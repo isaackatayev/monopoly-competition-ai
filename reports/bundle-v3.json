@@ -1,0 +1,167 @@
+{
+  "format": "monopoly.bundle-benchmark.v1",
+  "qualification": false,
+  "purpose": "Validate optional package play and compare versions on these bundle-capable local matchups.",
+  "entrants": {
+    "adaptive-v3": {
+      "manifest": "models/adaptive-v3.json",
+      "sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29"
+    },
+    "adaptive-v1": {
+      "manifest": "models/adaptive-v1.json",
+      "sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756"
+    }
+  },
+  "runtime": {
+    "native_library_sha256": "77558809209659593cb042dc27ee591e5cb07e822b68c3071fdcbeb07d084c0d",
+    "source_sha256": {
+      "src/bundle_match.cpp": "fb06cddd8094062a43132337badf3b9fe9bf546c025a0654ddaadc53bf134eb8",
+      "src/bundle_trade.cpp": "aa729f0c5931eef8b6c56509fdddc631503125501ee3b05d4e221b56bf0f0268",
+      "src/opponent.cpp": "d0e334bf0131de1d07069d62e88b1e9340a970aa992923e0674d25e0b424e6ba"
+    }
+  },
+  "games": 1200,
+  "turn_cap": 1000,
+  "design": "Per opponent: 100 fresh distinct seed pairs. Both seats use the same initial dice/deck seed within each pair. Both entrants use the same boards and seats.",
+  "strict_win_rate": "Wins divided by every game, including capped games.",
+  "uncertainty": "Each interval accounts for the two seat-swapped games on a common starting seed. Method is given per matchup. No multiple-testing adjustment.",
+  "trade_counts": "Offers and acceptances are counted across both seats. A package moves multiple deeds on at least one side or includes a release card. A closed deal may count in both the multi-deed and card categories.",
+  "opponents": {
+    "collector": "Scalar collector gameplay; a package is accepted when the package asset heuristic reaches 0.55.",
+    "blocker": "Scalar blocker gameplay; all packages vetoed.",
+    "adaptive-v1": "Manifest-verified neural model, real board-value and continuation evaluation for incoming packages."
+  },
+  "matches": {
+    "collector": {
+      "fixture_seed": 138038196,
+      "games_per_entrant": 200,
+      "board_seed_pairs": 100,
+      "entrants": {
+        "adaptive-v3": {
+          "wins": 191,
+          "losses": 9,
+          "caps": 0,
+          "turns": 11392,
+          "offers": 2226,
+          "accepted": 908,
+          "package_offers": 1504,
+          "package_accepted": 435,
+          "multi_deed_accepted": 429,
+          "card_accepted": 48,
+          "strict_win_fraction": 0.955,
+          "package_acceptance_fraction": 0.2892287234042553
+        },
+        "adaptive-v1": {
+          "wins": 192,
+          "losses": 8,
+          "caps": 0,
+          "turns": 11422,
+          "offers": 2141,
+          "accepted": 857,
+          "package_offers": 1449,
+          "package_accepted": 411,
+          "multi_deed_accepted": 404,
+          "card_accepted": 51,
+          "strict_win_fraction": 0.96,
+          "package_acceptance_fraction": 0.2836438923395445
+        }
+      },
+      "paired_strict_win_fraction_v3_minus_v1": -0.005,
+      "paired_difference_95pct_interval": [
+        -0.03805524796845828,
+        0.02805524796845828
+      ],
+      "interval_method": "Two-sided paired t approximation, 99 degrees of freedom."
+    },
+    "blocker": {
+      "fixture_seed": 610457128,
+      "games_per_entrant": 200,
+      "board_seed_pairs": 100,
+      "entrants": {
+        "adaptive-v3": {
+          "wins": 150,
+          "losses": 44,
+          "caps": 6,
+          "turns": 24901,
+          "offers": 1593,
+          "accepted": 0,
+          "package_offers": 1433,
+          "package_accepted": 0,
+          "multi_deed_accepted": 0,
+          "card_accepted": 0,
+          "strict_win_fraction": 0.75,
+          "package_acceptance_fraction": 0.0
+        },
+        "adaptive-v1": {
+          "wins": 150,
+          "losses": 44,
+          "caps": 6,
+          "turns": 24901,
+          "offers": 1565,
+          "accepted": 0,
+          "package_offers": 1429,
+          "package_accepted": 0,
+          "multi_deed_accepted": 0,
+          "card_accepted": 0,
+          "strict_win_fraction": 0.75,
+          "package_acceptance_fraction": 0.0
+        }
+      },
+      "paired_strict_win_fraction_v3_minus_v1": 0.0,
+      "paired_difference_95pct_interval": [
+        -0.029513049607039932,
+        0.029513049607039932
+      ],
+      "interval_method": "All 100 observed paired differences were zero. Exact 95% upper bound on the chance of an unseen nonzero paired difference, times maximum possible magnitude one."
+    },
+    "adaptive-v1": {
+      "fixture_seed": 974552641,
+      "games_per_entrant": 200,
+      "board_seed_pairs": 100,
+      "entrants": {
+        "adaptive-v3": {
+          "wins": 86,
+          "losses": 112,
+          "caps": 2,
+          "turns": 21987,
+          "offers": 12243,
+          "accepted": 397,
+          "package_offers": 10018,
+          "package_accepted": 318,
+          "multi_deed_accepted": 304,
+          "card_accepted": 54,
+          "strict_win_fraction": 0.43,
+          "package_acceptance_fraction": 0.03174286284687562
+        },
+        "adaptive-v1": {
+          "wins": 99,
+          "losses": 99,
+          "caps": 2,
+          "turns": 20716,
+          "offers": 11794,
+          "accepted": 380,
+          "package_offers": 9620,
+          "package_accepted": 350,
+          "multi_deed_accepted": 340,
+          "card_accepted": 52,
+          "strict_win_fraction": 0.495,
+          "package_acceptance_fraction": 0.036382536382536385
+        }
+      },
+      "paired_strict_win_fraction_v3_minus_v1": -0.065,
+      "paired_difference_95pct_interval": [
+        -0.13211793779807848,
+        0.0021179377980784786
+      ],
+      "interval_method": "Two-sided paired t approximation, 99 degrees of freedom."
+    }
+  },
+  "reproduction": [
+    "./monopoly bundle-match --model adaptive-v3 --opponent collector --seed 138038196 --cap 1000 --games 200",
+    "./monopoly bundle-match --model adaptive-v1 --opponent collector --seed 138038196 --cap 1000 --games 200",
+    "./monopoly bundle-match --model adaptive-v3 --opponent blocker --seed 610457128 --cap 1000 --games 200",
+    "./monopoly bundle-match --model adaptive-v1 --opponent blocker --seed 610457128 --cap 1000 --games 200",
+    "./monopoly bundle-match --model adaptive-v3 --opponent adaptive-v1 --seed 974552641 --cap 1000 --games 200",
+    "./monopoly bundle-match --model adaptive-v1 --opponent adaptive-v1 --seed 974552641 --cap 1000 --games 200"
+  ]
+}

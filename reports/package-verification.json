@@ -1,0 +1,143 @@
+{
+  "format": "monopoly.package-verification.v1",
+  "seed": 60182197,
+  "games_per_method_opponent": 1400,
+  "turn_cap": 1000,
+  "model_sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+  "v1_sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756",
+  "binary_sha256": "f0a1e0c4e980f2672186234b6d66168a494a059d29c67e1ad5e4b6040239f2a2",
+  "source_sha256": {
+    "src/bundle_trade.cpp": "aa729f0c5931eef8b6c56509fdddc631503125501ee3b05d4e221b56bf0f0268",
+    "src/bundle_match.cpp": "b4512118f3c36e965d22e45d46222301005e20a1454fdb533897b8d81ceb6837",
+    "src/bundles/verified.cpp": "faab4d62fd84533e5313cc921f3eb9da1dff5b430c0679dc97047f524d9e437d",
+    "tests/package_verify.cpp": "c8268633dca64301eaa487b21b217cd24ba326b1f646e801bd143ae493db710f",
+    "package_verify_evaluate.py": "a7007e850389953023c36eaa852d3d6ac0b265b125bc1ccf4352ad5beeb08648"
+  },
+  "method": "Compare original and verified package negotiation on the exact v3 scalar entrant. Each initial shuffled board is played with both methods in both seats against the same opponent. Adaptive v1 negotiates genuine packages; collector uses a fixed 0.55 asset-based acceptance threshold; blocker declines them. Games capped at 1,000 turns are nonwins. Approximate 95% intervals use within-seed seat-pair differences. Package counts are attributed to the issuing seat and include multi-deed or held-card deals.",
+  "selection": "A separate 240-game adaptive-v1 development screen (seed 7180789) tested controlling outgoing offers and incoming confirmations. The shorter proposer verifier with selective scalar fallback and a conservative recipient verifier was fixed before the fresh three-opponent comparison.",
+  "results": {
+    "adaptive_v1": {
+      "original": {
+        "turns": 147687,
+        "scalar_offers": 5734,
+        "scalar_closed": 354,
+        "package_offers": 37144,
+        "package_closed": 1180,
+        "rival_scalar_offers": 10653,
+        "rival_scalar_closed": 326,
+        "rival_package_offers": 32094,
+        "rival_package_closed": 1277,
+        "multi_deed_closed_both_seats": 2317,
+        "held_card_closed_both_seats": 442,
+        "wins": 695,
+        "losses": 698,
+        "caps": 7
+      },
+      "verified": {
+        "turns": 148059,
+        "scalar_offers": 17680,
+        "scalar_closed": 1685,
+        "package_offers": 11443,
+        "package_closed": 270,
+        "rival_scalar_offers": 9428,
+        "rival_scalar_closed": 229,
+        "rival_package_offers": 29406,
+        "rival_package_closed": 477,
+        "multi_deed_closed_both_seats": 720,
+        "held_card_closed_both_seats": 104,
+        "wins": 836,
+        "losses": 562,
+        "caps": 2
+      },
+      "win_rate_change": {
+        "estimate": 0.10071428571428571,
+        "interval_95": [
+          0.0693062256790973,
+          0.13212234574947412
+        ]
+      }
+    },
+    "collector": {
+      "original": {
+        "turns": 78789,
+        "scalar_offers": 3938,
+        "scalar_closed": 3051,
+        "package_offers": 10696,
+        "package_closed": 3125,
+        "rival_scalar_offers": 1410,
+        "rival_scalar_closed": 343,
+        "rival_package_offers": 0,
+        "rival_package_closed": 0,
+        "multi_deed_closed_both_seats": 3076,
+        "held_card_closed_both_seats": 286,
+        "wins": 1354,
+        "losses": 46,
+        "caps": 0
+      },
+      "verified": {
+        "turns": 79655,
+        "scalar_offers": 5605,
+        "scalar_closed": 3974,
+        "package_offers": 5406,
+        "package_closed": 1938,
+        "rival_scalar_offers": 1476,
+        "rival_scalar_closed": 360,
+        "rival_package_offers": 0,
+        "rival_package_closed": 0,
+        "multi_deed_closed_both_seats": 1921,
+        "held_card_closed_both_seats": 159,
+        "wins": 1360,
+        "losses": 40,
+        "caps": 0
+      },
+      "win_rate_change": {
+        "estimate": 0.004285714285714286,
+        "interval_95": [
+          -0.004344631631776044,
+          0.012916060203204616
+        ]
+      }
+    },
+    "blocker": {
+      "original": {
+        "turns": 168203,
+        "scalar_offers": 951,
+        "scalar_closed": 0,
+        "package_offers": 9698,
+        "package_closed": 0,
+        "rival_scalar_offers": 0,
+        "rival_scalar_closed": 0,
+        "rival_package_offers": 0,
+        "rival_package_closed": 0,
+        "multi_deed_closed_both_seats": 0,
+        "held_card_closed_both_seats": 0,
+        "wins": 1096,
+        "losses": 267,
+        "caps": 37
+      },
+      "verified": {
+        "turns": 166924,
+        "scalar_offers": 2645,
+        "scalar_closed": 0,
+        "package_offers": 5125,
+        "package_closed": 0,
+        "rival_scalar_offers": 0,
+        "rival_scalar_closed": 0,
+        "rival_package_offers": 0,
+        "rival_package_closed": 0,
+        "multi_deed_closed_both_seats": 0,
+        "held_card_closed_both_seats": 0,
+        "wins": 1095,
+        "losses": 269,
+        "caps": 36
+      },
+      "win_rate_change": {
+        "estimate": -0.0007142857142857143,
+        "interval_95": [
+          -0.004420539780623125,
+          0.0029919683520516966
+        ]
+      }
+    }
+  }
+}

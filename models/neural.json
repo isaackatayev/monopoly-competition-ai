@@ -1,0 +1,21 @@
+{
+  "format": "monopoly.neural.v1",
+  "value_network": "neural.bin",
+  "sha256": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+  "prior_weights": {
+    "acquisition": 0.17828521778844783,
+    "completion": 0.3590289902827784,
+    "denial": 0.533475618241401,
+    "railroads": 1,
+    "auction": 0,
+    "reserve": 0.2818077144575766,
+    "development": 0.8704728065032307,
+    "financing": 0.491337660094618,
+    "trade_demand": 0.07896951599432317,
+    "trade_defense": 0.5582611494448573,
+    "jail_patience": 0.46245911567958586,
+    "house_scarcity": 0.7930944165404459
+  },
+  "response_network": "response.bin",
+  "response_sha256": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2"
+}

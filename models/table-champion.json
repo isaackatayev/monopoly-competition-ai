@@ -1,0 +1,18 @@
+{
+  "format": "monopoly.adaptive.v4",
+  "base": "neural.json",
+  "opponent": "opponent.bin",
+  "specialist": "table-training/2358cbc61f1f86c6bb7f81a4ac36a4b525fba40ec514a30d2380666953c0e48a/specialist.json",
+  "resilience": "resilience.json",
+  "robust": "table-training/2358cbc61f1f86c6bb7f81a4ac36a4b525fba40ec514a30d2380666953c0e48a/robust.json",
+  "deal_value": "deal.bin",
+  "pressure": "pressure.json",
+  "acquisition_mode": "observed",
+  "base_sha256": "a64d76a2c4c5903cba96ca576715e4c3d57301c6f31109148d1170d663fed002",
+  "opponent_sha256": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+  "specialist_sha256": "ef258f9d4bc48c25421390cedb52faec552984d4684b6986a576c73b15f25358",
+  "resilience_sha256": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+  "robust_sha256": "14aa283bc86f5eafb0dbc8efa120023b2f816b159397ec6b3ec968642f932134",
+  "deal_value_sha256": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+  "pressure_sha256": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+}

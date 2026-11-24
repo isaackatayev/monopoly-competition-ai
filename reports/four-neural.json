@@ -1,0 +1,110 @@
+{
+  "model": "adaptive-v4",
+  "opponents": [
+    "adaptive-v1",
+    "adaptive-v2",
+    "adaptive-v3"
+  ],
+  "policies": [
+    {
+      "name": "adaptive-v4",
+      "style": 11,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+        "pressure": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+      }
+    },
+    {
+      "name": "adaptive-v1",
+      "style": 7,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66"
+      }
+    },
+    {
+      "name": "adaptive-v2",
+      "style": 8,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88"
+      }
+    },
+    {
+      "name": "adaptive-v3",
+      "style": 9,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580"
+      }
+    }
+  ],
+  "engine_sha256": "48ce167454fafc6143ab6f70e613c2ec6074df2f72bed93901334625200f6474",
+  "board_seed": 832716409,
+  "independent_boards": 600,
+  "games": 2400,
+  "turn_cap": 1000,
+  "trading": true,
+  "wins": 797,
+  "losses": 1584,
+  "caps": 19,
+  "win_rate": 0.33208333333333334,
+  "board_cluster_95_interval": [
+    0.3132254582095847,
+    0.350941208457082
+  ],
+  "wins_by_starting_seat": [
+    162,
+    229,
+    234,
+    172
+  ],
+  "opponent_wins_by_model": {
+    "adaptive-v1": 504,
+    "adaptive-v2": 409,
+    "adaptive-v3": 671
+  },
+  "mean_individual_turns": 206.72,
+  "trades": {
+    "outgoing": {
+      "proposed": 51539,
+      "accepted": 2475
+    },
+    "incoming": {
+      "proposed": 50787,
+      "accepted": 1645
+    },
+    "between_opponents": {
+      "proposed": 111402,
+      "accepted": 7643
+    }
+  },
+  "accepted_outgoing_trade_types": {
+    "buy_deed_for_cash": 224,
+    "sell_deed_for_cash": 350,
+    "swap_deeds": 1898,
+    "other": 3
+  },
+  "design": "Each four-seat game has one shared board. Each start rotates the entrant through all four seats. Opponent order cycles through six permutations. Only the last solvent player wins. Games unresolved at the turn cap count as non-wins. The approximate 95% interval uses the variation in win fractions across independent four-game starts.",
+  "adapter": "The frozen duel policies evaluate one opponent at a time. Each active player can consider every surviving opponent for one offer of up to one deed each way plus cash. The simulator enforces the full table's ownership and building supply."
+}

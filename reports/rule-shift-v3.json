@@ -1,0 +1,606 @@
+{
+  "format": "monopoly.rule-shift.v1",
+  "qualification": false,
+  "inspiration": {
+    "project": "USC ISI GNOME",
+    "url": "https://usc-isi-i2.github.io/gnome/",
+    "relationship": "Independent rule-sensitivity test using our own simulator. It does not run GNOME."
+  },
+  "models_frozen": true,
+  "scope": "Both entrants use their existing learned parameters and normal public inputs. We test outcome sensitivity to rule changes. No rule identity, horizon, retraining or rule-detection signal is supplied.",
+  "game_rules": "US Classic duel engine with its original one-deed-per-side trade format in ordinary allowed windows.",
+  "bankruptcy_1000": "Bankruptcy wins immediately. Both solvent after 1000 individual player turns gives each seat half a point.",
+  "net_worth_100": "Bankruptcy wins immediately. After 100 individual player turns compare cash plus deed face value, less outstanding mortgage principal on each mortgaged deed, plus half purchase cost for every building level. Hotels count as five levels. Held jail cards have zero adjudication value. Equal dollar totals give each seat half a point.",
+  "trade_ban_40": "Where enabled, suppress all trade windows for both seats starting on individual turn 40 inclusive. Purchases, auctions, building and other actions keep the baseline rules.",
+  "design": "For each opponent both entrants use exactly the same initial board seeds, twice each with seats reversed. Each game shares the complete board, hidden RNG and decks through turn 39 before trade-rule branches diverge. Each 100-turn result is read from the prefix of its corresponding long game.",
+  "scores": "A win receives 1, a draw 0.5, and a loss 0. Trade and turn counters cover both seats. Scores are descriptive for the sampled fixtures.",
+  "verification": "Verified bankruptcy control wins, losses, caps, turns, legal offers and closed trades against the production paired batch runner for each matchup. Banned windows produced zero offers from turn 40 onward. Checked net-worth valuation against a worked $745 example.",
+  "games_per_cell": 200,
+  "outcomes": 4800,
+  "distinct_starting_seeds": 300,
+  "inputs": {
+    "native_library": {
+      "path": "build/libmonopoly.so",
+      "sha256": "9d8707d8b5491b874c5885024fe7209333f653fac2d0e761c4339218b552aed4"
+    },
+    "v1_manifest": {
+      "path": "models/adaptive-v1.json",
+      "sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756"
+    },
+    "v3_manifest": {
+      "path": "models/adaptive-v3.json",
+      "sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29"
+    },
+    "frozen_manifest": {
+      "path": "models/neural.json",
+      "sha256": "a64d76a2c4c5903cba96ca576715e4c3d57301c6f31109148d1170d663fed002"
+    },
+    "evaluation_plugin": {
+      "path": "src/rule_shift_bench.cpp",
+      "sha256": "63b9afa6bdbccbd7a1bfeda77e6aea0c8a56386754eafe3393218077379c71de"
+    },
+    "evaluation_policy_abi": {
+      "path": "src/evaluation/policy.hpp",
+      "sha256": "d1b78d872a904303107a569d87d3a4c7e7d9f8709d05fdcd0ca18425f40c39c3"
+    },
+    "evaluation_driver": {
+      "path": "rule_shift_bench.py",
+      "sha256": "9b9ffa55319bf4be7aff43edf4bcef83d50daf44a90e78bcecb498498859f1c5"
+    }
+  },
+  "reproduce": "make all && /usr/bin/python3 rule_shift_bench.py --pairs 100",
+  "fixtures": {
+    "frozen": {
+      "seed": 461691782,
+      "pairs": 100,
+      "versions": {
+        "adaptive-v1": {
+          "bankruptcy_1000": {
+            "games": 200,
+            "wins": 113,
+            "losses": 86,
+            "draws": 1,
+            "score": 0.5675,
+            "bankruptcy_wins": 113,
+            "bankruptcy_losses": 86,
+            "cap_draws": 1,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 19864,
+            "reached_shift": 191,
+            "offers": 5685,
+            "deals": 230,
+            "offers_from_turn_40": 3591,
+            "deals_from_turn_40": 123
+          },
+          "net_worth_100": {
+            "games": 200,
+            "wins": 114,
+            "losses": 86,
+            "draws": 0,
+            "score": 0.57,
+            "bankruptcy_wins": 66,
+            "bankruptcy_losses": 63,
+            "cap_draws": 0,
+            "net_worth_wins": 48,
+            "net_worth_losses": 23,
+            "net_worth_ties": 0,
+            "turns": 16194,
+            "reached_shift": 191,
+            "offers": 4968,
+            "deals": 221,
+            "offers_from_turn_40": 2874,
+            "deals_from_turn_40": 114
+          },
+          "bankruptcy_1000_trade_ban_40": {
+            "games": 200,
+            "wins": 108,
+            "losses": 83,
+            "draws": 9,
+            "score": 0.5625,
+            "bankruptcy_wins": 108,
+            "bankruptcy_losses": 83,
+            "cap_draws": 9,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 30600,
+            "reached_shift": 191,
+            "offers": 2094,
+            "deals": 107,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100_trade_ban_40": {
+            "games": 200,
+            "wins": 117,
+            "losses": 83,
+            "draws": 0,
+            "score": 0.585,
+            "bankruptcy_wins": 54,
+            "bankruptcy_losses": 51,
+            "cap_draws": 0,
+            "net_worth_wins": 63,
+            "net_worth_losses": 32,
+            "net_worth_ties": 0,
+            "turns": 16534,
+            "reached_shift": 191,
+            "offers": 2094,
+            "deals": 107,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          }
+        },
+        "adaptive-v3": {
+          "bankruptcy_1000": {
+            "games": 200,
+            "wins": 124,
+            "losses": 75,
+            "draws": 1,
+            "score": 0.6225,
+            "bankruptcy_wins": 124,
+            "bankruptcy_losses": 75,
+            "cap_draws": 1,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 22460,
+            "reached_shift": 195,
+            "offers": 6175,
+            "deals": 347,
+            "offers_from_turn_40": 4032,
+            "deals_from_turn_40": 228
+          },
+          "net_worth_100": {
+            "games": 200,
+            "wins": 116,
+            "losses": 84,
+            "draws": 0,
+            "score": 0.58,
+            "bankruptcy_wins": 57,
+            "bankruptcy_losses": 53,
+            "cap_draws": 0,
+            "net_worth_wins": 59,
+            "net_worth_losses": 31,
+            "net_worth_ties": 0,
+            "turns": 16293,
+            "reached_shift": 195,
+            "offers": 4940,
+            "deals": 284,
+            "offers_from_turn_40": 2797,
+            "deals_from_turn_40": 165
+          },
+          "bankruptcy_1000_trade_ban_40": {
+            "games": 200,
+            "wins": 123,
+            "losses": 71,
+            "draws": 6,
+            "score": 0.63,
+            "bankruptcy_wins": 123,
+            "bankruptcy_losses": 71,
+            "cap_draws": 6,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 30736,
+            "reached_shift": 195,
+            "offers": 2143,
+            "deals": 119,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100_trade_ban_40": {
+            "games": 200,
+            "wins": 115,
+            "losses": 85,
+            "draws": 0,
+            "score": 0.575,
+            "bankruptcy_wins": 47,
+            "bankruptcy_losses": 45,
+            "cap_draws": 0,
+            "net_worth_wins": 68,
+            "net_worth_losses": 40,
+            "net_worth_ties": 0,
+            "turns": 16721,
+            "reached_shift": 195,
+            "offers": 2143,
+            "deals": 119,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          }
+        }
+      },
+      "score_differences": {
+        "bankruptcy_1000": {
+          "v3_minus_v1_score": 0.055,
+          "adaptive-v1_minus_own_standard": 0.0,
+          "adaptive-v3_minus_own_standard": 0.0
+        },
+        "net_worth_100": {
+          "v3_minus_v1_score": 0.01,
+          "adaptive-v1_minus_own_standard": 0.0025,
+          "adaptive-v3_minus_own_standard": -0.0425
+        },
+        "bankruptcy_1000_trade_ban_40": {
+          "v3_minus_v1_score": 0.0675,
+          "adaptive-v1_minus_own_standard": -0.005,
+          "adaptive-v3_minus_own_standard": 0.0075
+        },
+        "net_worth_100_trade_ban_40": {
+          "v3_minus_v1_score": -0.01,
+          "adaptive-v1_minus_own_standard": 0.0175,
+          "adaptive-v3_minus_own_standard": -0.0475
+        }
+      }
+    },
+    "builder": {
+      "seed": 999378261,
+      "pairs": 100,
+      "versions": {
+        "adaptive-v1": {
+          "bankruptcy_1000": {
+            "games": 200,
+            "wins": 178,
+            "losses": 22,
+            "draws": 0,
+            "score": 0.89,
+            "bankruptcy_wins": 178,
+            "bankruptcy_losses": 22,
+            "cap_draws": 0,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 13412,
+            "reached_shift": 166,
+            "offers": 1638,
+            "deals": 732,
+            "offers_from_turn_40": 618,
+            "deals_from_turn_40": 291
+          },
+          "net_worth_100": {
+            "games": 200,
+            "wins": 177,
+            "losses": 23,
+            "draws": 0,
+            "score": 0.885,
+            "bankruptcy_wins": 156,
+            "bankruptcy_losses": 13,
+            "cap_draws": 0,
+            "net_worth_wins": 21,
+            "net_worth_losses": 10,
+            "net_worth_ties": 0,
+            "turns": 12722,
+            "reached_shift": 166,
+            "offers": 1616,
+            "deals": 723,
+            "offers_from_turn_40": 596,
+            "deals_from_turn_40": 282
+          },
+          "bankruptcy_1000_trade_ban_40": {
+            "games": 200,
+            "wins": 161,
+            "losses": 36,
+            "draws": 3,
+            "score": 0.8125,
+            "bankruptcy_wins": 161,
+            "bankruptcy_losses": 36,
+            "cap_draws": 3,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 17435,
+            "reached_shift": 166,
+            "offers": 1020,
+            "deals": 441,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100_trade_ban_40": {
+            "games": 200,
+            "wins": 163,
+            "losses": 37,
+            "draws": 0,
+            "score": 0.815,
+            "bankruptcy_wins": 140,
+            "bankruptcy_losses": 22,
+            "cap_draws": 0,
+            "net_worth_wins": 23,
+            "net_worth_losses": 15,
+            "net_worth_ties": 0,
+            "turns": 13376,
+            "reached_shift": 166,
+            "offers": 1020,
+            "deals": 441,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          }
+        },
+        "adaptive-v3": {
+          "bankruptcy_1000": {
+            "games": 200,
+            "wins": 186,
+            "losses": 14,
+            "draws": 0,
+            "score": 0.93,
+            "bankruptcy_wins": 186,
+            "bankruptcy_losses": 14,
+            "cap_draws": 0,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 12756,
+            "reached_shift": 164,
+            "offers": 1587,
+            "deals": 717,
+            "offers_from_turn_40": 544,
+            "deals_from_turn_40": 261
+          },
+          "net_worth_100": {
+            "games": 200,
+            "wins": 186,
+            "losses": 14,
+            "draws": 0,
+            "score": 0.93,
+            "bankruptcy_wins": 176,
+            "bankruptcy_losses": 11,
+            "cap_draws": 0,
+            "net_worth_wins": 10,
+            "net_worth_losses": 3,
+            "net_worth_ties": 0,
+            "turns": 12331,
+            "reached_shift": 164,
+            "offers": 1572,
+            "deals": 710,
+            "offers_from_turn_40": 529,
+            "deals_from_turn_40": 254
+          },
+          "bankruptcy_1000_trade_ban_40": {
+            "games": 200,
+            "wins": 172,
+            "losses": 25,
+            "draws": 3,
+            "score": 0.8675,
+            "bankruptcy_wins": 172,
+            "bankruptcy_losses": 25,
+            "cap_draws": 3,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 16488,
+            "reached_shift": 164,
+            "offers": 1043,
+            "deals": 456,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100_trade_ban_40": {
+            "games": 200,
+            "wins": 174,
+            "losses": 26,
+            "draws": 0,
+            "score": 0.87,
+            "bankruptcy_wins": 154,
+            "bankruptcy_losses": 17,
+            "cap_draws": 0,
+            "net_worth_wins": 20,
+            "net_worth_losses": 9,
+            "net_worth_ties": 0,
+            "turns": 13073,
+            "reached_shift": 164,
+            "offers": 1043,
+            "deals": 456,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          }
+        }
+      },
+      "score_differences": {
+        "bankruptcy_1000": {
+          "v3_minus_v1_score": 0.04,
+          "adaptive-v1_minus_own_standard": 0.0,
+          "adaptive-v3_minus_own_standard": 0.0
+        },
+        "net_worth_100": {
+          "v3_minus_v1_score": 0.045,
+          "adaptive-v1_minus_own_standard": -0.005,
+          "adaptive-v3_minus_own_standard": 0.0
+        },
+        "bankruptcy_1000_trade_ban_40": {
+          "v3_minus_v1_score": 0.055,
+          "adaptive-v1_minus_own_standard": -0.0775,
+          "adaptive-v3_minus_own_standard": -0.0625
+        },
+        "net_worth_100_trade_ban_40": {
+          "v3_minus_v1_score": 0.055,
+          "adaptive-v1_minus_own_standard": -0.075,
+          "adaptive-v3_minus_own_standard": -0.06
+        }
+      }
+    },
+    "blocker": {
+      "seed": 185279622,
+      "pairs": 100,
+      "versions": {
+        "adaptive-v1": {
+          "bankruptcy_1000": {
+            "games": 200,
+            "wins": 159,
+            "losses": 37,
+            "draws": 4,
+            "score": 0.805,
+            "bankruptcy_wins": 159,
+            "bankruptcy_losses": 37,
+            "cap_draws": 4,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 22677,
+            "reached_shift": 181,
+            "offers": 855,
+            "deals": 0,
+            "offers_from_turn_40": 403,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100": {
+            "games": 200,
+            "wins": 165,
+            "losses": 35,
+            "draws": 0,
+            "score": 0.825,
+            "bankruptcy_wins": 126,
+            "bankruptcy_losses": 15,
+            "cap_draws": 0,
+            "net_worth_wins": 39,
+            "net_worth_losses": 20,
+            "net_worth_ties": 0,
+            "turns": 15064,
+            "reached_shift": 181,
+            "offers": 763,
+            "deals": 0,
+            "offers_from_turn_40": 311,
+            "deals_from_turn_40": 0
+          },
+          "bankruptcy_1000_trade_ban_40": {
+            "games": 200,
+            "wins": 159,
+            "losses": 37,
+            "draws": 4,
+            "score": 0.805,
+            "bankruptcy_wins": 159,
+            "bankruptcy_losses": 37,
+            "cap_draws": 4,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 22739,
+            "reached_shift": 181,
+            "offers": 452,
+            "deals": 0,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100_trade_ban_40": {
+            "games": 200,
+            "wins": 165,
+            "losses": 35,
+            "draws": 0,
+            "score": 0.825,
+            "bankruptcy_wins": 126,
+            "bankruptcy_losses": 15,
+            "cap_draws": 0,
+            "net_worth_wins": 39,
+            "net_worth_losses": 20,
+            "net_worth_ties": 0,
+            "turns": 15064,
+            "reached_shift": 181,
+            "offers": 452,
+            "deals": 0,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          }
+        },
+        "adaptive-v3": {
+          "bankruptcy_1000": {
+            "games": 200,
+            "wins": 159,
+            "losses": 37,
+            "draws": 4,
+            "score": 0.805,
+            "bankruptcy_wins": 159,
+            "bankruptcy_losses": 37,
+            "cap_draws": 4,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 22675,
+            "reached_shift": 181,
+            "offers": 840,
+            "deals": 0,
+            "offers_from_turn_40": 388,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100": {
+            "games": 200,
+            "wins": 165,
+            "losses": 35,
+            "draws": 0,
+            "score": 0.825,
+            "bankruptcy_wins": 126,
+            "bankruptcy_losses": 15,
+            "cap_draws": 0,
+            "net_worth_wins": 39,
+            "net_worth_losses": 20,
+            "net_worth_ties": 0,
+            "turns": 15064,
+            "reached_shift": 181,
+            "offers": 735,
+            "deals": 0,
+            "offers_from_turn_40": 283,
+            "deals_from_turn_40": 0
+          },
+          "bankruptcy_1000_trade_ban_40": {
+            "games": 200,
+            "wins": 159,
+            "losses": 37,
+            "draws": 4,
+            "score": 0.805,
+            "bankruptcy_wins": 159,
+            "bankruptcy_losses": 37,
+            "cap_draws": 4,
+            "net_worth_wins": 0,
+            "net_worth_losses": 0,
+            "net_worth_ties": 0,
+            "turns": 22739,
+            "reached_shift": 181,
+            "offers": 452,
+            "deals": 0,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          },
+          "net_worth_100_trade_ban_40": {
+            "games": 200,
+            "wins": 165,
+            "losses": 35,
+            "draws": 0,
+            "score": 0.825,
+            "bankruptcy_wins": 126,
+            "bankruptcy_losses": 15,
+            "cap_draws": 0,
+            "net_worth_wins": 39,
+            "net_worth_losses": 20,
+            "net_worth_ties": 0,
+            "turns": 15064,
+            "reached_shift": 181,
+            "offers": 452,
+            "deals": 0,
+            "offers_from_turn_40": 0,
+            "deals_from_turn_40": 0
+          }
+        }
+      },
+      "score_differences": {
+        "bankruptcy_1000": {
+          "v3_minus_v1_score": 0.0,
+          "adaptive-v1_minus_own_standard": 0.0,
+          "adaptive-v3_minus_own_standard": 0.0
+        },
+        "net_worth_100": {
+          "v3_minus_v1_score": 0.0,
+          "adaptive-v1_minus_own_standard": 0.02,
+          "adaptive-v3_minus_own_standard": 0.02
+        },
+        "bankruptcy_1000_trade_ban_40": {
+          "v3_minus_v1_score": 0.0,
+          "adaptive-v1_minus_own_standard": 0.0,
+          "adaptive-v3_minus_own_standard": 0.0
+        },
+        "net_worth_100_trade_ban_40": {
+          "v3_minus_v1_score": 0.0,
+          "adaptive-v1_minus_own_standard": 0.02,
+          "adaptive-v3_minus_own_standard": 0.02
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "seed": 20261119,
+  "turn_cap": 1000,
+  "independent_seeds": true,
+  "interval": "two-sided Wilson 95%, capped games counted as non-wins",
+  "source_sha256": "3c464385dcd15959ff7c64c209997e4434c03923f54f08ff37306ba90378a2de",
+  "model": {
+    "format": "monopoly.policy.v1",
+    "weights": {
+      "acquisition": 0.17828521778844783,
+      "completion": 0.3590289902827784,
+      "denial": 0.533475618241401,
+      "railroads": 1.0,
+      "auction": 0.0,
+      "reserve": 0.2818077144575766,
+      "development": 0.8704728065032307,
+      "financing": 0.491337660094618,
+      "trade_demand": 0.07896951599432317,
+      "trade_defense": 0.5582611494448573,
+      "jail_patience": 0.46245911567958586,
+      "house_scarcity": 0.7930944165404459
+    }
+  },
+  "trade_search": "paired-rollouts-v1",
+  "results": {
+    "collector": {
+      "wins": 15050,
+      "losses": 4950,
+      "caps": 0,
+      "turns": 1503480,
+      "games": 20000,
+      "win_rate": 0.7525,
+      "first_seat_wins": 7553,
+      "first_seat_games": 10000,
+      "second_seat_wins": 7497,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.7464708866460282,
+        0.7584321351456388
+      ]
+    },
+    "builder": {
+      "wins": 15177,
+      "losses": 4823,
+      "caps": 0,
+      "turns": 1516765,
+      "games": 20000,
+      "win_rate": 0.75885,
+      "first_seat_wins": 7614,
+      "first_seat_games": 10000,
+      "second_seat_wins": 7563,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.7528720175894645,
+        0.7647285653442901
+      ]
+    },
+    "cautious": {
+      "wins": 13143,
+      "losses": 6856,
+      "caps": 1,
+      "turns": 1917306,
+      "games": 20000,
+      "win_rate": 0.65715,
+      "first_seat_wins": 6663,
+      "first_seat_games": 10000,
+      "second_seat_wins": 6480,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.6505420271618069,
+        0.6636976159057594
+      ]
+    },
+    "untrained": {
+      "wins": 12033,
+      "losses": 7967,
+      "caps": 0,
+      "turns": 1829191,
+      "games": 20000,
+      "win_rate": 0.60165,
+      "first_seat_wins": 6089,
+      "first_seat_games": 10000,
+      "second_seat_wins": 5944,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.594846296474499,
+        0.608414662595295
+      ]
+    },
+    "blocker": {
+      "wins": 8666,
+      "losses": 10117,
+      "caps": 1217,
+      "turns": 3370140,
+      "games": 20000,
+      "win_rate": 0.4333,
+      "first_seat_wins": 4414,
+      "first_seat_games": 10000,
+      "second_seat_wins": 4252,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.426445871292339,
+        0.4401797463175454
+      ]
+    },
+    "fast": {
+      "wins": 10435,
+      "losses": 9565,
+      "caps": 0,
+      "turns": 1721105,
+      "games": 20000,
+      "win_rate": 0.52175,
+      "first_seat_wins": 5293,
+      "first_seat_games": 10000,
+      "second_seat_wins": 5142,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.5148235268905065,
+        0.5286681195410531
+      ]
+    },
+    "mirror": {
+      "wins": 10067,
+      "losses": 9933,
+      "caps": 0,
+      "turns": 1729668,
+      "games": 20000,
+      "win_rate": 0.50335,
+      "first_seat_wins": 5138,
+      "first_seat_games": 10000,
+      "second_seat_wins": 4929,
+      "second_seat_games": 10000,
+      "win_rate_95": [
+        0.4964206584381729,
+        0.5102780549202511
+      ]
+    }
+  }
+}

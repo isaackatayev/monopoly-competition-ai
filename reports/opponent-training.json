@@ -1,0 +1,229 @@
+{
+  "format": "monopoly.opponent.gru.v1",
+  "seed": 822257552113,
+  "architecture": {
+    "inputs": 16,
+    "hidden": 12,
+    "window": 16,
+    "heads": 2,
+    "cell": "GRU, reset-after, with a public offer-quality evidence gate",
+    "trained_parameters": 1068,
+    "serialized_float32": 1070,
+    "fixed_zero_output_intercepts": 2
+  },
+  "observations": "Only the opponent's last 16 public trade proposals/replies, face-price acquisitions/refusals, and paid deed auction prices. Inputs exclude bid ceilings, policy identity, switch dates, and outcomes.",
+  "labels": "The first head estimates an unconditional trade-refusal regime. The second estimates the high-acquisition-willingness regime. These are simulator behavioral profiles; the heads do not identify an arbitrary program.",
+  "schedule": "The profiled seat is randomized. Its refusal and purchase regimes switch independently with probabilities 0.75 and 2/3 at a randomly chosen turn from 8 through 87. The other seat proposes independently varied legal terms. Four strategic policy families are sampled; the separately implemented blocker is excluded.",
+  "dataset": {
+    "train": {
+      "games": 24000,
+      "public_events": 1083664,
+      "games_with_observed_trade_switch": 14569,
+      "capped": 685,
+      "seed": 822257552113
+    },
+    "calibration": {
+      "games": 3500,
+      "public_events": 159117,
+      "games_with_observed_trade_switch": 2137,
+      "capped": 116,
+      "seed": 822258552113
+    },
+    "test": {
+      "games": 6000,
+      "public_events": 270667,
+      "games_with_observed_trade_switch": 3684,
+      "capped": 169,
+      "seed": 822259552113
+    }
+  },
+  "test_observations_scored": 184062,
+  "optimizer": "Adam / two-head binary cross entropy with full backpropagation through the last 16 events",
+  "updates": 2814,
+  "calibration_log_loss": [
+    0.3260227385887902,
+    0.3196842264601293,
+    0.31624827405545447,
+    0.31414528861171687,
+    0.3128876216186777,
+    0.31200577250892536
+  ],
+  "test": {
+    "unconditional_trade_refusal": {
+      "overall": {
+        "log_loss": 0.19171087567168493,
+        "brier": 0.05654042959213257,
+        "accuracy": 0.9172344101444079
+      },
+      "training_prevalence_baseline": {
+        "log_loss": 0.6906608061960888,
+        "brier": 0.24875733256340027,
+        "accuracy": 0.5411709098021319
+      },
+      "since_behavior_switch": {
+        "1": {
+          "observations": 2633,
+          "trajectories": 2633,
+          "updated": {
+            "log_loss": 1.9305275241308375,
+            "brier": 0.5096028447151184,
+            "accuracy": 0.4090391188758071
+          },
+          "frozen_at_switch": {
+            "log_loss": 3.91106906642522,
+            "brier": 0.9110766053199768,
+            "accuracy": 0.013672616786935056
+          }
+        },
+        "2_to_3": {
+          "observations": 5072,
+          "trajectories": 3170,
+          "updated": {
+            "log_loss": 0.9093833875402966,
+            "brier": 0.26644277572631836,
+            "accuracy": 0.6630520504731862
+          },
+          "frozen_at_switch": {
+            "log_loss": 3.8950085290492003,
+            "brier": 0.9094210267066956,
+            "accuracy": 0.014589905362776025
+          }
+        },
+        "4_to_7": {
+          "observations": 9106,
+          "trajectories": 3314,
+          "updated": {
+            "log_loss": 0.3118600169385998,
+            "brier": 0.09753888100385666,
+            "accuracy": 0.8695365692949704
+          },
+          "frozen_at_switch": {
+            "log_loss": 3.86020997276816,
+            "brier": 0.9067770838737488,
+            "accuracy": 0.014715572150230618
+          }
+        },
+        "8_to_15": {
+          "observations": 13981,
+          "trajectories": 2957,
+          "updated": {
+            "log_loss": 0.09034236819315554,
+            "brier": 0.024775056168437004,
+            "accuracy": 0.9671697303483299
+          },
+          "frozen_at_switch": {
+            "log_loss": 3.766560314176669,
+            "brier": 0.8974586129188538,
+            "accuracy": 0.017380730992060653
+          }
+        },
+        "16_plus": {
+          "observations": 20073,
+          "trajectories": 2135,
+          "updated": {
+            "log_loss": 0.03518133631109026,
+            "brier": 0.007080705836415291,
+            "accuracy": 0.9924276391172221
+          },
+          "frozen_at_switch": {
+            "log_loss": 3.5550081654424703,
+            "brier": 0.8700233697891235,
+            "accuracy": 0.028446171474119465
+          }
+        }
+      }
+    },
+    "high_acquisition_willingness": {
+      "overall": {
+        "log_loss": 0.3854831287773009,
+        "brier": 0.12356831878423691,
+        "accuracy": 0.8178820180156686
+      },
+      "training_prevalence_baseline": {
+        "log_loss": 0.6921770893818063,
+        "brier": 0.24951507151126862,
+        "accuracy": 0.522769501580989
+      },
+      "since_behavior_switch": {
+        "1": {
+          "observations": 2318,
+          "trajectories": 2318,
+          "updated": {
+            "log_loss": 1.6334992001658803,
+            "brier": 0.5481922030448914,
+            "accuracy": 0.19542709232096636
+          },
+          "frozen_at_switch": {
+            "log_loss": 2.2671541249856726,
+            "brier": 0.710308849811554,
+            "accuracy": 0.0992234685073339
+          }
+        },
+        "2_to_3": {
+          "observations": 4432,
+          "trajectories": 2788,
+          "updated": {
+            "log_loss": 1.1732707563346092,
+            "brier": 0.41217970848083496,
+            "accuracy": 0.3458935018050541
+          },
+          "frozen_at_switch": {
+            "log_loss": 2.3085770402425934,
+            "brier": 0.7177436947822571,
+            "accuracy": 0.0970216606498195
+          }
+        },
+        "4_to_7": {
+          "observations": 7956,
+          "trajectories": 2935,
+          "updated": {
+            "log_loss": 0.8089527560737019,
+            "brier": 0.28495389223098755,
+            "accuracy": 0.5432378079436903
+          },
+          "frozen_at_switch": {
+            "log_loss": 2.350688610711655,
+            "brier": 0.7281503081321716,
+            "accuracy": 0.08986928104575163
+          }
+        },
+        "8_to_15": {
+          "observations": 12280,
+          "trajectories": 2623,
+          "updated": {
+            "log_loss": 0.5247106624215184,
+            "brier": 0.17648017406463623,
+            "accuracy": 0.7337947882736157
+          },
+          "frozen_at_switch": {
+            "log_loss": 2.4310029232195514,
+            "brier": 0.7433196306228638,
+            "accuracy": 0.08534201954397394
+          }
+        },
+        "16_plus": {
+          "observations": 18615,
+          "trajectories": 1933,
+          "updated": {
+            "log_loss": 0.4724577790630923,
+            "brier": 0.15607504546642303,
+            "accuracy": 0.7628793983346763
+          },
+          "frozen_at_switch": {
+            "log_loss": 2.558430572881616,
+            "brier": 0.7642619013786316,
+            "accuracy": 0.07536932581251679
+          }
+        }
+      }
+    }
+  },
+  "controlled_refusal_probabilities": {
+    "cold": 0.5,
+    "six_obviously_poor_offers_declined": 0.5,
+    "six_favorable_offers_declined": 0.9979231953620911,
+    "four_favorable_declines_then_two_accepts": 0.0018521934980526567
+  },
+  "sha256": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+  "numpy_version": "2.0.2"
+}

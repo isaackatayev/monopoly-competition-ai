@@ -1,0 +1,21 @@
+name: Simulator and players
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test game rules, model loading, and player protocols
+        run: make -j2 test
+      - name: Play a competition game over HTTP
+        run: make test-http
+      - name: Run Club Champion on an example offer
+        run: |
+          set -o pipefail
+          ./monopoly example offer | ./monopoly bot --model table-champion

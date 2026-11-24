@@ -1,0 +1,315 @@
+{
+  "method": {
+    "board_seed_generator_input": 17795291567363018288,
+    "qualification_seed": 481297157,
+    "turn_cap": 1000,
+    "checkpoint_sha256": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+    "engine_file_sha256": "9d8707d8b5491b874c5885024fe7209333f653fac2d0e761c4339218b552aed4",
+    "qualification_report_sha256": "161406cb0c763be6dfdcff90328e380f43239be0219b901208b6bcc5992fc4af",
+    "instrumentation": "At each normal trade window call Game::trade without changing any decision or RNG draw. If offers_made increases, read proposer terms from ProposedTrade and check closure via offers_closed. Compare full ownership counts before and after legal transfers for all eight street colors. Cash balances are observed immediately before and after settlement, including any election on mortgaged deeds. Price flows shown refer only to the signed cash terms. A repeated or declined legal offer counts once each time it was sent. This release benchmark uses cash and at most one deed per side.",
+    "replay": "Two games per successive SplitMix64 draw from board_seed_generator_input, with v4 starting in seat 0 and then seat 1, Collector in the other seat. 1,000 independent board draws. Reproduced release W/L/turn caps, total turns, and all four offer and acceptance totals.",
+    "saved_trace_sha256": "2e85123ae8784ce94dd84ef60738da88589824993845a55212bb6c208194f7ee",
+    "trace_plugin_sha256": "80e0d0420c7ae35860f79a1c01616212992a0575148159904d17dc956f4404a8"
+  },
+  "outcomes": {
+    "games": 2000,
+    "v4_wins": 1923,
+    "v4_losses": 77,
+    "turn_caps": 0,
+    "total_turns": 117796
+  },
+  "by_proposer": {
+    "v4": {
+      "all": {
+        "proposed": 11851,
+        "accepted": 7659,
+        "median_abs_cash_proposed": 80,
+        "median_abs_cash_accepted": 105
+      },
+      "terms_from_proposer_perspective": {
+        "buy_deed_for_cash": {
+          "proposed": 99,
+          "accepted": 2,
+          "median_abs_cash_proposed": 160,
+          "median_abs_cash_accepted": 465.0
+        },
+        "request_free_deed": {
+          "proposed": 58,
+          "accepted": 0,
+          "median_abs_cash_proposed": 0.0,
+          "median_abs_cash_accepted": null
+        },
+        "sell_deed_for_cash": {
+          "proposed": 3161,
+          "accepted": 2644,
+          "median_abs_cash_proposed": 150,
+          "median_abs_cash_accepted": 162.0
+        },
+        "straight_swap": {
+          "proposed": 2047,
+          "accepted": 755,
+          "median_abs_cash_proposed": 0,
+          "median_abs_cash_accepted": 0
+        },
+        "swap_and_collect_cash": {
+          "proposed": 5629,
+          "accepted": 3966,
+          "median_abs_cash_proposed": 85,
+          "median_abs_cash_accepted": 90.0
+        },
+        "swap_and_pay_cash": {
+          "proposed": 857,
+          "accepted": 292,
+          "median_abs_cash_proposed": 40,
+          "median_abs_cash_accepted": 50.0
+        }
+      },
+      "cash_on_accepted_deals": {
+        "accepted": 7659,
+        "median_collector_cash_before": 188,
+        "median_collector_cash_after": 38,
+        "collector_cash_after_at_most_100": 5325,
+        "collector_cash_after_zero": 1621,
+        "cash_flow_to_v4_from_trade_terms": 876521
+      },
+      "cash_when_collector_newly_completes_color": {
+        "accepted": 2266,
+        "median_collector_cash_before": 188.0,
+        "median_collector_cash_after": 9.0,
+        "collector_cash_after_at_most_100": 1969,
+        "collector_cash_after_zero": 876,
+        "cash_flow_to_v4_from_trade_terms": 356313
+      },
+      "new_color_sets_immediately_on_accepted_deals": {
+        "v4_only": 592,
+        "collector_only": 1943,
+        "both": 323,
+        "neither": 4801
+      },
+      "frequent_proposer_deeds_given_on_accepted_trades": {
+        "Pennsylvania Avenue": 406,
+        "North Carolina Avenue": 361,
+        "Pacific Avenue": 352,
+        "Illinois Avenue": 343,
+        "Ventnor Avenue": 340
+      },
+      "frequent_proposer_deeds_received_on_accepted_trades": {
+        "New York Avenue": 379,
+        "Electric Company": 347,
+        "Reading Railroad": 297,
+        "Oriental Avenue": 296,
+        "Tennessee Avenue": 293
+      }
+    },
+    "collector": {
+      "all": {
+        "proposed": 2153,
+        "accepted": 500,
+        "median_abs_cash_proposed": 115,
+        "median_abs_cash_accepted": 80.0
+      },
+      "terms_from_proposer_perspective": {
+        "buy_deed_for_cash": {
+          "proposed": 23,
+          "accepted": 22,
+          "median_abs_cash_proposed": 310,
+          "median_abs_cash_accepted": 310.0
+        },
+        "sell_deed_for_cash": {
+          "proposed": 250,
+          "accepted": 4,
+          "median_abs_cash_proposed": 315.0,
+          "median_abs_cash_accepted": 265.0
+        },
+        "straight_swap": {
+          "proposed": 14,
+          "accepted": 4,
+          "median_abs_cash_proposed": 0.0,
+          "median_abs_cash_accepted": 0.0
+        },
+        "swap_and_collect_cash": {
+          "proposed": 1394,
+          "accepted": 189,
+          "median_abs_cash_proposed": 110.0,
+          "median_abs_cash_accepted": 50
+        },
+        "swap_and_pay_cash": {
+          "proposed": 472,
+          "accepted": 281,
+          "median_abs_cash_proposed": 70.0,
+          "median_abs_cash_accepted": 90
+        }
+      },
+      "cash_on_accepted_deals": {
+        "accepted": 500,
+        "median_collector_cash_before": 238.5,
+        "median_collector_cash_after": 184.0,
+        "collector_cash_after_at_most_100": 64,
+        "collector_cash_after_zero": 0,
+        "cash_flow_to_v4_from_trade_terms": 21670
+      },
+      "cash_when_collector_newly_completes_color": {
+        "accepted": 123,
+        "median_collector_cash_before": 215,
+        "median_collector_cash_after": 165,
+        "collector_cash_after_at_most_100": 22,
+        "collector_cash_after_zero": 0,
+        "cash_flow_to_v4_from_trade_terms": 5120
+      },
+      "new_color_sets_immediately_on_accepted_deals": {
+        "v4_only": 55,
+        "collector_only": 101,
+        "both": 22,
+        "neither": 322
+      },
+      "frequent_proposer_deeds_given_on_accepted_trades": {
+        "Reading Railroad": 43,
+        "New York Avenue": 35,
+        "Mediterranean Avenue": 30,
+        "Tennessee Avenue": 29,
+        "States Avenue": 26
+      },
+      "frequent_proposer_deeds_received_on_accepted_trades": {
+        "Illinois Avenue": 38,
+        "Kentucky Avenue": 30,
+        "Virginia Avenue": 28,
+        "Indiana Avenue": 28,
+        "North Carolina Avenue": 27
+      }
+    }
+  },
+  "examples": [
+    {
+      "board_pair_index": 0,
+      "v4_seat": 0,
+      "turn": 17,
+      "proposer": "v4",
+      "proposer_gave": "Ventnor Avenue",
+      "proposer_requested": "Tennessee Avenue",
+      "cash_paid_by_proposer": 0,
+      "accepted": true,
+      "v4_color_gained": [
+        "orange"
+      ],
+      "collector_color_gained": [],
+      "v4_cash_before_after": [
+        635,
+        635
+      ],
+      "collector_cash_before_after": [
+        279,
+        279
+      ]
+    },
+    {
+      "board_pair_index": 2,
+      "v4_seat": 0,
+      "turn": 21,
+      "proposer": "v4",
+      "proposer_gave": "Pennsylvania Avenue",
+      "proposer_requested": "New York Avenue",
+      "cash_paid_by_proposer": -85,
+      "accepted": true,
+      "v4_color_gained": [
+        "orange"
+      ],
+      "collector_color_gained": [],
+      "v4_cash_before_after": [
+        1267,
+        1352
+      ],
+      "collector_cash_before_after": [
+        107,
+        22
+      ]
+    },
+    {
+      "board_pair_index": 0,
+      "v4_seat": 0,
+      "turn": 33,
+      "proposer": "v4",
+      "proposer_gave": "Marvin Gardens",
+      "proposer_requested": "St. Charles Place",
+      "cash_paid_by_proposer": -89,
+      "accepted": true,
+      "v4_color_gained": [],
+      "collector_color_gained": [
+        "yellow"
+      ],
+      "v4_cash_before_after": [
+        47,
+        136
+      ],
+      "collector_cash_before_after": [
+        89,
+        0
+      ]
+    },
+    {
+      "board_pair_index": 6,
+      "v4_seat": 0,
+      "turn": 41,
+      "proposer": "v4",
+      "proposer_gave": "Mediterranean Avenue",
+      "proposer_requested": null,
+      "cash_paid_by_proposer": -284,
+      "accepted": true,
+      "v4_color_gained": [],
+      "collector_color_gained": [
+        "brown"
+      ],
+      "v4_cash_before_after": [
+        290,
+        574
+      ],
+      "collector_cash_before_after": [
+        284,
+        0
+      ]
+    },
+    {
+      "board_pair_index": 635,
+      "v4_seat": 0,
+      "turn": 37,
+      "proposer": "v4",
+      "proposer_gave": null,
+      "proposer_requested": "Connecticut Avenue",
+      "cash_paid_by_proposer": 330,
+      "accepted": true,
+      "v4_color_gained": [
+        "light blue"
+      ],
+      "collector_color_gained": [],
+      "v4_cash_before_after": [
+        1956,
+        1560
+      ],
+      "collector_cash_before_after": [
+        129,
+        459
+      ]
+    },
+    {
+      "board_pair_index": 0,
+      "v4_seat": 0,
+      "turn": 14,
+      "proposer": "collector",
+      "proposer_gave": "Tennessee Avenue",
+      "proposer_requested": null,
+      "cash_paid_by_proposer": -745,
+      "accepted": false,
+      "v4_color_gained": [
+        "orange"
+      ],
+      "collector_color_gained": [],
+      "v4_cash_before_after": [
+        1048,
+        1048
+      ],
+      "collector_cash_before_after": [
+        279,
+        279
+      ]
+    }
+  ]
+}

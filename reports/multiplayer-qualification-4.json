@@ -1,0 +1,475 @@
+{
+  "seats": 4,
+  "seed": 1124968031,
+  "turn_cap": 1000,
+  "boards_per_fixture": 600,
+  "games_per_entrant": 14400,
+  "candidate_sha256": "ec0fcfec5554ea536d8277f4ee1811ae45d5309a1afa2bd47ad08081fdfbad64",
+  "base": "adaptive-v4",
+  "reference_policy": {
+    "name": "adaptive-v4",
+    "style": 11,
+    "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+    "component_sha256": {
+      "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+      "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+      "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+      "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+      "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+      "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+      "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+      "pressure": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+    }
+  },
+  "opponent_policies": {
+    "adaptive-v1": {
+      "name": "adaptive-v1",
+      "style": 7,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66"
+      }
+    },
+    "adaptive-v2": {
+      "name": "adaptive-v2",
+      "style": 8,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88"
+      }
+    },
+    "adaptive-v3": {
+      "name": "adaptive-v3",
+      "style": 9,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580"
+      }
+    },
+    "adaptive-v4": {
+      "name": "adaptive-v4",
+      "style": 11,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+        "pressure": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+      }
+    },
+    "blocker": {
+      "name": "blocker",
+      "style": 4,
+      "prior_weights_sha256": "c95ed3a65f36e84ca3cbaa8c30a9ee8e637f69f9039612436cd6745a644e37ee",
+      "component_sha256": {}
+    },
+    "builder": {
+      "name": "builder",
+      "style": 2,
+      "prior_weights_sha256": "d7ef3f8bed35ce10b8828a92c8d9de4a5cce487c7f7dd8a14d504f4ca9064a73",
+      "component_sha256": {}
+    },
+    "cautious": {
+      "name": "cautious",
+      "style": 3,
+      "prior_weights_sha256": "7baa5215a4a260c594569a31a99c6a8ac6cdbb1938968faa75c3443251475840",
+      "component_sha256": {}
+    },
+    "collector": {
+      "name": "collector",
+      "style": 1,
+      "prior_weights_sha256": "ffc445dc9771c6c75b4cfee62dc78855e8ba91be2074820be20ed11df7bd7510",
+      "component_sha256": {}
+    },
+    "frozen": {
+      "name": "frozen",
+      "style": 6,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2"
+      }
+    }
+  },
+  "engine_sha256": "ce0043460f7594de82adddba61b817c815de58fa489cd2ae76eb3ed60b8bf8c3",
+  "candidate": {
+    "wins": 6802,
+    "losses": 7292,
+    "caps": 306
+  },
+  "reference": {
+    "wins": 4547,
+    "losses": 8954,
+    "caps": 899
+  },
+  "win_rate": 0.4723611111111111,
+  "reference_win_rate": 0.3157638888888889,
+  "paired_delta": 0.15659722222222222,
+  "paired_delta_95_interval": [
+    0.14608921951213535,
+    0.1671052249323091
+  ],
+  "beats_reference": true,
+  "fixtures": {
+    "collectors": {
+      "opponents": [
+        "collector",
+        "collector",
+        "collector"
+      ],
+      "games_per_entrant": 2400,
+      "reference": {
+        "wins": 893,
+        "losses": 1507,
+        "caps": 0,
+        "outgoing_proposed": 18537,
+        "outgoing_accepted": 10510,
+        "incoming_proposed": 3357,
+        "incoming_accepted": 1194
+      },
+      "candidate": {
+        "wins": 1051,
+        "losses": 1349,
+        "caps": 0,
+        "outgoing_proposed": 21562,
+        "outgoing_accepted": 12144,
+        "incoming_proposed": 3711,
+        "incoming_accepted": 1675
+      },
+      "reference_accepted_outgoing_types": {
+        "buy_deed_for_cash": 31,
+        "sell_deed_for_cash": 4587,
+        "swap_deeds": 5892,
+        "other": 0
+      },
+      "candidate_accepted_outgoing_types": {
+        "buy_deed_for_cash": 566,
+        "sell_deed_for_cash": 6543,
+        "swap_deeds": 5035,
+        "other": 0
+      },
+      "reference_wins_by_seat": [
+        231,
+        228,
+        232,
+        202
+      ],
+      "candidate_wins_by_seat": [
+        291,
+        291,
+        258,
+        211
+      ],
+      "reference_rate": 0.3720833333333333,
+      "candidate_rate": 0.4379166666666667,
+      "paired_delta": 0.06583333333333333,
+      "paired_delta_95_interval": [
+        0.03944433800605284,
+        0.0922223286606138
+      ]
+    },
+    "mixed_basic": {
+      "opponents": [
+        "collector",
+        "builder",
+        "cautious"
+      ],
+      "games_per_entrant": 2400,
+      "reference": {
+        "wins": 1035,
+        "losses": 1365,
+        "caps": 0,
+        "outgoing_proposed": 26996,
+        "outgoing_accepted": 11237,
+        "incoming_proposed": 5549,
+        "incoming_accepted": 1278
+      },
+      "candidate": {
+        "wins": 1186,
+        "losses": 1214,
+        "caps": 0,
+        "outgoing_proposed": 27679,
+        "outgoing_accepted": 12995,
+        "incoming_proposed": 4672,
+        "incoming_accepted": 1651
+      },
+      "reference_accepted_outgoing_types": {
+        "buy_deed_for_cash": 55,
+        "sell_deed_for_cash": 5114,
+        "swap_deeds": 6068,
+        "other": 0
+      },
+      "candidate_accepted_outgoing_types": {
+        "buy_deed_for_cash": 721,
+        "sell_deed_for_cash": 7563,
+        "swap_deeds": 4711,
+        "other": 0
+      },
+      "reference_wins_by_seat": [
+        289,
+        245,
+        263,
+        238
+      ],
+      "candidate_wins_by_seat": [
+        303,
+        314,
+        302,
+        267
+      ],
+      "reference_rate": 0.43125,
+      "candidate_rate": 0.49416666666666664,
+      "paired_delta": 0.06291666666666666,
+      "paired_delta_95_interval": [
+        0.03586999850111705,
+        0.08996333483221627
+      ]
+    },
+    "archived_neural": {
+      "opponents": [
+        "adaptive-v1",
+        "adaptive-v2",
+        "adaptive-v3"
+      ],
+      "games_per_entrant": 2400,
+      "reference": {
+        "wins": 836,
+        "losses": 1545,
+        "caps": 19,
+        "outgoing_proposed": 50610,
+        "outgoing_accepted": 2474,
+        "incoming_proposed": 49909,
+        "incoming_accepted": 1532
+      },
+      "candidate": {
+        "wins": 1321,
+        "losses": 1079,
+        "caps": 0,
+        "outgoing_proposed": 49741,
+        "outgoing_accepted": 3574,
+        "incoming_proposed": 49713,
+        "incoming_accepted": 1956
+      },
+      "reference_accepted_outgoing_types": {
+        "buy_deed_for_cash": 208,
+        "sell_deed_for_cash": 365,
+        "swap_deeds": 1894,
+        "other": 7
+      },
+      "candidate_accepted_outgoing_types": {
+        "buy_deed_for_cash": 1873,
+        "sell_deed_for_cash": 381,
+        "swap_deeds": 1320,
+        "other": 0
+      },
+      "reference_wins_by_seat": [
+        204,
+        229,
+        235,
+        168
+      ],
+      "candidate_wins_by_seat": [
+        309,
+        367,
+        347,
+        298
+      ],
+      "reference_rate": 0.34833333333333333,
+      "candidate_rate": 0.5504166666666667,
+      "paired_delta": 0.20208333333333334,
+      "paired_delta_95_interval": [
+        0.1741142801676605,
+        0.23005238649900617
+      ]
+    },
+    "blocker_and_basic": {
+      "opponents": [
+        "blocker",
+        "collector",
+        "builder"
+      ],
+      "games_per_entrant": 2400,
+      "reference": {
+        "wins": 446,
+        "losses": 1856,
+        "caps": 98,
+        "outgoing_proposed": 24024,
+        "outgoing_accepted": 7625,
+        "incoming_proposed": 3412,
+        "incoming_accepted": 1060
+      },
+      "candidate": {
+        "wins": 914,
+        "losses": 1447,
+        "caps": 39,
+        "outgoing_proposed": 39563,
+        "outgoing_accepted": 10619,
+        "incoming_proposed": 3741,
+        "incoming_accepted": 1522
+      },
+      "reference_accepted_outgoing_types": {
+        "buy_deed_for_cash": 77,
+        "sell_deed_for_cash": 2749,
+        "swap_deeds": 4799,
+        "other": 0
+      },
+      "candidate_accepted_outgoing_types": {
+        "buy_deed_for_cash": 694,
+        "sell_deed_for_cash": 5131,
+        "swap_deeds": 4794,
+        "other": 0
+      },
+      "reference_wins_by_seat": [
+        104,
+        125,
+        113,
+        104
+      ],
+      "candidate_wins_by_seat": [
+        241,
+        230,
+        238,
+        205
+      ],
+      "reference_rate": 0.18583333333333332,
+      "candidate_rate": 0.38083333333333336,
+      "paired_delta": 0.195,
+      "paired_delta_95_interval": [
+        0.1711849960547892,
+        0.2188150039452108
+      ]
+    },
+    "incumbents": {
+      "opponents": [
+        "adaptive-v4",
+        "adaptive-v4",
+        "adaptive-v4"
+      ],
+      "games_per_entrant": 2400,
+      "reference": {
+        "wins": 464,
+        "losses": 1392,
+        "caps": 544,
+        "outgoing_proposed": 92809,
+        "outgoing_accepted": 1218,
+        "incoming_proposed": 92809,
+        "incoming_accepted": 1218
+      },
+      "candidate": {
+        "wins": 1372,
+        "losses": 953,
+        "caps": 75,
+        "outgoing_proposed": 64233,
+        "outgoing_accepted": 3852,
+        "incoming_proposed": 64369,
+        "incoming_accepted": 2325
+      },
+      "reference_accepted_outgoing_types": {
+        "buy_deed_for_cash": 117,
+        "sell_deed_for_cash": 210,
+        "swap_deeds": 888,
+        "other": 3
+      },
+      "candidate_accepted_outgoing_types": {
+        "buy_deed_for_cash": 3133,
+        "sell_deed_for_cash": 298,
+        "swap_deeds": 421,
+        "other": 0
+      },
+      "reference_wins_by_seat": [
+        140,
+        108,
+        119,
+        97
+      ],
+      "candidate_wins_by_seat": [
+        316,
+        362,
+        361,
+        333
+      ],
+      "reference_rate": 0.19333333333333333,
+      "candidate_rate": 0.5716666666666667,
+      "paired_delta": 0.37833333333333335,
+      "paired_delta_95_interval": [
+        0.35695857423597643,
+        0.3997080924306903
+      ]
+    },
+    "blocker_and_neural": {
+      "opponents": [
+        "blocker",
+        "adaptive-v3",
+        "frozen"
+      ],
+      "games_per_entrant": 2400,
+      "reference": {
+        "wins": 873,
+        "losses": 1289,
+        "caps": 238,
+        "outgoing_proposed": 54182,
+        "outgoing_accepted": 2085,
+        "incoming_proposed": 55146,
+        "incoming_accepted": 1058
+      },
+      "candidate": {
+        "wins": 958,
+        "losses": 1250,
+        "caps": 192,
+        "outgoing_proposed": 67884,
+        "outgoing_accepted": 2630,
+        "incoming_proposed": 44990,
+        "incoming_accepted": 2054
+      },
+      "reference_accepted_outgoing_types": {
+        "buy_deed_for_cash": 298,
+        "sell_deed_for_cash": 384,
+        "swap_deeds": 1401,
+        "other": 2
+      },
+      "candidate_accepted_outgoing_types": {
+        "buy_deed_for_cash": 1622,
+        "sell_deed_for_cash": 291,
+        "swap_deeds": 717,
+        "other": 0
+      },
+      "reference_wins_by_seat": [
+        232,
+        220,
+        212,
+        209
+      ],
+      "candidate_wins_by_seat": [
+        253,
+        259,
+        232,
+        214
+      ],
+      "reference_rate": 0.36375,
+      "candidate_rate": 0.39916666666666667,
+      "paired_delta": 0.035416666666666666,
+      "paired_delta_95_interval": [
+        0.008198137191662454,
+        0.06263519614167087
+      ]
+    }
+  },
+  "method": "Both policies played the same six equally weighted lineups, independently seeded within each lineup. Each board was played from every seat, with trading enabled. Only outright wins count. The two-sided approximate 95% interval is based on the variance of the paired difference across board clusters within each lineup. Selection and training use separate board-seed namespaces."
+}

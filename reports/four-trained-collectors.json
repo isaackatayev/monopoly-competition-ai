@@ -1,0 +1,91 @@
+{
+  "model": "multiplayer-4",
+  "opponents": [
+    "collector",
+    "collector",
+    "collector"
+  ],
+  "seats": 4,
+  "policies": [
+    {
+      "name": "multiplayer-4",
+      "style": 11,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+        "pressure": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+      },
+      "multiplayer_weights_sha256": "13745957dcd83bc4ae9379c7a0a7784ffeac8fa6c0bbca7be7711c145d2a8838"
+    },
+    {
+      "name": "collector",
+      "style": 1,
+      "prior_weights_sha256": "ffc445dc9771c6c75b4cfee62dc78855e8ba91be2074820be20ed11df7bd7510",
+      "component_sha256": {}
+    },
+    {
+      "name": "collector",
+      "style": 1,
+      "prior_weights_sha256": "ffc445dc9771c6c75b4cfee62dc78855e8ba91be2074820be20ed11df7bd7510",
+      "component_sha256": {}
+    },
+    {
+      "name": "collector",
+      "style": 1,
+      "prior_weights_sha256": "ffc445dc9771c6c75b4cfee62dc78855e8ba91be2074820be20ed11df7bd7510",
+      "component_sha256": {}
+    }
+  ],
+  "engine_sha256": "ce0043460f7594de82adddba61b817c815de58fa489cd2ae76eb3ed60b8bf8c3",
+  "board_seed": 832716409,
+  "independent_boards": 600,
+  "games": 2400,
+  "turn_cap": 1000,
+  "trading": true,
+  "wins": 1045,
+  "losses": 1355,
+  "caps": 0,
+  "win_rate": 0.4354166666666667,
+  "board_cluster_95_interval": [
+    0.41554723366197255,
+    0.4552860996713608
+  ],
+  "wins_by_starting_seat": [
+    298,
+    274,
+    246,
+    227
+  ],
+  "opponent_wins_by_model": {
+    "collector": 1355
+  },
+  "mean_individual_turns": 122.58375,
+  "trades": {
+    "outgoing": {
+      "proposed": 21706,
+      "accepted": 12145
+    },
+    "incoming": {
+      "proposed": 3732,
+      "accepted": 1610
+    },
+    "between_opponents": {
+      "proposed": 6407,
+      "accepted": 6407
+    }
+  },
+  "accepted_outgoing_trade_types": {
+    "buy_deed_for_cash": 617,
+    "sell_deed_for_cash": 6541,
+    "swap_deeds": 4987,
+    "other": 0
+  },
+  "design": "Each game has one shared board. Each start rotates the entrant through every seat. Opponent order cycles through all permutations. Only the last solvent player wins. Games unresolved at the turn cap count as non-wins. The approximate 95% interval uses the variation in win fractions across independent starts.",
+  "adapter": "Multiplayer checkpoints use additional full-table features. Base duel decisions evaluate one rival at a time. Each active player can consider every surviving rival for one offer of up to one deed each way plus cash. The simulator enforces the full table's ownership and building supply."
+}

@@ -1,0 +1,52 @@
+{
+  "architecture": [
+    36,
+    24,
+    1
+  ],
+  "activation": "ReLU and sigmoid",
+  "parameters": 913,
+  "target": "recipient accepted a delivered legal offer",
+  "train": {
+    "games": 50000,
+    "legal_offers": 583086,
+    "accepted": 218094,
+    "caps": 56,
+    "seed": 51751
+  },
+  "validation": {
+    "games": 5000,
+    "legal_offers": 56435,
+    "accepted": 21568,
+    "caps": 2,
+    "seed": 51752
+  },
+  "test": {
+    "games": 5000,
+    "legal_offers": 59106,
+    "accepted": 21627,
+    "caps": 6,
+    "seed": 51753
+  },
+  "optimizer": "Adam, binary cross entropy",
+  "epochs": 12,
+  "validation_log_loss": [
+    0.4182857370022108,
+    0.3945597762674812,
+    0.38258909593218937,
+    0.37464711203211837,
+    0.36918490786267566,
+    0.3656107553438105,
+    0.3633394768483535,
+    0.3625167062541244,
+    0.3609925714123972,
+    0.3601616740407573,
+    0.3597822910247554,
+    0.35927858480921226
+  ],
+  "test_log_loss": 0.36585028308212797,
+  "test_constant_log_loss": 0.6568801901721187,
+  "test_brier": 0.11824475973844528,
+  "test_accuracy": 0.8309985449869726,
+  "sha256": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2"
+}

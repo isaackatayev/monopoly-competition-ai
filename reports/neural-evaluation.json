@@ -1,0 +1,159 @@
+{
+  "seed": 93276104,
+  "turn_cap": 1000,
+  "independent_seeds": true,
+  "interval": "two-sided Wilson 95%, capped games counted as non-wins",
+  "source_sha256": "adb87b3233cf8e0fcf57229bfbb7f3e93ad977cb4b701dc8bbb2120509f62db3",
+  "model_name": "champion",
+  "model_style": 6,
+  "prior_weights": {
+    "acquisition": 0.17828521778844783,
+    "completion": 0.3590289902827784,
+    "denial": 0.533475618241401,
+    "railroads": 1.0,
+    "auction": 0.0,
+    "reserve": 0.2818077144575766,
+    "development": 0.8704728065032307,
+    "financing": 0.491337660094618,
+    "trade_demand": 0.07896951599432317,
+    "trade_defense": 0.5582611494448573,
+    "jail_patience": 0.46245911567958586,
+    "house_scarcity": 0.7930944165404459
+  },
+  "network_sha256": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+  "response_sha256": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+  "results": {
+    "legacy": {
+      "wins": 3025,
+      "losses": 1971,
+      "caps": 4,
+      "turns": 435507,
+      "games": 5000,
+      "win_rate": 0.605,
+      "first_seat_wins": 1526,
+      "first_seat_games": 2500,
+      "second_seat_wins": 1499,
+      "second_seat_games": 2500,
+      "win_rate_95": [
+        0.5913743527176318,
+        0.6184644298739062
+      ],
+      "trades": {
+        "offers_sent": 63739,
+        "outgoing_accepted": 6223,
+        "offers_received": 8131,
+        "incoming_accepted": 1727
+      }
+    },
+    "blocker": {
+      "wins": 2290,
+      "losses": 2477,
+      "caps": 233,
+      "turns": 782800,
+      "games": 5000,
+      "win_rate": 0.458,
+      "first_seat_wins": 1151,
+      "first_seat_games": 2500,
+      "second_seat_wins": 1139,
+      "second_seat_games": 2500,
+      "win_rate_95": [
+        0.4442274508474182,
+        0.4718370361159667
+      ],
+      "trades": {
+        "offers_sent": 103735,
+        "outgoing_accepted": 0,
+        "offers_received": 0,
+        "incoming_accepted": 0
+      }
+    },
+    "collector": {
+      "wins": 4657,
+      "losses": 343,
+      "caps": 0,
+      "turns": 312198,
+      "games": 5000,
+      "win_rate": 0.9314,
+      "first_seat_wins": 2335,
+      "first_seat_games": 2500,
+      "second_seat_wins": 2322,
+      "second_seat_games": 2500,
+      "win_rate_95": [
+        0.92405730403111,
+        0.9380803227306949
+      ],
+      "trades": {
+        "offers_sent": 31614,
+        "outgoing_accepted": 19414,
+        "offers_received": 4637,
+        "incoming_accepted": 1067
+      }
+    },
+    "builder": {
+      "wins": 4529,
+      "losses": 471,
+      "caps": 0,
+      "turns": 334857,
+      "games": 5000,
+      "win_rate": 0.9058,
+      "first_seat_wins": 2269,
+      "first_seat_games": 2500,
+      "second_seat_wins": 2260,
+      "second_seat_games": 2500,
+      "win_rate_95": [
+        0.897388943995219,
+        0.9135879891061729
+      ],
+      "trades": {
+        "offers_sent": 34410,
+        "outgoing_accepted": 15832,
+        "offers_received": 5918,
+        "incoming_accepted": 1073
+      }
+    },
+    "cautious": {
+      "wins": 4521,
+      "losses": 479,
+      "caps": 0,
+      "turns": 430284,
+      "games": 5000,
+      "win_rate": 0.9042,
+      "first_seat_wins": 2260,
+      "first_seat_games": 2500,
+      "second_seat_wins": 2261,
+      "second_seat_games": 2500,
+      "win_rate_95": [
+        0.8957290304689461,
+        0.9120503592786698
+      ],
+      "trades": {
+        "offers_sent": 48258,
+        "outgoing_accepted": 12390,
+        "offers_received": 9701,
+        "incoming_accepted": 1372
+      }
+    },
+    "mirror": {
+      "wins": 2500,
+      "losses": 2488,
+      "caps": 12,
+      "turns": 443995,
+      "games": 5000,
+      "win_rate": 0.5,
+      "first_seat_wins": 1281,
+      "first_seat_games": 2500,
+      "second_seat_wins": 1219,
+      "second_seat_games": 2500,
+      "win_rate_95": [
+        0.48614628258320963,
+        0.5138537174167904
+      ],
+      "trades": {
+        "offers_sent": 70952,
+        "outgoing_accepted": 2468,
+        "offers_received": 71000,
+        "incoming_accepted": 2529
+      }
+    }
+  }
+}

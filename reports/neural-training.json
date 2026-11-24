@@ -1,0 +1,203 @@
+{
+  "format": "monopoly.value.training.v1",
+  "seed": 714335017,
+  "turn_cap": 800,
+  "behavior": "Each seat independently samples collector, builder, cautious, untrained, frozen champion, or randomly perturbed champion weights. A separate 20% chance per seat disables trades. Seats are randomly swapped. The blocker and the neural policy are excluded.",
+  "observation": "One uniformly reservoir-sampled live pre-turn snapshot per match. The shared MLP receives both seat perspectives. Bankruptcy labels are 1/0, capped matches are 0.5 for each seat.",
+  "architecture": {
+    "input": 128,
+    "hidden": [
+      48,
+      24
+    ],
+    "nonlinearities": "ReLU",
+    "output": "sigmoid((score(player,opponent) - score(opponent,player)) / temperature)",
+    "parameters": 7392,
+    "temperature": 1.02
+  },
+  "optimizer": {
+    "name": "Adam",
+    "objective": "binary cross-entropy with soft capped outcomes",
+    "batch_games": 2048,
+    "epochs": 6,
+    "updates": 2934,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "schedule": "geometric epoch decay from 0.0016 to 0.000256",
+    "selected_epoch": 6
+  },
+  "games": {
+    "training": {
+      "games": 1000000,
+      "capped": 23481,
+      "seat0_wins": 493514,
+      "seat1_wins": 483005,
+      "turns": 113494779,
+      "split_seed": 1100225962793,
+      "data_sha256": "bf51ebe4435ceb72e4142e748625ff153c6d9506c12efa77aaec1cf4173640f1"
+    },
+    "calibration": {
+      "games": 20000,
+      "capped": 477,
+      "seat0_wins": 9912,
+      "seat1_wins": 9611,
+      "turns": 2275084,
+      "split_seed": 2199737590569,
+      "data_sha256": "b4427b513441f08ae795a9635b5a023603340213810d76f62e649050bf5779ea"
+    },
+    "validation": {
+      "games": 40000,
+      "capped": 944,
+      "seat0_wins": 19808,
+      "seat1_wins": 19248,
+      "turns": 4535996,
+      "split_seed": 3299249218345,
+      "data_sha256": "5cbad18219693a4d89ac21fc131d60a3237cd825a28eea6f39d4805bfe5f3dd8"
+    }
+  },
+  "training_perspectives": 2000000,
+  "history": [
+    {
+      "epoch": 1,
+      "calibration_bce": 0.44874655351455983,
+      "learning_rate": 0.0016
+    },
+    {
+      "epoch": 2,
+      "calibration_bce": 0.446366717558279,
+      "learning_rate": 0.0011090317490482342
+    },
+    {
+      "epoch": 3,
+      "calibration_bce": 0.44573615066085037,
+      "learning_rate": 0.000768719637748116
+    },
+    {
+      "epoch": 4,
+      "calibration_bce": 0.4443474416092561,
+      "learning_rate": 0.0005328340527371989
+    },
+    {
+      "epoch": 5,
+      "calibration_bce": 0.44435738013949183,
+      "learning_rate": 0.00036933117591224666
+    },
+    {
+      "epoch": 6,
+      "calibration_bce": 0.4439683208687696,
+      "learning_rate": 0.00025600000000000004
+    }
+  ],
+  "validation": {
+    "bce": 0.44809325339330053,
+    "brier": 0.14490105211734772,
+    "decided_accuracy": 0.7711747234739861,
+    "calibration_error": 0.0022266633162042124,
+    "calibration_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "count": 12523,
+        "predicted": 0.027620555832982063,
+        "observed": 0.029705341905355453
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 5093,
+        "predicted": 0.15015539526939392,
+        "observed": 0.15138424932956696
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "count": 5737,
+        "predicted": 0.2511603534221649,
+        "observed": 0.244640052318573
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "count": 7000,
+        "predicted": 0.3514045178890228,
+        "observed": 0.35278570652008057
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 9647,
+        "predicted": 0.4563724398612976,
+        "observed": 0.45537471771240234
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "count": 9647,
+        "predicted": 0.5436275601387024,
+        "observed": 0.5446252822875977
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "count": 7000,
+        "predicted": 0.6485955119132996,
+        "observed": 0.6472142934799194
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "count": 5737,
+        "predicted": 0.7488396167755127,
+        "observed": 0.755359947681427
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 5093,
+        "predicted": 0.8498446345329285,
+        "observed": 0.8486157655715942
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "count": 12523,
+        "predicted": 0.9723793864250183,
+        "observed": 0.9702946543693542
+      }
+    ]
+  },
+  "validation_constant_half": {
+    "bce": 0.6931471824645996,
+    "brier": 0.24410000443458557
+  },
+  "checksum_legacy_policy": "647823b35c48baf3c0f3a143e2ce9a6e19ed3edb69a4d7cf850513cd594cf6c0",
+  "generator_sources": {
+    "neural_data.cpp": "65dff7b57b255810644552d9b46d7439c8bd5afc3bfa8c56b0a5dad3e1e95bcd",
+    "neural_value.cpp": "51f88b5a789ff24954b1a9384b2c1f920affb8b798f2932f4dd3a5cd267a2a6d",
+    "board.cpp": "28da57692e8659365cb1f3c429f6f4815d0fe4d15b94f7af13b7efc175542e70",
+    "economy.cpp": "352804db47789c219fc661b5b04c95ebc1276f0d087520493f7217213d3a49c4",
+    "holdout.cpp": "bbbcae86baa8e74111c3346ae9917fff1480a6d5d8bdfab7517e2fde775f3ac8",
+    "search.cpp": "8f734c75f0d9c2ccf8c9b9e8f9db98d8f74c3a388a8c19a46e57a3a605ab3585",
+    "policy.cpp": "1c9fcc46f6e520bbd546484e841467c4b46580e6e2ec0dcbc91d1267432b1798",
+    "game.hpp": "1b2a7cc67f362813d2cdcde6598b79f0631bd2cf74bf66c51510f36709b97daf",
+    "groups.hpp": "6066e767c901ec60cdd5a86285361eb981318f42bc8a3a24730dbc2c52390111",
+    "neural_value.hpp": "7a8a72f2e792f584661545a9fe06efeedaa8d49e0053c52084d0c4c340efdaf3"
+  },
+  "trainer_sha256": "35827ade78a0f896df247a5ec1d29fd3ddd5f092481e502e47f61d435d634f54",
+  "numpy_version": "2.0.2",
+  "validation_by_turn": {
+    "0_to_19": {
+      "games": 10384,
+      "bce": 0.6285396157414562
+    },
+    "20_to_59": {
+      "games": 17404,
+      "bce": 0.4515533797480979
+    },
+    "60_plus": {
+      "games": 12212,
+      "bce": 0.2897264776233903
+    }
+  },
+  "model_sha256": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4"
+}

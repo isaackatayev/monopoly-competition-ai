@@ -1,0 +1,577 @@
+{
+  "format": "monopoly.league.v3",
+  "entrant": "monopoly.adaptive.v3",
+  "baseline": "same candidate with deal valuation network disabled",
+  "seed": 572287913,
+  "rival_seed": 318517229,
+  "games_per_entrant_and_fixture": 2000,
+  "turn_cap": 1000,
+  "manifest_sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+  "baseline_manifest_sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+  "baseline_deal_net_enabled": false,
+  "engine_sha256": "0031b64f709853cb4ad691561b1fdfa8127ac577e7a29586f7c11be13383ecbb",
+  "binary_sha256": "a4e6cf8557e0a6a4503bd387b856a0c52d541444ea0f52baf2a077ce728d1291",
+  "evaluator_sha256": "b4b6bd980fc5f45c62d2c7674e9ec8e3f87076af2d7898f54eb9077a64296f19",
+  "method": "Outright bankruptcies win. Turn caps are nonwins. Per fixture, both entrants receive the same board and opponent conditions in both seats. Normal 95% intervals use independent seed-pair means or within-pair differences. An additional score interval bounds pair variance using one independent unit per board, including after a clean sweep. The portfolio uses equal fixed fixture weights and within-fixture uncertainty; intervals have no multiple-comparison correction.",
+  "fresh_rival": "A separate bounded six-parameter evolutionary search maximizes the rival's outright wins against the locked candidate. Its seed never provides qualification boards.",
+  "fixture_definitions": {
+    "known_additive": "Original development family 5 with public price premiums, variable reserve and negotiation/management modes.",
+    "additive_liquidity": "New trade-free bidder, face and mortgage baseline plus group premiums; cash reserve follows next-roll rent exposure; cautious manager.",
+    "additive_district": "New trade-free bidder, face baseline plus development return, district denial, bank house supply and railroad premiums; builder management.",
+    "changing": "Trading-then-refusal and reverse switch once on a private fixture seed. Reactive closes after two personally unacceptable offers and reopens after cooldown."
+  },
+  "rivals": {
+    "prior_challenger_v1": {
+      "seed": 63289011,
+      "weights": [
+        0.7188329387795263,
+        0.7108807282093618,
+        0.4162143258160599,
+        0.0398552818993404,
+        0.8966502105261722,
+        0.28745873677179923
+      ],
+      "target_manifest_sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756",
+      "checkpoint_sha256": "04b2c2e7231312eb4b31f58b7e090d428fecb6ed3294131a017c178b92009927",
+      "archived_report_sha256": "88f8dfbd7eedd5b69f5f32263d51db593eeeafcd25f2221ddb247a23ec325ade"
+    },
+    "prior_challenger_v2": {
+      "seed": 64713921,
+      "weights": [
+        1,
+        0.6718174614742098,
+        0.633344448810712,
+        0.014910537113815,
+        0.7733265332635915,
+        0.8831121829012601
+      ],
+      "target_manifest_sha256": "fdc83c52d7fc717e9069eb3437f86a4a48d48178d43a7c9e60f358d67d0c8638",
+      "checkpoint_sha256": "406b376ca6c81d053350c8819231cfee705cb7fa659f9ed07d060ac203ac41af",
+      "archived_report_sha256": "f7ce2aa08c7d38a917b319c21d0f01d911827923acc678817d33cc77c66e6209"
+    },
+    "learned_rival": {
+      "seed": 318517229,
+      "weights": [
+        0.9653761766250137,
+        0.8956172812093963,
+        0.6746981186422135,
+        0,
+        0.7285177642366603,
+        0.7537753102755164
+      ],
+      "training_games": 4416,
+      "scope": "Six parameters blend frozen neural and blocker deed ceilings, scale bids and denial, reserve cash, choose refusal/accept-only/full negotiation, and choose neural or blocker asset management. No updates during the final evaluation.",
+      "target_manifest_sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+      "checkpoint_sha256": "669dfe4665b23159b7b6acaa0e24ad250ca71d8caa5f954de74c8755a8cdaf98"
+    }
+  },
+  "equal_fixture_weighted": {
+    "candidate_without_deal_wins_losses_caps": [
+      5507,
+      4371,
+      122
+    ],
+    "candidate_wins_losses_caps": [
+      5837,
+      4092,
+      71
+    ],
+    "win_rate_change": 0.033,
+    "interval_95": [
+      0.025345013371901728,
+      0.04065498662809827
+    ]
+  },
+  "results": {
+    "prior_challenger_v1": {
+      "candidate_without_deal": {
+        "games": 2000,
+        "wins": 1177,
+        "losses": 798,
+        "caps": 25,
+        "win_rate": {
+          "estimate": 0.5885,
+          "interval_95": [
+            0.5674787322435132,
+            0.6095212677564869
+          ]
+        },
+        "total_turns": 230427,
+        "wins_by_seat": [
+          578,
+          599
+        ],
+        "offers_sent": 30763,
+        "outgoing_accepted": 719,
+        "offers_received": 28404,
+        "incoming_accepted": 1346,
+        "outbound_acceptance_rate": 0.023372232877157624,
+        "inbound_acceptance_rate": 0.04738769187438389,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.5577174131325155,
+          0.6186052506155413
+        ]
+      },
+      "candidate": {
+        "games": 2000,
+        "wins": 1262,
+        "losses": 728,
+        "caps": 10,
+        "win_rate": {
+          "estimate": 0.631,
+          "interval_95": [
+            0.6107310965419555,
+            0.6512689034580446
+          ]
+        },
+        "total_turns": 196915,
+        "wins_by_seat": [
+          608,
+          654
+        ],
+        "offers_sent": 29112,
+        "outgoing_accepted": 2385,
+        "offers_received": 25392,
+        "incoming_accepted": 1433,
+        "outbound_acceptance_rate": 0.0819249793899423,
+        "inbound_acceptance_rate": 0.056435097668557026,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.600644550435556,
+          0.6603528388412285
+        ]
+      },
+      "win_rate_change": {
+        "estimate": 0.0425,
+        "interval_95": [
+          0.021113675105422315,
+          0.06388632489457768
+        ]
+      },
+      "candidate_without_deal_to_candidate_outcomes": {
+        "win": {
+          "win": 990,
+          "loss": 182,
+          "cap": 5
+        },
+        "loss": {
+          "win": 259,
+          "loss": 538,
+          "cap": 1
+        },
+        "cap": {
+          "win": 13,
+          "loss": 8,
+          "cap": 4
+        }
+      }
+    },
+    "prior_challenger_v2": {
+      "candidate_without_deal": {
+        "games": 2000,
+        "wins": 1167,
+        "losses": 806,
+        "caps": 27,
+        "win_rate": {
+          "estimate": 0.5835,
+          "interval_95": [
+            0.5626292693150142,
+            0.6043707306849858
+          ]
+        },
+        "total_turns": 211435,
+        "wins_by_seat": [
+          574,
+          593
+        ],
+        "offers_sent": 28885,
+        "outgoing_accepted": 794,
+        "offers_received": 28952,
+        "incoming_accepted": 1176,
+        "outbound_acceptance_rate": 0.027488315734810455,
+        "inbound_acceptance_rate": 0.04061895551257253,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.5526827508876702,
+          0.6136781804452422
+        ]
+      },
+      "candidate": {
+        "games": 2000,
+        "wins": 1235,
+        "losses": 760,
+        "caps": 5,
+        "win_rate": {
+          "estimate": 0.6175,
+          "interval_95": [
+            0.59717381257931,
+            0.6378261874206901
+          ]
+        },
+        "total_turns": 182619,
+        "wins_by_seat": [
+          602,
+          633
+        ],
+        "offers_sent": 28052,
+        "outgoing_accepted": 2328,
+        "offers_received": 26143,
+        "incoming_accepted": 1255,
+        "outbound_acceptance_rate": 0.08298873520604591,
+        "inbound_acceptance_rate": 0.048005202157365263,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.5869827883527203,
+          0.6471179234031743
+        ]
+      },
+      "win_rate_change": {
+        "estimate": 0.034,
+        "interval_95": [
+          0.012221680689923117,
+          0.05577831931007689
+        ]
+      },
+      "candidate_without_deal_to_candidate_outcomes": {
+        "win": {
+          "win": 956,
+          "loss": 211,
+          "cap": 0
+        },
+        "loss": {
+          "win": 261,
+          "loss": 544,
+          "cap": 1
+        },
+        "cap": {
+          "win": 18,
+          "loss": 5,
+          "cap": 4
+        }
+      }
+    },
+    "learned_rival": {
+      "candidate_without_deal": {
+        "games": 2000,
+        "wins": 244,
+        "losses": 1754,
+        "caps": 2,
+        "win_rate": {
+          "estimate": 0.122,
+          "interval_95": [
+            0.10770849294532298,
+            0.13629150705467702
+          ]
+        },
+        "total_turns": 312987,
+        "wins_by_seat": [
+          121,
+          123
+        ],
+        "offers_sent": 31550,
+        "outgoing_accepted": 579,
+        "offers_received": 23110,
+        "incoming_accepted": 1152,
+        "outbound_acceptance_rate": 0.018351822503961966,
+        "inbound_acceptance_rate": 0.049848550411077455,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.10314874471332984,
+          0.14374428470174982
+        ]
+      },
+      "candidate": {
+        "games": 2000,
+        "wins": 434,
+        "losses": 1564,
+        "caps": 2,
+        "win_rate": {
+          "estimate": 0.217,
+          "interval_95": [
+            0.199037168530054,
+            0.234962831469946
+          ]
+        },
+        "total_turns": 285121,
+        "wins_by_seat": [
+          210,
+          224
+        ],
+        "offers_sent": 30834,
+        "outgoing_accepted": 2566,
+        "offers_received": 23716,
+        "incoming_accepted": 1602,
+        "outbound_acceptance_rate": 0.083219822274113,
+        "inbound_acceptance_rate": 0.06754933378310002,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.19256080207751963,
+          0.24360514322530458
+        ]
+      },
+      "win_rate_change": {
+        "estimate": 0.095,
+        "interval_95": [
+          0.07687053861613921,
+          0.11312946138386079
+        ]
+      },
+      "candidate_without_deal_to_candidate_outcomes": {
+        "win": {
+          "win": 165,
+          "loss": 79,
+          "cap": 0
+        },
+        "loss": {
+          "win": 269,
+          "loss": 1484,
+          "cap": 1
+        },
+        "cap": {
+          "win": 0,
+          "loss": 1,
+          "cap": 1
+        }
+      }
+    },
+    "known_additive": {
+      "candidate_without_deal": {
+        "games": 2000,
+        "wins": 1055,
+        "losses": 877,
+        "caps": 68,
+        "win_rate": {
+          "estimate": 0.5275,
+          "interval_95": [
+            0.5061992522765548,
+            0.5488007477234451
+          ]
+        },
+        "total_turns": 267524,
+        "wins_by_seat": [
+          525,
+          530
+        ],
+        "offers_sent": 16442,
+        "outgoing_accepted": 401,
+        "offers_received": 9781,
+        "incoming_accepted": 388,
+        "outbound_acceptance_rate": 0.0243887604914244,
+        "inbound_acceptance_rate": 0.03966874552704223,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.4965110028767047,
+          0.5582785254065897
+        ]
+      },
+      "candidate": {
+        "games": 2000,
+        "wins": 1054,
+        "losses": 892,
+        "caps": 54,
+        "win_rate": {
+          "estimate": 0.527,
+          "interval_95": [
+            0.5061298911473283,
+            0.5478701088526717
+          ]
+        },
+        "total_turns": 247873,
+        "wins_by_seat": [
+          526,
+          528
+        ],
+        "offers_sent": 16061,
+        "outgoing_accepted": 963,
+        "offers_received": 8908,
+        "incoming_accepted": 332,
+        "outbound_acceptance_rate": 0.059958906668327004,
+        "inbound_acceptance_rate": 0.037269869779973056,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.4960112345098614,
+          0.5577821205319188
+        ]
+      },
+      "win_rate_change": {
+        "estimate": -0.0005,
+        "interval_95": [
+          -0.013544299375482268,
+          0.012544299375482267
+        ]
+      },
+      "candidate_without_deal_to_candidate_outcomes": {
+        "win": {
+          "win": 964,
+          "loss": 90,
+          "cap": 1
+        },
+        "loss": {
+          "win": 86,
+          "loss": 791,
+          "cap": 0
+        },
+        "cap": {
+          "win": 4,
+          "loss": 11,
+          "cap": 53
+        }
+      }
+    },
+    "builder": {
+      "candidate_without_deal": {
+        "games": 2000,
+        "wins": 1864,
+        "losses": 136,
+        "caps": 0,
+        "win_rate": {
+          "estimate": 0.932,
+          "interval_95": [
+            0.9210159086757111,
+            0.942984091324289
+          ]
+        },
+        "total_turns": 131154,
+        "wins_by_seat": [
+          937,
+          927
+        ],
+        "offers_sent": 13159,
+        "outgoing_accepted": 6721,
+        "offers_received": 2445,
+        "incoming_accepted": 444,
+        "outbound_acceptance_rate": 0.5107530967398739,
+        "inbound_acceptance_rate": 0.18159509202453988,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.9146861384770105,
+          0.9460075421914699
+        ]
+      },
+      "candidate": {
+        "games": 2000,
+        "wins": 1852,
+        "losses": 148,
+        "caps": 0,
+        "win_rate": {
+          "estimate": 0.926,
+          "interval_95": [
+            0.9145617908944259,
+            0.9374382091055742
+          ]
+        },
+        "total_turns": 131048,
+        "wins_by_seat": [
+          937,
+          915
+        ],
+        "offers_sent": 13554,
+        "outgoing_accepted": 6888,
+        "offers_received": 2390,
+        "incoming_accepted": 450,
+        "outbound_acceptance_rate": 0.5081894643647632,
+        "inbound_acceptance_rate": 0.18828451882845187,
+        "fixture": {
+          "games_observing_a_switch": 0,
+          "total_transitions": 0,
+          "decisions_open": 0,
+          "decisions_closed": 0,
+          "trade_actions_when_open": 0,
+          "trade_actions_suppressed_when_closed": 0
+        },
+        "pair_score_interval_95": [
+          0.9080945943544141,
+          0.940645007415893
+        ]
+      },
+      "win_rate_change": {
+        "estimate": -0.006,
+        "interval_95": [
+          -0.011871056648924197,
+          -0.00012894335107580326
+        ]
+      },
+      "candidate_without_deal_to_candidate_outcomes": {
+        "win": {
+          "win": 1840,
+          "loss": 24,
+          "cap": 0
+        },
+        "loss": {
+          "win": 12,
+          "loss": 124,
+          "cap": 0
+        },
+        "cap": {
+          "win": 0,
+          "loss": 0,
+          "cap": 0
+        }
+      }
+    }
+  }
+}

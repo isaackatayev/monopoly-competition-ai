@@ -1,0 +1,25 @@
+{
+  "format": "monopoly.policy.v1",
+  "weights": {
+    "acquisition": 0.17828521778844783,
+    "completion": 0.3590289902827784,
+    "denial": 0.533475618241401,
+    "railroads": 1,
+    "auction": 0,
+    "reserve": 0.2818077144575766,
+    "development": 0.8704728065032307,
+    "financing": 0.491337660094618,
+    "trade_demand": 0.07896951599432317,
+    "trade_defense": 0.5582611494448573,
+    "jail_patience": 0.46245911567958586,
+    "house_scarcity": 0.7930944165404459
+  },
+  "trade_search": "paired-rollouts-v1",
+  "training_games": 1000000,
+  "validation_games": 200000,
+  "training_seed": 34519,
+  "turn_cap": 1000,
+  "source_sha256": "3c464385dcd15959ff7c64c209997e4434c03923f54f08ff37306ba90378a2de",
+  "selected_generation": 20,
+  "selected_candidate": 4
+}

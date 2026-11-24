@@ -1,0 +1,91 @@
+{
+  "model": "adaptive-v4",
+  "opponents": [
+    "collector",
+    "builder",
+    "cautious"
+  ],
+  "policies": [
+    {
+      "name": "adaptive-v4",
+      "style": 11,
+      "prior_weights_sha256": "071a1d881a6996ce57c72265c581f0a5832267b45983f019acafa6c76357af86",
+      "component_sha256": {
+        "board": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "response": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "opponent": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "specialist": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "resilience": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "robust": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "deal": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+        "pressure": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+      }
+    },
+    {
+      "name": "collector",
+      "style": 1,
+      "prior_weights_sha256": "ffc445dc9771c6c75b4cfee62dc78855e8ba91be2074820be20ed11df7bd7510",
+      "component_sha256": {}
+    },
+    {
+      "name": "builder",
+      "style": 2,
+      "prior_weights_sha256": "d7ef3f8bed35ce10b8828a92c8d9de4a5cce487c7f7dd8a14d504f4ca9064a73",
+      "component_sha256": {}
+    },
+    {
+      "name": "cautious",
+      "style": 3,
+      "prior_weights_sha256": "7baa5215a4a260c594569a31a99c6a8ac6cdbb1938968faa75c3443251475840",
+      "component_sha256": {}
+    }
+  ],
+  "engine_sha256": "48ce167454fafc6143ab6f70e613c2ec6074df2f72bed93901334625200f6474",
+  "board_seed": 832716409,
+  "independent_boards": 600,
+  "games": 2400,
+  "turn_cap": 1000,
+  "trading": false,
+  "wins": 352,
+  "losses": 625,
+  "caps": 1423,
+  "win_rate": 0.14666666666666667,
+  "board_cluster_95_interval": [
+    0.13238075658506596,
+    0.16095257674826738
+  ],
+  "wins_by_starting_seat": [
+    107,
+    79,
+    79,
+    87
+  ],
+  "opponent_wins_by_model": {
+    "builder": 263,
+    "cautious": 114,
+    "collector": 248
+  },
+  "mean_individual_turns": 688.45,
+  "trades": {
+    "outgoing": {
+      "proposed": 0,
+      "accepted": 0
+    },
+    "incoming": {
+      "proposed": 0,
+      "accepted": 0
+    },
+    "between_opponents": {
+      "proposed": 0,
+      "accepted": 0
+    }
+  },
+  "accepted_outgoing_trade_types": {
+    "buy_deed_for_cash": 0,
+    "sell_deed_for_cash": 0,
+    "swap_deeds": 0,
+    "other": 0
+  },
+  "design": "Each four-seat game has one shared board. Each start rotates the entrant through all four seats. Opponent order cycles through six permutations. Only the last solvent player wins. Games unresolved at the turn cap count as non-wins. The approximate 95% interval uses the variation in win fractions across independent four-game starts.",
+  "adapter": "The frozen duel policies evaluate one opponent at a time. Each active player can consider every surviving opponent for one offer of up to one deed each way plus cash. The simulator enforces the full table's ownership and building supply."
+}

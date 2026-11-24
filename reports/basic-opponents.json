@@ -1,0 +1,106 @@
+{
+  "seed": 481297157,
+  "turn_cap": 1000,
+  "games_per_opponent": 2000,
+  "opponents": [
+    "collector",
+    "builder",
+    "cautious"
+  ],
+  "manifest_sha256": {
+    "adaptive-v1": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756",
+    "adaptive-v2": "fdc83c52d7fc717e9069eb3437f86a4a48d48178d43a7c9e60f358d67d0c8638",
+    "adaptive-v3": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+    "adaptive-v4": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+    "pressure": "95247f1139f3229a5d0ba870c737e64232a16036589d3445616b4911cf3b701a"
+  },
+  "reference": "league-v4.json",
+  "method": "The same 1000 initial boards per opponent from the original qualification, each played from both seats. Each row uses all three scripted opponents with equal weight. Caps count as non-wins. The v1 and v4 totals reproduced the original qualification for every opponent. Comparing these existing checkpoints does not establish an optimum.",
+  "results": {
+    "adaptive-v1": {
+      "collector": {
+        "wins": 1900,
+        "losses": 100,
+        "caps": 0
+      },
+      "builder": {
+        "wins": 1848,
+        "losses": 152,
+        "caps": 0
+      },
+      "cautious": {
+        "wins": 1814,
+        "losses": 185,
+        "caps": 1
+      }
+    },
+    "adaptive-v2": {
+      "collector": {
+        "wins": 1925,
+        "losses": 75,
+        "caps": 0
+      },
+      "builder": {
+        "wins": 1858,
+        "losses": 142,
+        "caps": 0
+      },
+      "cautious": {
+        "wins": 1792,
+        "losses": 207,
+        "caps": 1
+      }
+    },
+    "adaptive-v3": {
+      "collector": {
+        "wins": 1931,
+        "losses": 69,
+        "caps": 0
+      },
+      "builder": {
+        "wins": 1865,
+        "losses": 134,
+        "caps": 1
+      },
+      "cautious": {
+        "wins": 1812,
+        "losses": 188,
+        "caps": 0
+      }
+    },
+    "adaptive-v4": {
+      "collector": {
+        "wins": 1923,
+        "losses": 77,
+        "caps": 0
+      },
+      "builder": {
+        "wins": 1854,
+        "losses": 145,
+        "caps": 1
+      },
+      "cautious": {
+        "wins": 1813,
+        "losses": 187,
+        "caps": 0
+      }
+    },
+    "pressure": {
+      "collector": {
+        "wins": 1898,
+        "losses": 102,
+        "caps": 0
+      },
+      "builder": {
+        "wins": 1838,
+        "losses": 162,
+        "caps": 0
+      },
+      "cautious": {
+        "wins": 1795,
+        "losses": 203,
+        "caps": 2
+      }
+    }
+  }
+}

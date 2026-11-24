@@ -1,0 +1,222 @@
+{
+  "seed": 419630827,
+  "turn_cap": 1000,
+  "independent_seeds": true,
+  "interval": "two-sided Wilson 95%, capped games counted as non-wins",
+  "source_sha256": "adb87b3233cf8e0fcf57229bfbb7f3e93ad977cb4b701dc8bbb2120509f62db3",
+  "model_name": "champion",
+  "model_style": 6,
+  "prior_weights": {
+    "acquisition": 0.17828521778844783,
+    "completion": 0.3590289902827784,
+    "denial": 0.533475618241401,
+    "railroads": 1.0,
+    "auction": 0.0,
+    "reserve": 0.2818077144575766,
+    "development": 0.8704728065032307,
+    "financing": 0.491337660094618,
+    "trade_demand": 0.07896951599432317,
+    "trade_defense": 0.5582611494448573,
+    "jail_patience": 0.46245911567958586,
+    "house_scarcity": 0.7930944165404459
+  },
+  "network_sha256": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+  "response_sha256": "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+  "results": {
+    "legacy": {
+      "wins": 1198,
+      "losses": 799,
+      "caps": 3,
+      "turns": 175618,
+      "games": 2000,
+      "win_rate": 0.599,
+      "first_seat_wins": 590,
+      "first_seat_games": 1000,
+      "second_seat_wins": 608,
+      "second_seat_games": 1000,
+      "win_rate_95": [
+        0.5773507421655506,
+        0.6202696824727612
+      ],
+      "trades": {
+        "offers_sent": 25390,
+        "outgoing_accepted": 2446,
+        "offers_received": 3308,
+        "incoming_accepted": 677
+      }
+    },
+    "blocker": {
+      "wins": 864,
+      "losses": 1024,
+      "caps": 112,
+      "turns": 333148,
+      "games": 2000,
+      "win_rate": 0.432,
+      "first_seat_wins": 450,
+      "first_seat_games": 1000,
+      "second_seat_wins": 414,
+      "second_seat_games": 1000,
+      "win_rate_95": [
+        0.41044132080375967,
+        0.45381939762649065
+      ],
+      "trades": {
+        "offers_sent": 41974,
+        "outgoing_accepted": 0,
+        "offers_received": 0,
+        "incoming_accepted": 0
+      }
+    },
+    "collector": {
+      "wins": 1859,
+      "losses": 141,
+      "caps": 0,
+      "turns": 124823,
+      "games": 2000,
+      "win_rate": 0.9295,
+      "first_seat_wins": 929,
+      "first_seat_games": 1000,
+      "second_seat_wins": 930,
+      "second_seat_games": 1000,
+      "win_rate_95": [
+        0.9174382310555769,
+        0.9399150253298267
+      ],
+      "trades": {
+        "offers_sent": 12528,
+        "outgoing_accepted": 7637,
+        "offers_received": 1872,
+        "incoming_accepted": 417
+      }
+    },
+    "builder": {
+      "wins": 1833,
+      "losses": 167,
+      "caps": 0,
+      "turns": 134285,
+      "games": 2000,
+      "win_rate": 0.9165,
+      "first_seat_wins": 913,
+      "first_seat_games": 1000,
+      "second_seat_wins": 920,
+      "second_seat_games": 1000,
+      "win_rate_95": [
+        0.903562981613867,
+        0.9278401180008492
+      ],
+      "trades": {
+        "offers_sent": 13812,
+        "outgoing_accepted": 6335,
+        "offers_received": 2409,
+        "incoming_accepted": 422
+      }
+    },
+    "cautious": {
+      "wins": 1787,
+      "losses": 213,
+      "caps": 0,
+      "turns": 170803,
+      "games": 2000,
+      "win_rate": 0.8935,
+      "first_seat_wins": 892,
+      "first_seat_games": 1000,
+      "second_seat_wins": 895,
+      "second_seat_games": 1000,
+      "win_rate_95": [
+        0.8792182266916742,
+        0.9062730570979796
+      ],
+      "trades": {
+        "offers_sent": 19402,
+        "outgoing_accepted": 4842,
+        "offers_received": 3939,
+        "incoming_accepted": 558
+      }
+    },
+    "mirror": {
+      "wins": 979,
+      "losses": 1016,
+      "caps": 5,
+      "turns": 176886,
+      "games": 2000,
+      "win_rate": 0.4895,
+      "first_seat_wins": 502,
+      "first_seat_games": 1000,
+      "second_seat_wins": 477,
+      "second_seat_games": 1000,
+      "win_rate_95": [
+        0.4676328982207936,
+        0.5114073597721125
+      ],
+      "trades": {
+        "offers_sent": 28467,
+        "outgoing_accepted": 998,
+        "offers_received": 27940,
+        "incoming_accepted": 947
+      }
+    }
+  },
+  "controlled_trade_test": {
+    "master_seed": 319003083,
+    "turn_cap": 1000,
+    "design": "1000 shared starting seeds per opponent, each played in both seats and both conditions. The only intervention was disabling the opponent's trade proposals and acceptances. Capped games count as non-wins.",
+    "results": {
+      "collector": {
+        "normal": {
+          "wins": 1860,
+          "losses": 140,
+          "caps": 0,
+          "win_rate": 0.93
+        },
+        "trading_disabled": {
+          "wins": 1417,
+          "losses": 440,
+          "caps": 143,
+          "win_rate": 0.7085
+        }
+      },
+      "builder": {
+        "normal": {
+          "wins": 1791,
+          "losses": 209,
+          "caps": 0,
+          "win_rate": 0.8955
+        },
+        "trading_disabled": {
+          "wins": 1408,
+          "losses": 435,
+          "caps": 157,
+          "win_rate": 0.704
+        }
+      },
+      "cautious": {
+        "normal": {
+          "wins": 1784,
+          "losses": 213,
+          "caps": 3,
+          "win_rate": 0.892
+        },
+        "trading_disabled": {
+          "wins": 1415,
+          "losses": 535,
+          "caps": 50,
+          "win_rate": 0.7075
+        }
+      },
+      "legacy": {
+        "normal": {
+          "wins": 1248,
+          "losses": 752,
+          "caps": 0,
+          "win_rate": 0.624
+        },
+        "trading_disabled": {
+          "wins": 1049,
+          "losses": 859,
+          "caps": 92,
+          "win_rate": 0.5245
+        }
+      }
+    }
+  }
+}

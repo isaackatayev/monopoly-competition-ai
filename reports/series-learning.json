@@ -1,0 +1,6275 @@
+{
+  "format": "monopoly.series-learning.v1",
+  "qualification": false,
+  "initial": "adaptive-v4",
+  "board_seed": 844728927,
+  "selector_seed": 535761042,
+  "series_per_scenario": 32,
+  "games_per_series": 160,
+  "turn_cap": 1000,
+  "completed_or_capped_native_duels": 81920,
+  "decision_opportunities": 20480,
+  "profile_order": [
+    "adaptive-v4",
+    "adaptive-v1",
+    "adaptive-v3",
+    "pressure"
+  ],
+  "profile_manifests": {
+    "adaptive-v4": {
+      "style": 11,
+      "manifest": "models/adaptive-v4.json",
+      "sha256": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+      "component_sha256": [
+        "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+        "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+      ]
+    },
+    "adaptive-v1": {
+      "style": 7,
+      "manifest": "models/adaptive-v1.json",
+      "sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756",
+      "component_sha256": [
+        "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66"
+      ]
+    },
+    "adaptive-v3": {
+      "style": 9,
+      "manifest": "models/adaptive-v3.json",
+      "sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+      "component_sha256": [
+        "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580"
+      ]
+    },
+    "pressure": {
+      "style": 10,
+      "manifest": "models/pressure-player.json",
+      "sha256": "95247f1139f3229a5d0ba870c737e64232a16036589d3445616b4911cf3b701a",
+      "component_sha256": [
+        "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+        "94b44f892f267267e11f648c132e5fbd91dbecc8032a522a0fbbcc3cbb69acc2",
+        "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+        "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+        "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+        "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+        "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+        "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+      ]
+    }
+  },
+  "input_sha256": {
+    "build/libmonopoly.so": "9d8707d8b5491b874c5885024fe7209333f653fac2d0e761c4339218b552aed4",
+    "src/adaptive_bench.cpp": "c9c52436b8c1259a65528d25fe7f5c11968ec59a2d9f1b22274dd21b42924439",
+    "src/series_bench.cpp": "a6a294ca5544241da90f8576a4b227c3c8eca09b829244a0e44e1c30cd6a5f81",
+    "src/evaluation/policy.hpp": "d1b78d872a904303107a569d87d3a4c7e7d9f8709d05fdcd0ca18425f40c39c3",
+    "series_player.py": "8880647e3a562d15428277612ab457706352ba8d2cb8fa102069917709e0963c",
+    "live_player.py": "f0d43e67d721e9a321455d17c8958286358138534de1405f0108606e47dc1c14",
+    "series_evaluate.py": "8269c80b91e5a8bb8b8ad40ce6c994f406abab0ad453a1e79e03bb879d20af32",
+    "models/neural.json": "a64d76a2c4c5903cba96ca576715e4c3d57301c6f31109148d1170d663fed002",
+    "models/adaptive-v4.json": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+    "models/adaptive-v1.json": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756",
+    "models/adaptive-v3.json": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29",
+    "models/pressure-player.json": "95247f1139f3229a5d0ba870c737e64232a16036589d3445616b4911cf3b701a",
+    "reports/qualification-rival.json": "04b2c2e7231312eb4b31f58b7e090d428fecb6ed3294131a017c178b92009927",
+    "reports/qualification-rival-v2.json": "406b376ca6c81d053350c8819231cfee705cb7fa659f9ed07d060ac203ac41af",
+    "reports/qualification-rival-v3.json": "669dfe4665b23159b7b6acaa0e24ad250ca71d8caa5f954de74c8755a8cdaf98"
+  },
+  "opponents": {
+    "qualification-rival": {
+      "weights": [
+        0.7188329387795263,
+        0.7108807282093618,
+        0.4162143258160599,
+        0.0398552818993404,
+        0.8966502105261722,
+        0.28745873677179923
+      ],
+      "sha256": "04b2c2e7231312eb4b31f58b7e090d428fecb6ed3294131a017c178b92009927"
+    },
+    "qualification-rival-v2": {
+      "weights": [
+        1,
+        0.6718174614742098,
+        0.633344448810712,
+        0.014910537113815,
+        0.7733265332635915,
+        0.8831121829012601
+      ],
+      "sha256": "406b376ca6c81d053350c8819231cfee705cb7fa659f9ed07d060ac203ac41af"
+    },
+    "qualification-rival-v3": {
+      "weights": [
+        0.9653761766250137,
+        0.8956172812093963,
+        0.6746981186422135,
+        0,
+        0.7285177642366603,
+        0.7537753102755164
+      ],
+      "sha256": "669dfe4665b23159b7b6acaa0e24ad250ca71d8caa5f954de74c8755a8cdaf98"
+    }
+  },
+  "design": "Each independent series starts with the first live profile and no evidence. Each matchup is a full scalar-format game with the original archived rival callback. All arms, fixed baselines and a uniform chooser replay the same board seeds and seats. The uniform chooser starts with the designated primary and draws uniformly thereafter. No board repeats. Seat alternates with independently varied first seat.",
+  "observations": "Invokes the real SeriesPlayer.choose on a valid opening of each linked game with opaque independently generated game/opponent IDs, current seat, and only the prior selected arm's publicly reported winner. The opponent ID stays unchanged at the unannounced switch. The other arms' outcomes remain offline. Native duels start fresh each game to isolate profile selection from separate linked-game action-history transfer.",
+  "scoring": "Strict wins are the primary endpoint. A cap is a reported null winner, which the deployed selector treats as a non-win. Half-credit cap scores are also shown.",
+  "uncertainty": "95% bootstrap percentile intervals from 2000 resamplings of complete independent series, paired on all games and arms. Null means all observed series values were identical. Intervals are descriptive per comparison, without multiplicity correction.",
+  "tape_encoding": "For each scenario, decompress the base64/zlib string. One byte per arm (0 win, 1 loss, 2 cap) in profile_order, nested by series then game then arm. Seeds and public tokens are independently reproducible using the driver.",
+  "reproduce": "/usr/bin/python3 series_evaluate.py --initial adaptive-v4 --workers 3 --series 32 --length 160 --cap 1000 --board-seed 844728927 --selector-seed 535761042",
+  "scenarios": {
+    "archived_v1": {
+      "comparison": {
+        "live": {
+          "wins": 2826,
+          "losses": 2258,
+          "caps": 36,
+          "win_rate": 0.551953125,
+          "score_with_half_for_cap": 0.55546875,
+          "win_rate_95pct_series_interval": [
+            0.5394531249999999,
+            0.565234375
+          ]
+        },
+        "uniform": {
+          "wins": 2693,
+          "losses": 2393,
+          "caps": 34,
+          "win_rate": 0.5259765625,
+          "score_with_half_for_cap": 0.529296875,
+          "win_rate_95pct_series_interval": [
+            0.5123046875,
+            0.5419921875
+          ],
+          "live_minus_this_win_rate": 0.025976562499999998,
+          "paired_difference_95pct_series_interval": [
+            0.014453124999999999,
+            0.037500000000000006
+          ]
+        },
+        "adaptive-v4": {
+          "wins": 2750,
+          "losses": 2346,
+          "caps": 24,
+          "win_rate": 0.537109375,
+          "score_with_half_for_cap": 0.539453125,
+          "win_rate_95pct_series_interval": [
+            0.5248046875,
+            0.5499999999999999
+          ],
+          "live_minus_this_win_rate": 0.014843750000000001,
+          "paired_difference_95pct_series_interval": [
+            -1.3010426069826053e-18,
+            0.0291015625
+          ]
+        },
+        "adaptive-v1": {
+          "wins": 2352,
+          "losses": 2721,
+          "caps": 47,
+          "win_rate": 0.459375,
+          "score_with_half_for_cap": 0.46396484375,
+          "win_rate_95pct_series_interval": [
+            0.44746093750000004,
+            0.47265625000000017
+          ],
+          "live_minus_this_win_rate": 0.092578125,
+          "paired_difference_95pct_series_interval": [
+            0.0787109375,
+            0.1060546875
+          ]
+        },
+        "adaptive-v3": {
+          "wins": 3157,
+          "losses": 1923,
+          "caps": 40,
+          "win_rate": 0.6166015625,
+          "score_with_half_for_cap": 0.6205078125,
+          "win_rate_95pct_series_interval": [
+            0.6037109374999999,
+            0.6296875000000001
+          ],
+          "live_minus_this_win_rate": -0.0646484375,
+          "paired_difference_95pct_series_interval": [
+            -0.07558593749999998,
+            -0.053515625000000004
+          ]
+        },
+        "pressure": {
+          "wins": 2548,
+          "losses": 2556,
+          "caps": 16,
+          "win_rate": 0.49765625,
+          "score_with_half_for_cap": 0.49921875,
+          "win_rate_95pct_series_interval": [
+            0.48515624999999996,
+            0.5111328124999999
+          ],
+          "live_minus_this_win_rate": 0.054296875,
+          "paired_difference_95pct_series_interval": [
+            0.041406250000000006,
+            0.067578125
+          ]
+        }
+      },
+      "time_windows": {
+        "opening": {
+          "game_indices_zero_based_half_open": [
+            0,
+            20
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 170,
+            "adaptive-v1": 120,
+            "adaptive-v3": 203,
+            "pressure": 147
+          },
+          "win_rates": {
+            "live": 0.5390625,
+            "uniform": 0.540625,
+            "adaptive-v4": 0.546875,
+            "adaptive-v1": 0.4484375,
+            "adaptive-v3": 0.6640625,
+            "pressure": 0.4875
+          }
+        },
+        "end_first_half": {
+          "game_indices_zero_based_half_open": [
+            60,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 174,
+            "adaptive-v1": 103,
+            "adaptive-v3": 231,
+            "pressure": 132
+          },
+          "win_rates": {
+            "live": 0.578125,
+            "uniform": 0.5578125,
+            "adaptive-v4": 0.5484375,
+            "adaptive-v1": 0.4921875,
+            "adaptive-v3": 0.621875,
+            "pressure": 0.5203125
+          }
+        },
+        "start_second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            100
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 164,
+            "adaptive-v1": 91,
+            "adaptive-v3": 254,
+            "pressure": 131
+          },
+          "win_rates": {
+            "live": 0.5625,
+            "uniform": 0.51875,
+            "adaptive-v4": 0.53125,
+            "adaptive-v1": 0.453125,
+            "adaptive-v3": 0.6140625,
+            "pressure": 0.4984375
+          }
+        },
+        "end": {
+          "game_indices_zero_based_half_open": [
+            140,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 138,
+            "adaptive-v1": 96,
+            "adaptive-v3": 280,
+            "pressure": 126
+          },
+          "win_rates": {
+            "live": 0.546875,
+            "uniform": 0.4984375,
+            "adaptive-v4": 0.5171875,
+            "adaptive-v1": 0.45625,
+            "adaptive-v3": 0.628125,
+            "pressure": 0.4859375
+          }
+        },
+        "first_half": {
+          "game_indices_zero_based_half_open": [
+            0,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 651,
+            "adaptive-v1": 439,
+            "adaptive-v3": 879,
+            "pressure": 591
+          },
+          "win_rates": {
+            "live": 0.540234375,
+            "uniform": 0.52734375,
+            "adaptive-v4": 0.535546875,
+            "adaptive-v1": 0.456640625,
+            "adaptive-v3": 0.608203125,
+            "pressure": 0.5046875
+          }
+        },
+        "second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 632,
+            "adaptive-v1": 370,
+            "adaptive-v3": 1077,
+            "pressure": 481
+          },
+          "win_rates": {
+            "live": 0.563671875,
+            "uniform": 0.524609375,
+            "adaptive-v4": 0.538671875,
+            "adaptive-v1": 0.462109375,
+            "adaptive-v3": 0.625,
+            "pressure": 0.490625
+          }
+        }
+      },
+      "per_series": [
+        {
+          "series": 0,
+          "wins_losses_caps": {
+            "live": [
+              83,
+              75,
+              2
+            ],
+            "uniform": [
+              80,
+              77,
+              3
+            ],
+            "adaptive-v4": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v1": [
+              70,
+              89,
+              1
+            ],
+            "adaptive-v3": [
+              97,
+              62,
+              1
+            ],
+            "pressure": [
+              73,
+              84,
+              3
+            ]
+          },
+          "arm_counts": [
+            57,
+            18,
+            66,
+            19
+          ]
+        },
+        {
+          "series": 1,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              70,
+              1
+            ],
+            "uniform": [
+              89,
+              70,
+              1
+            ],
+            "adaptive-v4": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v1": [
+              73,
+              86,
+              1
+            ],
+            "adaptive-v3": [
+              97,
+              62,
+              1
+            ],
+            "pressure": [
+              81,
+              78,
+              1
+            ]
+          },
+          "arm_counts": [
+            53,
+            21,
+            45,
+            41
+          ]
+        },
+        {
+          "series": 2,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              72,
+              1
+            ],
+            "uniform": [
+              83,
+              77,
+              0
+            ],
+            "adaptive-v4": [
+              89,
+              71,
+              0
+            ],
+            "adaptive-v1": [
+              74,
+              85,
+              1
+            ],
+            "adaptive-v3": [
+              100,
+              59,
+              1
+            ],
+            "pressure": [
+              85,
+              75,
+              0
+            ]
+          },
+          "arm_counts": [
+            61,
+            44,
+            21,
+            34
+          ]
+        },
+        {
+          "series": 3,
+          "wins_losses_caps": {
+            "live": [
+              97,
+              60,
+              3
+            ],
+            "uniform": [
+              80,
+              78,
+              2
+            ],
+            "adaptive-v4": [
+              93,
+              65,
+              2
+            ],
+            "adaptive-v1": [
+              73,
+              85,
+              2
+            ],
+            "adaptive-v3": [
+              103,
+              55,
+              2
+            ],
+            "pressure": [
+              87,
+              72,
+              1
+            ]
+          },
+          "arm_counts": [
+            25,
+            25,
+            93,
+            17
+          ]
+        },
+        {
+          "series": 4,
+          "wins_losses_caps": {
+            "live": [
+              90,
+              70,
+              0
+            ],
+            "uniform": [
+              88,
+              72,
+              0
+            ],
+            "adaptive-v4": [
+              86,
+              74,
+              0
+            ],
+            "adaptive-v1": [
+              75,
+              82,
+              3
+            ],
+            "adaptive-v3": [
+              105,
+              52,
+              3
+            ],
+            "pressure": [
+              72,
+              88,
+              0
+            ]
+          },
+          "arm_counts": [
+            78,
+            20,
+            39,
+            23
+          ]
+        },
+        {
+          "series": 5,
+          "wins_losses_caps": {
+            "live": [
+              96,
+              63,
+              1
+            ],
+            "uniform": [
+              95,
+              64,
+              1
+            ],
+            "adaptive-v4": [
+              94,
+              64,
+              2
+            ],
+            "adaptive-v1": [
+              88,
+              72,
+              0
+            ],
+            "adaptive-v3": [
+              106,
+              53,
+              1
+            ],
+            "pressure": [
+              87,
+              73,
+              0
+            ]
+          },
+          "arm_counts": [
+            57,
+            21,
+            59,
+            23
+          ]
+        },
+        {
+          "series": 6,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              69,
+              2
+            ],
+            "uniform": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v4": [
+              83,
+              77,
+              0
+            ],
+            "adaptive-v1": [
+              73,
+              82,
+              5
+            ],
+            "adaptive-v3": [
+              100,
+              59,
+              1
+            ],
+            "pressure": [
+              77,
+              83,
+              0
+            ]
+          },
+          "arm_counts": [
+            12,
+            15,
+            100,
+            33
+          ]
+        },
+        {
+          "series": 7,
+          "wins_losses_caps": {
+            "live": [
+              81,
+              77,
+              2
+            ],
+            "uniform": [
+              74,
+              86,
+              0
+            ],
+            "adaptive-v4": [
+              73,
+              87,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              90,
+              2
+            ],
+            "adaptive-v3": [
+              100,
+              59,
+              1
+            ],
+            "pressure": [
+              78,
+              82,
+              0
+            ]
+          },
+          "arm_counts": [
+            30,
+            16,
+            90,
+            24
+          ]
+        },
+        {
+          "series": 8,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              72,
+              1
+            ],
+            "uniform": [
+              84,
+              75,
+              1
+            ],
+            "adaptive-v4": [
+              86,
+              74,
+              0
+            ],
+            "adaptive-v1": [
+              71,
+              89,
+              0
+            ],
+            "adaptive-v3": [
+              98,
+              61,
+              1
+            ],
+            "pressure": [
+              75,
+              84,
+              1
+            ]
+          },
+          "arm_counts": [
+            47,
+            19,
+            63,
+            31
+          ]
+        },
+        {
+          "series": 9,
+          "wins_losses_caps": {
+            "live": [
+              96,
+              63,
+              1
+            ],
+            "uniform": [
+              91,
+              68,
+              1
+            ],
+            "adaptive-v4": [
+              86,
+              74,
+              0
+            ],
+            "adaptive-v1": [
+              65,
+              95,
+              0
+            ],
+            "adaptive-v3": [
+              104,
+              55,
+              1
+            ],
+            "pressure": [
+              77,
+              81,
+              2
+            ]
+          },
+          "arm_counts": [
+            11,
+            18,
+            118,
+            13
+          ]
+        },
+        {
+          "series": 10,
+          "wins_losses_caps": {
+            "live": [
+              88,
+              72,
+              0
+            ],
+            "uniform": [
+              81,
+              78,
+              1
+            ],
+            "adaptive-v4": [
+              79,
+              80,
+              1
+            ],
+            "adaptive-v1": [
+              86,
+              72,
+              2
+            ],
+            "adaptive-v3": [
+              95,
+              65,
+              0
+            ],
+            "pressure": [
+              73,
+              87,
+              0
+            ]
+          },
+          "arm_counts": [
+            21,
+            47,
+            67,
+            25
+          ]
+        },
+        {
+          "series": 11,
+          "wins_losses_caps": {
+            "live": [
+              82,
+              75,
+              3
+            ],
+            "uniform": [
+              85,
+              73,
+              2
+            ],
+            "adaptive-v4": [
+              85,
+              74,
+              1
+            ],
+            "adaptive-v1": [
+              71,
+              88,
+              1
+            ],
+            "adaptive-v3": [
+              98,
+              60,
+              2
+            ],
+            "pressure": [
+              74,
+              85,
+              1
+            ]
+          },
+          "arm_counts": [
+            45,
+            31,
+            28,
+            56
+          ]
+        },
+        {
+          "series": 12,
+          "wins_losses_caps": {
+            "live": [
+              81,
+              79,
+              0
+            ],
+            "uniform": [
+              74,
+              85,
+              1
+            ],
+            "adaptive-v4": [
+              85,
+              73,
+              2
+            ],
+            "adaptive-v1": [
+              68,
+              92,
+              0
+            ],
+            "adaptive-v3": [
+              101,
+              59,
+              0
+            ],
+            "pressure": [
+              85,
+              75,
+              0
+            ]
+          },
+          "arm_counts": [
+            76,
+            23,
+            50,
+            11
+          ]
+        },
+        {
+          "series": 13,
+          "wins_losses_caps": {
+            "live": [
+              85,
+              75,
+              0
+            ],
+            "uniform": [
+              79,
+              80,
+              1
+            ],
+            "adaptive-v4": [
+              81,
+              78,
+              1
+            ],
+            "adaptive-v1": [
+              64,
+              95,
+              1
+            ],
+            "adaptive-v3": [
+              89,
+              71,
+              0
+            ],
+            "pressure": [
+              76,
+              84,
+              0
+            ]
+          },
+          "arm_counts": [
+            34,
+            22,
+            50,
+            54
+          ]
+        },
+        {
+          "series": 14,
+          "wins_losses_caps": {
+            "live": [
+              91,
+              69,
+              0
+            ],
+            "uniform": [
+              84,
+              76,
+              0
+            ],
+            "adaptive-v4": [
+              89,
+              71,
+              0
+            ],
+            "adaptive-v1": [
+              86,
+              70,
+              4
+            ],
+            "adaptive-v3": [
+              100,
+              60,
+              0
+            ],
+            "pressure": [
+              79,
+              80,
+              1
+            ]
+          },
+          "arm_counts": [
+            16,
+            52,
+            63,
+            29
+          ]
+        },
+        {
+          "series": 15,
+          "wins_losses_caps": {
+            "live": [
+              79,
+              79,
+              2
+            ],
+            "uniform": [
+              78,
+              81,
+              1
+            ],
+            "adaptive-v4": [
+              85,
+              75,
+              0
+            ],
+            "adaptive-v1": [
+              72,
+              87,
+              1
+            ],
+            "adaptive-v3": [
+              93,
+              66,
+              1
+            ],
+            "pressure": [
+              68,
+              92,
+              0
+            ]
+          },
+          "arm_counts": [
+            46,
+            32,
+            56,
+            26
+          ]
+        },
+        {
+          "series": 16,
+          "wins_losses_caps": {
+            "live": [
+              91,
+              68,
+              1
+            ],
+            "uniform": [
+              87,
+              72,
+              1
+            ],
+            "adaptive-v4": [
+              87,
+              71,
+              2
+            ],
+            "adaptive-v1": [
+              73,
+              84,
+              3
+            ],
+            "adaptive-v3": [
+              89,
+              71,
+              0
+            ],
+            "pressure": [
+              78,
+              82,
+              0
+            ]
+          },
+          "arm_counts": [
+            38,
+            31,
+            67,
+            24
+          ]
+        },
+        {
+          "series": 17,
+          "wins_losses_caps": {
+            "live": [
+              91,
+              66,
+              3
+            ],
+            "uniform": [
+              85,
+              74,
+              1
+            ],
+            "adaptive-v4": [
+              89,
+              69,
+              2
+            ],
+            "adaptive-v1": [
+              76,
+              84,
+              0
+            ],
+            "adaptive-v3": [
+              95,
+              62,
+              3
+            ],
+            "pressure": [
+              82,
+              78,
+              0
+            ]
+          },
+          "arm_counts": [
+            17,
+            30,
+            81,
+            32
+          ]
+        },
+        {
+          "series": 18,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              71,
+              0
+            ],
+            "uniform": [
+              92,
+              66,
+              2
+            ],
+            "adaptive-v4": [
+              97,
+              63,
+              0
+            ],
+            "adaptive-v1": [
+              70,
+              89,
+              1
+            ],
+            "adaptive-v3": [
+              102,
+              57,
+              1
+            ],
+            "pressure": [
+              79,
+              80,
+              1
+            ]
+          },
+          "arm_counts": [
+            62,
+            12,
+            50,
+            36
+          ]
+        },
+        {
+          "series": 19,
+          "wins_losses_caps": {
+            "live": [
+              103,
+              54,
+              3
+            ],
+            "uniform": [
+              102,
+              57,
+              1
+            ],
+            "adaptive-v4": [
+              92,
+              68,
+              0
+            ],
+            "adaptive-v1": [
+              79,
+              81,
+              0
+            ],
+            "adaptive-v3": [
+              109,
+              48,
+              3
+            ],
+            "pressure": [
+              87,
+              73,
+              0
+            ]
+          },
+          "arm_counts": [
+            17,
+            23,
+            101,
+            19
+          ]
+        },
+        {
+          "series": 20,
+          "wins_losses_caps": {
+            "live": [
+              84,
+              76,
+              0
+            ],
+            "uniform": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v4": [
+              76,
+              84,
+              0
+            ],
+            "adaptive-v1": [
+              69,
+              91,
+              0
+            ],
+            "adaptive-v3": [
+              101,
+              59,
+              0
+            ],
+            "pressure": [
+              75,
+              85,
+              0
+            ]
+          },
+          "arm_counts": [
+            37,
+            29,
+            60,
+            34
+          ]
+        },
+        {
+          "series": 21,
+          "wins_losses_caps": {
+            "live": [
+              95,
+              63,
+              2
+            ],
+            "uniform": [
+              84,
+              73,
+              3
+            ],
+            "adaptive-v4": [
+              79,
+              78,
+              3
+            ],
+            "adaptive-v1": [
+              70,
+              88,
+              2
+            ],
+            "adaptive-v3": [
+              103,
+              54,
+              3
+            ],
+            "pressure": [
+              74,
+              86,
+              0
+            ]
+          },
+          "arm_counts": [
+            55,
+            24,
+            59,
+            22
+          ]
+        },
+        {
+          "series": 22,
+          "wins_losses_caps": {
+            "live": [
+              82,
+              76,
+              2
+            ],
+            "uniform": [
+              75,
+              83,
+              2
+            ],
+            "adaptive-v4": [
+              86,
+              74,
+              0
+            ],
+            "adaptive-v1": [
+              69,
+              88,
+              3
+            ],
+            "adaptive-v3": [
+              83,
+              74,
+              3
+            ],
+            "pressure": [
+              78,
+              81,
+              1
+            ]
+          },
+          "arm_counts": [
+            51,
+            13,
+            49,
+            47
+          ]
+        },
+        {
+          "series": 23,
+          "wins_losses_caps": {
+            "live": [
+              99,
+              61,
+              0
+            ],
+            "uniform": [
+              97,
+              62,
+              1
+            ],
+            "adaptive-v4": [
+              94,
+              66,
+              0
+            ],
+            "adaptive-v1": [
+              80,
+              79,
+              1
+            ],
+            "adaptive-v3": [
+              110,
+              50,
+              0
+            ],
+            "pressure": [
+              97,
+              62,
+              1
+            ]
+          },
+          "arm_counts": [
+            28,
+            11,
+            71,
+            50
+          ]
+        },
+        {
+          "series": 24,
+          "wins_losses_caps": {
+            "live": [
+              88,
+              71,
+              1
+            ],
+            "uniform": [
+              87,
+              73,
+              0
+            ],
+            "adaptive-v4": [
+              86,
+              73,
+              1
+            ],
+            "adaptive-v1": [
+              76,
+              82,
+              2
+            ],
+            "adaptive-v3": [
+              99,
+              61,
+              0
+            ],
+            "pressure": [
+              78,
+              82,
+              0
+            ]
+          },
+          "arm_counts": [
+            17,
+            35,
+            55,
+            53
+          ]
+        },
+        {
+          "series": 25,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              73,
+              0
+            ],
+            "uniform": [
+              87,
+              72,
+              1
+            ],
+            "adaptive-v4": [
+              86,
+              74,
+              0
+            ],
+            "adaptive-v1": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v3": [
+              89,
+              69,
+              2
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            50,
+            46,
+            29,
+            35
+          ]
+        },
+        {
+          "series": 26,
+          "wins_losses_caps": {
+            "live": [
+              83,
+              76,
+              1
+            ],
+            "uniform": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v4": [
+              91,
+              69,
+              0
+            ],
+            "adaptive-v1": [
+              78,
+              81,
+              1
+            ],
+            "adaptive-v3": [
+              92,
+              67,
+              1
+            ],
+            "pressure": [
+              82,
+              76,
+              2
+            ]
+          },
+          "arm_counts": [
+            65,
+            17,
+            50,
+            28
+          ]
+        },
+        {
+          "series": 27,
+          "wins_losses_caps": {
+            "live": [
+              91,
+              69,
+              0
+            ],
+            "uniform": [
+              72,
+              87,
+              1
+            ],
+            "adaptive-v4": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v1": [
+              72,
+              86,
+              2
+            ],
+            "adaptive-v3": [
+              100,
+              59,
+              1
+            ],
+            "pressure": [
+              76,
+              84,
+              0
+            ]
+          },
+          "arm_counts": [
+            17,
+            13,
+            75,
+            55
+          ]
+        },
+        {
+          "series": 28,
+          "wins_losses_caps": {
+            "live": [
+              96,
+              63,
+              1
+            ],
+            "uniform": [
+              84,
+              73,
+              3
+            ],
+            "adaptive-v4": [
+              83,
+              75,
+              2
+            ],
+            "adaptive-v1": [
+              79,
+              76,
+              5
+            ],
+            "adaptive-v3": [
+              108,
+              51,
+              1
+            ],
+            "pressure": [
+              88,
+              72,
+              0
+            ]
+          },
+          "arm_counts": [
+            23,
+            12,
+            79,
+            46
+          ]
+        },
+        {
+          "series": 29,
+          "wins_losses_caps": {
+            "live": [
+              79,
+              80,
+              1
+            ],
+            "uniform": [
+              80,
+              79,
+              1
+            ],
+            "adaptive-v4": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v1": [
+              70,
+              90,
+              0
+            ],
+            "adaptive-v3": [
+              94,
+              64,
+              2
+            ],
+            "pressure": [
+              79,
+              81,
+              0
+            ]
+          },
+          "arm_counts": [
+            40,
+            10,
+            37,
+            73
+          ]
+        },
+        {
+          "series": 30,
+          "wins_losses_caps": {
+            "live": [
+              77,
+              81,
+              2
+            ],
+            "uniform": [
+              81,
+              78,
+              1
+            ],
+            "adaptive-v4": [
+              87,
+              72,
+              1
+            ],
+            "adaptive-v1": [
+              63,
+              96,
+              1
+            ],
+            "adaptive-v3": [
+              94,
+              64,
+              2
+            ],
+            "pressure": [
+              77,
+              83,
+              0
+            ]
+          },
+          "arm_counts": [
+            50,
+            38,
+            32,
+            40
+          ]
+        },
+        {
+          "series": 31,
+          "wins_losses_caps": {
+            "live": [
+              90,
+              70,
+              0
+            ],
+            "uniform": [
+              94,
+              66,
+              0
+            ],
+            "adaptive-v4": [
+              99,
+              60,
+              1
+            ],
+            "adaptive-v1": [
+              73,
+              85,
+              2
+            ],
+            "adaptive-v3": [
+              103,
+              55,
+              2
+            ],
+            "pressure": [
+              90,
+              69,
+              1
+            ]
+          },
+          "arm_counts": [
+            47,
+            41,
+            53,
+            19
+          ]
+        }
+      ],
+      "counterfactual_tape_sha256": "a706b8713148f4f7bd5cf3c76126a4c28c0cafdfad1b389d8fdb7819b3eac9b9",
+      "counterfactual_tape_zlib_base64": "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",
+      "first_half_opponent": "qualification-rival",
+      "second_half_opponent": "qualification-rival"
+    },
+    "archived_v2": {
+      "comparison": {
+        "live": {
+          "wins": 2927,
+          "losses": 2177,
+          "caps": 16,
+          "win_rate": 0.5716796875,
+          "score_with_half_for_cap": 0.5732421875,
+          "win_rate_95pct_series_interval": [
+            0.5576171874999999,
+            0.5851562500000002
+          ]
+        },
+        "uniform": {
+          "wins": 2740,
+          "losses": 2353,
+          "caps": 27,
+          "win_rate": 0.53515625,
+          "score_with_half_for_cap": 0.53779296875,
+          "win_rate_95pct_series_interval": [
+            0.5228515625,
+            0.5482421875
+          ],
+          "live_minus_this_win_rate": 0.0365234375,
+          "paired_difference_95pct_series_interval": [
+            0.021875000000000002,
+            0.052539062500000004
+          ]
+        },
+        "adaptive-v4": {
+          "wins": 3167,
+          "losses": 1935,
+          "caps": 18,
+          "win_rate": 0.6185546875,
+          "score_with_half_for_cap": 0.6203125,
+          "win_rate_95pct_series_interval": [
+            0.60546875,
+            0.6310546875000002
+          ],
+          "live_minus_this_win_rate": -0.046875,
+          "paired_difference_95pct_series_interval": [
+            -0.055664062499999986,
+            -0.038281249999999996
+          ]
+        },
+        "adaptive-v1": {
+          "wins": 2312,
+          "losses": 2767,
+          "caps": 41,
+          "win_rate": 0.4515625,
+          "score_with_half_for_cap": 0.45556640625,
+          "win_rate_95pct_series_interval": [
+            0.4398437500000001,
+            0.46289062500000006
+          ],
+          "live_minus_this_win_rate": 0.1201171875,
+          "paired_difference_95pct_series_interval": [
+            0.1068359375,
+            0.1345703125
+          ]
+        },
+        "adaptive-v3": {
+          "wins": 3160,
+          "losses": 1941,
+          "caps": 19,
+          "win_rate": 0.6171875,
+          "score_with_half_for_cap": 0.61904296875,
+          "win_rate_95pct_series_interval": [
+            0.6044921874999999,
+            0.6294921874999998
+          ],
+          "live_minus_this_win_rate": -0.0455078125,
+          "paired_difference_95pct_series_interval": [
+            -0.05351562499999999,
+            -0.03749999999999999
+          ]
+        },
+        "pressure": {
+          "wins": 2470,
+          "losses": 2629,
+          "caps": 21,
+          "win_rate": 0.482421875,
+          "score_with_half_for_cap": 0.48447265625,
+          "win_rate_95pct_series_interval": [
+            0.4689453125,
+            0.4964843750000001
+          ],
+          "live_minus_this_win_rate": 0.0892578125,
+          "paired_difference_95pct_series_interval": [
+            0.06894531250000001,
+            0.10976562499999999
+          ]
+        }
+      },
+      "time_windows": {
+        "opening": {
+          "game_indices_zero_based_half_open": [
+            0,
+            20
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 188,
+            "adaptive-v1": 120,
+            "adaptive-v3": 188,
+            "pressure": 144
+          },
+          "win_rates": {
+            "live": 0.5515625,
+            "uniform": 0.5375,
+            "adaptive-v4": 0.6140625,
+            "adaptive-v1": 0.4609375,
+            "adaptive-v3": 0.6109375,
+            "pressure": 0.5078125
+          }
+        },
+        "end_first_half": {
+          "game_indices_zero_based_half_open": [
+            60,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 204,
+            "adaptive-v1": 76,
+            "adaptive-v3": 264,
+            "pressure": 96
+          },
+          "win_rates": {
+            "live": 0.5515625,
+            "uniform": 0.521875,
+            "adaptive-v4": 0.609375,
+            "adaptive-v1": 0.440625,
+            "adaptive-v3": 0.6046875,
+            "pressure": 0.44375
+          }
+        },
+        "start_second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            100
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 216,
+            "adaptive-v1": 71,
+            "adaptive-v3": 267,
+            "pressure": 86
+          },
+          "win_rates": {
+            "live": 0.6015625,
+            "uniform": 0.5328125,
+            "adaptive-v4": 0.6375,
+            "adaptive-v1": 0.4359375,
+            "adaptive-v3": 0.6390625,
+            "pressure": 0.4828125
+          }
+        },
+        "end": {
+          "game_indices_zero_based_half_open": [
+            140,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 238,
+            "adaptive-v1": 80,
+            "adaptive-v3": 239,
+            "pressure": 83
+          },
+          "win_rates": {
+            "live": 0.6,
+            "uniform": 0.5640625,
+            "adaptive-v4": 0.6546875,
+            "adaptive-v1": 0.4796875,
+            "adaptive-v3": 0.6546875,
+            "pressure": 0.4796875
+          }
+        },
+        "first_half": {
+          "game_indices_zero_based_half_open": [
+            0,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 760,
+            "adaptive-v1": 384,
+            "adaptive-v3": 934,
+            "pressure": 482
+          },
+          "win_rates": {
+            "live": 0.55078125,
+            "uniform": 0.517578125,
+            "adaptive-v4": 0.603125,
+            "adaptive-v1": 0.439453125,
+            "adaptive-v3": 0.600390625,
+            "pressure": 0.47265625
+          }
+        },
+        "second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 935,
+            "adaptive-v1": 290,
+            "adaptive-v3": 992,
+            "pressure": 343
+          },
+          "win_rates": {
+            "live": 0.592578125,
+            "uniform": 0.552734375,
+            "adaptive-v4": 0.633984375,
+            "adaptive-v1": 0.463671875,
+            "adaptive-v3": 0.633984375,
+            "pressure": 0.4921875
+          }
+        }
+      },
+      "per_series": [
+        {
+          "series": 0,
+          "wins_losses_caps": {
+            "live": [
+              98,
+              62,
+              0
+            ],
+            "uniform": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v4": [
+              103,
+              57,
+              0
+            ],
+            "adaptive-v1": [
+              74,
+              86,
+              0
+            ],
+            "adaptive-v3": [
+              102,
+              58,
+              0
+            ],
+            "pressure": [
+              74,
+              86,
+              0
+            ]
+          },
+          "arm_counts": [
+            93,
+            18,
+            36,
+            13
+          ]
+        },
+        {
+          "series": 1,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              71,
+              0
+            ],
+            "uniform": [
+              85,
+              73,
+              2
+            ],
+            "adaptive-v4": [
+              101,
+              57,
+              2
+            ],
+            "adaptive-v1": [
+              73,
+              85,
+              2
+            ],
+            "adaptive-v3": [
+              101,
+              57,
+              2
+            ],
+            "pressure": [
+              76,
+              84,
+              0
+            ]
+          },
+          "arm_counts": [
+            71,
+            21,
+            54,
+            14
+          ]
+        },
+        {
+          "series": 2,
+          "wins_losses_caps": {
+            "live": [
+              95,
+              64,
+              1
+            ],
+            "uniform": [
+              94,
+              65,
+              1
+            ],
+            "adaptive-v4": [
+              105,
+              54,
+              1
+            ],
+            "adaptive-v1": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v3": [
+              104,
+              55,
+              1
+            ],
+            "pressure": [
+              87,
+              73,
+              0
+            ]
+          },
+          "arm_counts": [
+            42,
+            21,
+            44,
+            53
+          ]
+        },
+        {
+          "series": 3,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              71,
+              0
+            ],
+            "uniform": [
+              85,
+              75,
+              0
+            ],
+            "adaptive-v4": [
+              94,
+              66,
+              0
+            ],
+            "adaptive-v1": [
+              63,
+              96,
+              1
+            ],
+            "adaptive-v3": [
+              95,
+              65,
+              0
+            ],
+            "pressure": [
+              80,
+              80,
+              0
+            ]
+          },
+          "arm_counts": [
+            66,
+            17,
+            57,
+            20
+          ]
+        },
+        {
+          "series": 4,
+          "wins_losses_caps": {
+            "live": [
+              79,
+              80,
+              1
+            ],
+            "uniform": [
+              82,
+              77,
+              1
+            ],
+            "adaptive-v4": [
+              90,
+              70,
+              0
+            ],
+            "adaptive-v1": [
+              74,
+              85,
+              1
+            ],
+            "adaptive-v3": [
+              90,
+              70,
+              0
+            ],
+            "pressure": [
+              80,
+              79,
+              1
+            ]
+          },
+          "arm_counts": [
+            62,
+            21,
+            36,
+            41
+          ]
+        },
+        {
+          "series": 5,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              71,
+              2
+            ],
+            "uniform": [
+              85,
+              72,
+              3
+            ],
+            "adaptive-v4": [
+              102,
+              57,
+              1
+            ],
+            "adaptive-v1": [
+              73,
+              85,
+              2
+            ],
+            "adaptive-v3": [
+              100,
+              58,
+              2
+            ],
+            "pressure": [
+              79,
+              80,
+              1
+            ]
+          },
+          "arm_counts": [
+            50,
+            46,
+            45,
+            19
+          ]
+        },
+        {
+          "series": 6,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              73,
+              0
+            ],
+            "uniform": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v4": [
+              90,
+              70,
+              0
+            ],
+            "adaptive-v1": [
+              74,
+              86,
+              0
+            ],
+            "adaptive-v3": [
+              89,
+              71,
+              0
+            ],
+            "pressure": [
+              79,
+              81,
+              0
+            ]
+          },
+          "arm_counts": [
+            24,
+            27,
+            71,
+            38
+          ]
+        },
+        {
+          "series": 7,
+          "wins_losses_caps": {
+            "live": [
+              91,
+              67,
+              2
+            ],
+            "uniform": [
+              84,
+              74,
+              2
+            ],
+            "adaptive-v4": [
+              95,
+              63,
+              2
+            ],
+            "adaptive-v1": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v3": [
+              94,
+              64,
+              2
+            ],
+            "pressure": [
+              76,
+              83,
+              1
+            ]
+          },
+          "arm_counts": [
+            75,
+            32,
+            41,
+            12
+          ]
+        },
+        {
+          "series": 8,
+          "wins_losses_caps": {
+            "live": [
+              98,
+              62,
+              0
+            ],
+            "uniform": [
+              81,
+              78,
+              1
+            ],
+            "adaptive-v4": [
+              106,
+              54,
+              0
+            ],
+            "adaptive-v1": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v3": [
+              106,
+              54,
+              0
+            ],
+            "pressure": [
+              73,
+              87,
+              0
+            ]
+          },
+          "arm_counts": [
+            30,
+            28,
+            93,
+            9
+          ]
+        },
+        {
+          "series": 9,
+          "wins_losses_caps": {
+            "live": [
+              95,
+              65,
+              0
+            ],
+            "uniform": [
+              97,
+              63,
+              0
+            ],
+            "adaptive-v4": [
+              107,
+              53,
+              0
+            ],
+            "adaptive-v1": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v3": [
+              106,
+              54,
+              0
+            ],
+            "pressure": [
+              67,
+              92,
+              1
+            ]
+          },
+          "arm_counts": [
+            60,
+            23,
+            57,
+            20
+          ]
+        },
+        {
+          "series": 10,
+          "wins_losses_caps": {
+            "live": [
+              88,
+              72,
+              0
+            ],
+            "uniform": [
+              88,
+              69,
+              3
+            ],
+            "adaptive-v4": [
+              101,
+              58,
+              1
+            ],
+            "adaptive-v1": [
+              69,
+              89,
+              2
+            ],
+            "adaptive-v3": [
+              100,
+              59,
+              1
+            ],
+            "pressure": [
+              70,
+              88,
+              2
+            ]
+          },
+          "arm_counts": [
+            11,
+            24,
+            110,
+            15
+          ]
+        },
+        {
+          "series": 11,
+          "wins_losses_caps": {
+            "live": [
+              101,
+              59,
+              0
+            ],
+            "uniform": [
+              100,
+              60,
+              0
+            ],
+            "adaptive-v4": [
+              108,
+              51,
+              1
+            ],
+            "adaptive-v1": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v3": [
+              107,
+              52,
+              1
+            ],
+            "pressure": [
+              74,
+              85,
+              1
+            ]
+          },
+          "arm_counts": [
+            99,
+            13,
+            29,
+            19
+          ]
+        },
+        {
+          "series": 12,
+          "wins_losses_caps": {
+            "live": [
+              82,
+              78,
+              0
+            ],
+            "uniform": [
+              84,
+              75,
+              1
+            ],
+            "adaptive-v4": [
+              91,
+              69,
+              0
+            ],
+            "adaptive-v1": [
+              57,
+              102,
+              1
+            ],
+            "adaptive-v3": [
+              91,
+              69,
+              0
+            ],
+            "pressure": [
+              85,
+              74,
+              1
+            ]
+          },
+          "arm_counts": [
+            30,
+            17,
+            94,
+            19
+          ]
+        },
+        {
+          "series": 13,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              73,
+              0
+            ],
+            "uniform": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v4": [
+              94,
+              66,
+              0
+            ],
+            "adaptive-v1": [
+              70,
+              89,
+              1
+            ],
+            "adaptive-v3": [
+              94,
+              66,
+              0
+            ],
+            "pressure": [
+              81,
+              78,
+              1
+            ]
+          },
+          "arm_counts": [
+            22,
+            36,
+            81,
+            21
+          ]
+        },
+        {
+          "series": 14,
+          "wins_losses_caps": {
+            "live": [
+              92,
+              68,
+              0
+            ],
+            "uniform": [
+              95,
+              64,
+              1
+            ],
+            "adaptive-v4": [
+              105,
+              54,
+              1
+            ],
+            "adaptive-v1": [
+              77,
+              81,
+              2
+            ],
+            "adaptive-v3": [
+              104,
+              55,
+              1
+            ],
+            "pressure": [
+              83,
+              76,
+              1
+            ]
+          },
+          "arm_counts": [
+            57,
+            23,
+            58,
+            22
+          ]
+        },
+        {
+          "series": 15,
+          "wins_losses_caps": {
+            "live": [
+              99,
+              60,
+              1
+            ],
+            "uniform": [
+              82,
+              76,
+              2
+            ],
+            "adaptive-v4": [
+              103,
+              56,
+              1
+            ],
+            "adaptive-v1": [
+              60,
+              96,
+              4
+            ],
+            "adaptive-v3": [
+              103,
+              56,
+              1
+            ],
+            "pressure": [
+              63,
+              96,
+              1
+            ]
+          },
+          "arm_counts": [
+            54,
+            12,
+            69,
+            25
+          ]
+        },
+        {
+          "series": 16,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              69,
+              2
+            ],
+            "uniform": [
+              76,
+              82,
+              2
+            ],
+            "adaptive-v4": [
+              94,
+              63,
+              3
+            ],
+            "adaptive-v1": [
+              69,
+              90,
+              1
+            ],
+            "adaptive-v3": [
+              93,
+              64,
+              3
+            ],
+            "pressure": [
+              83,
+              76,
+              1
+            ]
+          },
+          "arm_counts": [
+            32,
+            23,
+            51,
+            54
+          ]
+        },
+        {
+          "series": 17,
+          "wins_losses_caps": {
+            "live": [
+              100,
+              60,
+              0
+            ],
+            "uniform": [
+              87,
+              73,
+              0
+            ],
+            "adaptive-v4": [
+              102,
+              58,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              92,
+              0
+            ],
+            "adaptive-v3": [
+              102,
+              58,
+              0
+            ],
+            "pressure": [
+              80,
+              79,
+              1
+            ]
+          },
+          "arm_counts": [
+            82,
+            7,
+            24,
+            47
+          ]
+        },
+        {
+          "series": 18,
+          "wins_losses_caps": {
+            "live": [
+              93,
+              67,
+              0
+            ],
+            "uniform": [
+              92,
+              66,
+              2
+            ],
+            "adaptive-v4": [
+              103,
+              57,
+              0
+            ],
+            "adaptive-v1": [
+              73,
+              85,
+              2
+            ],
+            "adaptive-v3": [
+              103,
+              57,
+              0
+            ],
+            "pressure": [
+              91,
+              68,
+              1
+            ]
+          },
+          "arm_counts": [
+            66,
+            10,
+            37,
+            47
+          ]
+        },
+        {
+          "series": 19,
+          "wins_losses_caps": {
+            "live": [
+              95,
+              65,
+              0
+            ],
+            "uniform": [
+              85,
+              75,
+              0
+            ],
+            "adaptive-v4": [
+              99,
+              61,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              90,
+              2
+            ],
+            "adaptive-v3": [
+              101,
+              59,
+              0
+            ],
+            "pressure": [
+              66,
+              94,
+              0
+            ]
+          },
+          "arm_counts": [
+            59,
+            11,
+            71,
+            19
+          ]
+        },
+        {
+          "series": 20,
+          "wins_losses_caps": {
+            "live": [
+              86,
+              74,
+              0
+            ],
+            "uniform": [
+              83,
+              77,
+              0
+            ],
+            "adaptive-v4": [
+              89,
+              71,
+              0
+            ],
+            "adaptive-v1": [
+              70,
+              90,
+              0
+            ],
+            "adaptive-v3": [
+              92,
+              68,
+              0
+            ],
+            "pressure": [
+              79,
+              81,
+              0
+            ]
+          },
+          "arm_counts": [
+            55,
+            26,
+            39,
+            40
+          ]
+        },
+        {
+          "series": 21,
+          "wins_losses_caps": {
+            "live": [
+              98,
+              60,
+              2
+            ],
+            "uniform": [
+              87,
+              73,
+              0
+            ],
+            "adaptive-v4": [
+              102,
+              57,
+              1
+            ],
+            "adaptive-v1": [
+              82,
+              75,
+              3
+            ],
+            "adaptive-v3": [
+              102,
+              57,
+              1
+            ],
+            "pressure": [
+              80,
+              80,
+              0
+            ]
+          },
+          "arm_counts": [
+            46,
+            47,
+            32,
+            35
+          ]
+        },
+        {
+          "series": 22,
+          "wins_losses_caps": {
+            "live": [
+              90,
+              69,
+              1
+            ],
+            "uniform": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v4": [
+              96,
+              62,
+              2
+            ],
+            "adaptive-v1": [
+              73,
+              82,
+              5
+            ],
+            "adaptive-v3": [
+              97,
+              61,
+              2
+            ],
+            "pressure": [
+              72,
+              87,
+              1
+            ]
+          },
+          "arm_counts": [
+            50,
+            7,
+            80,
+            23
+          ]
+        },
+        {
+          "series": 23,
+          "wins_losses_caps": {
+            "live": [
+              103,
+              57,
+              0
+            ],
+            "uniform": [
+              90,
+              70,
+              0
+            ],
+            "adaptive-v4": [
+              103,
+              57,
+              0
+            ],
+            "adaptive-v1": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v3": [
+              103,
+              57,
+              0
+            ],
+            "pressure": [
+              75,
+              85,
+              0
+            ]
+          },
+          "arm_counts": [
+            29,
+            31,
+            76,
+            24
+          ]
+        },
+        {
+          "series": 24,
+          "wins_losses_caps": {
+            "live": [
+              80,
+              79,
+              1
+            ],
+            "uniform": [
+              83,
+              77,
+              0
+            ],
+            "adaptive-v4": [
+              91,
+              69,
+              0
+            ],
+            "adaptive-v1": [
+              66,
+              92,
+              2
+            ],
+            "adaptive-v3": [
+              90,
+              70,
+              0
+            ],
+            "pressure": [
+              71,
+              88,
+              1
+            ]
+          },
+          "arm_counts": [
+            69,
+            10,
+            61,
+            20
+          ]
+        },
+        {
+          "series": 25,
+          "wins_losses_caps": {
+            "live": [
+              100,
+              59,
+              1
+            ],
+            "uniform": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v4": [
+              109,
+              51,
+              0
+            ],
+            "adaptive-v1": [
+              75,
+              82,
+              3
+            ],
+            "adaptive-v3": [
+              107,
+              53,
+              0
+            ],
+            "pressure": [
+              74,
+              85,
+              1
+            ]
+          },
+          "arm_counts": [
+            87,
+            12,
+            51,
+            10
+          ]
+        },
+        {
+          "series": 26,
+          "wins_losses_caps": {
+            "live": [
+              88,
+              71,
+              1
+            ],
+            "uniform": [
+              94,
+              66,
+              0
+            ],
+            "adaptive-v4": [
+              96,
+              63,
+              1
+            ],
+            "adaptive-v1": [
+              73,
+              87,
+              0
+            ],
+            "adaptive-v3": [
+              95,
+              64,
+              1
+            ],
+            "pressure": [
+              86,
+              74,
+              0
+            ]
+          },
+          "arm_counts": [
+            42,
+            17,
+            76,
+            25
+          ]
+        },
+        {
+          "series": 27,
+          "wins_losses_caps": {
+            "live": [
+              92,
+              68,
+              0
+            ],
+            "uniform": [
+              83,
+              77,
+              0
+            ],
+            "adaptive-v4": [
+              102,
+              58,
+              0
+            ],
+            "adaptive-v1": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v3": [
+              103,
+              57,
+              0
+            ],
+            "pressure": [
+              88,
+              71,
+              1
+            ]
+          },
+          "arm_counts": [
+            29,
+            20,
+            85,
+            26
+          ]
+        },
+        {
+          "series": 28,
+          "wins_losses_caps": {
+            "live": [
+              93,
+              66,
+              1
+            ],
+            "uniform": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v4": [
+              99,
+              60,
+              1
+            ],
+            "adaptive-v1": [
+              72,
+              88,
+              0
+            ],
+            "adaptive-v3": [
+              99,
+              60,
+              1
+            ],
+            "pressure": [
+              77,
+              82,
+              1
+            ]
+          },
+          "arm_counts": [
+            47,
+            17,
+            76,
+            20
+          ]
+        },
+        {
+          "series": 29,
+          "wins_losses_caps": {
+            "live": [
+              79,
+              81,
+              0
+            ],
+            "uniform": [
+              77,
+              81,
+              2
+            ],
+            "adaptive-v4": [
+              93,
+              67,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              91,
+              1
+            ],
+            "adaptive-v3": [
+              93,
+              67,
+              0
+            ],
+            "pressure": [
+              64,
+              95,
+              1
+            ]
+          },
+          "arm_counts": [
+            25,
+            20,
+            107,
+            8
+          ]
+        },
+        {
+          "series": 30,
+          "wins_losses_caps": {
+            "live": [
+              95,
+              65,
+              0
+            ],
+            "uniform": [
+              92,
+              65,
+              3
+            ],
+            "adaptive-v4": [
+              103,
+              57,
+              0
+            ],
+            "adaptive-v1": [
+              75,
+              81,
+              4
+            ],
+            "adaptive-v3": [
+              103,
+              57,
+              0
+            ],
+            "pressure": [
+              80,
+              79,
+              1
+            ]
+          },
+          "arm_counts": [
+            88,
+            11,
+            31,
+            30
+          ]
+        },
+        {
+          "series": 31,
+          "wins_losses_caps": {
+            "live": [
+              89,
+              71,
+              0
+            ],
+            "uniform": [
+              89,
+              71,
+              0
+            ],
+            "adaptive-v4": [
+              91,
+              69,
+              0
+            ],
+            "adaptive-v1": [
+              74,
+              86,
+              0
+            ],
+            "adaptive-v3": [
+              91,
+              69,
+              0
+            ],
+            "pressure": [
+              77,
+              83,
+              0
+            ]
+          },
+          "arm_counts": [
+            43,
+            26,
+            54,
+            37
+          ]
+        }
+      ],
+      "counterfactual_tape_sha256": "662a3e26c0ee4df1efd3117af45a236c50c468ed0b721416893514c06ac94af7",
+      "counterfactual_tape_zlib_base64": "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",
+      "first_half_opponent": "qualification-rival-v2",
+      "second_half_opponent": "qualification-rival-v2"
+    },
+    "archived_v3": {
+      "comparison": {
+        "live": {
+          "wins": 2325,
+          "losses": 2779,
+          "caps": 16,
+          "win_rate": 0.4541015625,
+          "score_with_half_for_cap": 0.4556640625,
+          "win_rate_95pct_series_interval": [
+            0.43671875,
+            0.4701171875
+          ]
+        },
+        "uniform": {
+          "wins": 2075,
+          "losses": 3026,
+          "caps": 19,
+          "win_rate": 0.4052734375,
+          "score_with_half_for_cap": 0.40712890625,
+          "win_rate_95pct_series_interval": [
+            0.39492187500000003,
+            0.416015625
+          ],
+          "live_minus_this_win_rate": 0.048828125,
+          "paired_difference_95pct_series_interval": [
+            0.03183593749999999,
+            0.0658203125
+          ]
+        },
+        "adaptive-v4": {
+          "wins": 2485,
+          "losses": 2629,
+          "caps": 6,
+          "win_rate": 0.4853515625,
+          "score_with_half_for_cap": 0.4859375,
+          "win_rate_95pct_series_interval": [
+            0.47167968749999994,
+            0.4984375000000001
+          ],
+          "live_minus_this_win_rate": -0.03125,
+          "paired_difference_95pct_series_interval": [
+            -0.0458984375,
+            -0.0177734375
+          ]
+        },
+        "adaptive-v1": {
+          "wins": 2118,
+          "losses": 2946,
+          "caps": 56,
+          "win_rate": 0.413671875,
+          "score_with_half_for_cap": 0.419140625,
+          "win_rate_95pct_series_interval": [
+            0.3980468750000001,
+            0.4294921875
+          ],
+          "live_minus_this_win_rate": 0.0404296875,
+          "paired_difference_95pct_series_interval": [
+            0.019140624999999998,
+            0.0619140625
+          ]
+        },
+        "adaptive-v3": {
+          "wins": 1034,
+          "losses": 4086,
+          "caps": 0,
+          "win_rate": 0.201953125,
+          "score_with_half_for_cap": 0.201953125,
+          "win_rate_95pct_series_interval": [
+            0.1919921875,
+            0.21230468750000006
+          ],
+          "live_minus_this_win_rate": 0.2521484375,
+          "paired_difference_95pct_series_interval": [
+            0.23066406249999993,
+            0.271875
+          ]
+        },
+        "pressure": {
+          "wins": 2697,
+          "losses": 2412,
+          "caps": 11,
+          "win_rate": 0.5267578125,
+          "score_with_half_for_cap": 0.52783203125,
+          "win_rate_95pct_series_interval": [
+            0.515234375,
+            0.5384765625
+          ],
+          "live_minus_this_win_rate": -0.07265625,
+          "paired_difference_95pct_series_interval": [
+            -0.08984375,
+            -0.056640625000000014
+          ]
+        }
+      },
+      "time_windows": {
+        "opening": {
+          "game_indices_zero_based_half_open": [
+            0,
+            20
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 187,
+            "adaptive-v1": 144,
+            "adaptive-v3": 99,
+            "pressure": 210
+          },
+          "win_rates": {
+            "live": 0.428125,
+            "uniform": 0.41875,
+            "adaptive-v4": 0.5,
+            "adaptive-v1": 0.4140625,
+            "adaptive-v3": 0.2265625,
+            "pressure": 0.5328125
+          }
+        },
+        "end_first_half": {
+          "game_indices_zero_based_half_open": [
+            60,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 165,
+            "adaptive-v1": 127,
+            "adaptive-v3": 51,
+            "pressure": 297
+          },
+          "win_rates": {
+            "live": 0.48125,
+            "uniform": 0.415625,
+            "adaptive-v4": 0.5046875,
+            "adaptive-v1": 0.40625,
+            "adaptive-v3": 0.215625,
+            "pressure": 0.55625
+          }
+        },
+        "start_second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            100
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 194,
+            "adaptive-v1": 112,
+            "adaptive-v3": 36,
+            "pressure": 298
+          },
+          "win_rates": {
+            "live": 0.4515625,
+            "uniform": 0.4171875,
+            "adaptive-v4": 0.4921875,
+            "adaptive-v1": 0.4171875,
+            "adaptive-v3": 0.1984375,
+            "pressure": 0.5109375
+          }
+        },
+        "end": {
+          "game_indices_zero_based_half_open": [
+            140,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 170,
+            "adaptive-v1": 112,
+            "adaptive-v3": 39,
+            "pressure": 319
+          },
+          "win_rates": {
+            "live": 0.471875,
+            "uniform": 0.403125,
+            "adaptive-v4": 0.475,
+            "adaptive-v1": 0.4203125,
+            "adaptive-v3": 0.1953125,
+            "pressure": 0.5140625
+          }
+        },
+        "first_half": {
+          "game_indices_zero_based_half_open": [
+            0,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 727,
+            "adaptive-v1": 538,
+            "adaptive-v3": 276,
+            "pressure": 1019
+          },
+          "win_rates": {
+            "live": 0.45078125,
+            "uniform": 0.405078125,
+            "adaptive-v4": 0.49140625,
+            "adaptive-v1": 0.41171875,
+            "adaptive-v3": 0.20546875,
+            "pressure": 0.540625
+          }
+        },
+        "second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 703,
+            "adaptive-v1": 488,
+            "adaptive-v3": 183,
+            "pressure": 1186
+          },
+          "win_rates": {
+            "live": 0.457421875,
+            "uniform": 0.40546875,
+            "adaptive-v4": 0.479296875,
+            "adaptive-v1": 0.415625,
+            "adaptive-v3": 0.1984375,
+            "pressure": 0.512890625
+          }
+        }
+      },
+      "per_series": [
+        {
+          "series": 0,
+          "wins_losses_caps": {
+            "live": [
+              67,
+              91,
+              2
+            ],
+            "uniform": [
+              58,
+              101,
+              1
+            ],
+            "adaptive-v4": [
+              71,
+              89,
+              0
+            ],
+            "adaptive-v1": [
+              75,
+              82,
+              3
+            ],
+            "adaptive-v3": [
+              34,
+              126,
+              0
+            ],
+            "pressure": [
+              80,
+              80,
+              0
+            ]
+          },
+          "arm_counts": [
+            14,
+            39,
+            26,
+            81
+          ]
+        },
+        {
+          "series": 1,
+          "wins_losses_caps": {
+            "live": [
+              74,
+              86,
+              0
+            ],
+            "uniform": [
+              64,
+              94,
+              2
+            ],
+            "adaptive-v4": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v1": [
+              64,
+              93,
+              3
+            ],
+            "adaptive-v3": [
+              34,
+              126,
+              0
+            ],
+            "pressure": [
+              83,
+              76,
+              1
+            ]
+          },
+          "arm_counts": [
+            69,
+            31,
+            8,
+            52
+          ]
+        },
+        {
+          "series": 2,
+          "wins_losses_caps": {
+            "live": [
+              71,
+              88,
+              1
+            ],
+            "uniform": [
+              65,
+              94,
+              1
+            ],
+            "adaptive-v4": [
+              69,
+              90,
+              1
+            ],
+            "adaptive-v1": [
+              59,
+              99,
+              2
+            ],
+            "adaptive-v3": [
+              29,
+              131,
+              0
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            43,
+            14,
+            15,
+            88
+          ]
+        },
+        {
+          "series": 3,
+          "wins_losses_caps": {
+            "live": [
+              77,
+              83,
+              0
+            ],
+            "uniform": [
+              65,
+              94,
+              1
+            ],
+            "adaptive-v4": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v1": [
+              69,
+              88,
+              3
+            ],
+            "adaptive-v3": [
+              37,
+              123,
+              0
+            ],
+            "pressure": [
+              80,
+              80,
+              0
+            ]
+          },
+          "arm_counts": [
+            32,
+            13,
+            16,
+            99
+          ]
+        },
+        {
+          "series": 4,
+          "wins_losses_caps": {
+            "live": [
+              72,
+              86,
+              2
+            ],
+            "uniform": [
+              64,
+              96,
+              0
+            ],
+            "adaptive-v4": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              89,
+              3
+            ],
+            "adaptive-v3": [
+              34,
+              126,
+              0
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            70,
+            21,
+            11,
+            58
+          ]
+        },
+        {
+          "series": 5,
+          "wins_losses_caps": {
+            "live": [
+              71,
+              88,
+              1
+            ],
+            "uniform": [
+              55,
+              105,
+              0
+            ],
+            "adaptive-v4": [
+              64,
+              96,
+              0
+            ],
+            "adaptive-v1": [
+              55,
+              103,
+              2
+            ],
+            "adaptive-v3": [
+              23,
+              137,
+              0
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            34,
+            24,
+            11,
+            91
+          ]
+        },
+        {
+          "series": 6,
+          "wins_losses_caps": {
+            "live": [
+              72,
+              86,
+              2
+            ],
+            "uniform": [
+              62,
+              98,
+              0
+            ],
+            "adaptive-v4": [
+              78,
+              81,
+              1
+            ],
+            "adaptive-v1": [
+              72,
+              86,
+              2
+            ],
+            "adaptive-v3": [
+              27,
+              133,
+              0
+            ],
+            "pressure": [
+              94,
+              66,
+              0
+            ]
+          },
+          "arm_counts": [
+            34,
+            40,
+            15,
+            71
+          ]
+        },
+        {
+          "series": 7,
+          "wins_losses_caps": {
+            "live": [
+              73,
+              87,
+              0
+            ],
+            "uniform": [
+              69,
+              91,
+              0
+            ],
+            "adaptive-v4": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v1": [
+              76,
+              83,
+              1
+            ],
+            "adaptive-v3": [
+              25,
+              135,
+              0
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            22,
+            51,
+            13,
+            74
+          ]
+        },
+        {
+          "series": 8,
+          "wins_losses_caps": {
+            "live": [
+              67,
+              93,
+              0
+            ],
+            "uniform": [
+              66,
+              94,
+              0
+            ],
+            "adaptive-v4": [
+              73,
+              87,
+              0
+            ],
+            "adaptive-v1": [
+              73,
+              86,
+              1
+            ],
+            "adaptive-v3": [
+              31,
+              129,
+              0
+            ],
+            "pressure": [
+              82,
+              78,
+              0
+            ]
+          },
+          "arm_counts": [
+            48,
+            49,
+            10,
+            53
+          ]
+        },
+        {
+          "series": 9,
+          "wins_losses_caps": {
+            "live": [
+              75,
+              85,
+              0
+            ],
+            "uniform": [
+              69,
+              91,
+              0
+            ],
+            "adaptive-v4": [
+              87,
+              73,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              90,
+              2
+            ],
+            "adaptive-v3": [
+              34,
+              126,
+              0
+            ],
+            "pressure": [
+              83,
+              77,
+              0
+            ]
+          },
+          "arm_counts": [
+            71,
+            29,
+            13,
+            47
+          ]
+        },
+        {
+          "series": 10,
+          "wins_losses_caps": {
+            "live": [
+              75,
+              85,
+              0
+            ],
+            "uniform": [
+              66,
+              94,
+              0
+            ],
+            "adaptive-v4": [
+              83,
+              77,
+              0
+            ],
+            "adaptive-v1": [
+              71,
+              87,
+              2
+            ],
+            "adaptive-v3": [
+              30,
+              130,
+              0
+            ],
+            "pressure": [
+              78,
+              81,
+              1
+            ]
+          },
+          "arm_counts": [
+            39,
+            28,
+            15,
+            78
+          ]
+        },
+        {
+          "series": 11,
+          "wins_losses_caps": {
+            "live": [
+              62,
+              98,
+              0
+            ],
+            "uniform": [
+              61,
+              99,
+              0
+            ],
+            "adaptive-v4": [
+              64,
+              96,
+              0
+            ],
+            "adaptive-v1": [
+              66,
+              93,
+              1
+            ],
+            "adaptive-v3": [
+              32,
+              128,
+              0
+            ],
+            "pressure": [
+              77,
+              83,
+              0
+            ]
+          },
+          "arm_counts": [
+            36,
+            31,
+            18,
+            75
+          ]
+        },
+        {
+          "series": 12,
+          "wins_losses_caps": {
+            "live": [
+              84,
+              75,
+              1
+            ],
+            "uniform": [
+              69,
+              88,
+              3
+            ],
+            "adaptive-v4": [
+              89,
+              70,
+              1
+            ],
+            "adaptive-v1": [
+              68,
+              90,
+              2
+            ],
+            "adaptive-v3": [
+              35,
+              125,
+              0
+            ],
+            "pressure": [
+              85,
+              75,
+              0
+            ]
+          },
+          "arm_counts": [
+            36,
+            33,
+            9,
+            82
+          ]
+        },
+        {
+          "series": 13,
+          "wins_losses_caps": {
+            "live": [
+              55,
+              105,
+              0
+            ],
+            "uniform": [
+              58,
+              100,
+              2
+            ],
+            "adaptive-v4": [
+              69,
+              91,
+              0
+            ],
+            "adaptive-v1": [
+              62,
+              96,
+              2
+            ],
+            "adaptive-v3": [
+              37,
+              123,
+              0
+            ],
+            "pressure": [
+              79,
+              81,
+              0
+            ]
+          },
+          "arm_counts": [
+            70,
+            34,
+            32,
+            24
+          ]
+        },
+        {
+          "series": 14,
+          "wins_losses_caps": {
+            "live": [
+              81,
+              78,
+              1
+            ],
+            "uniform": [
+              64,
+              96,
+              0
+            ],
+            "adaptive-v4": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v1": [
+              59,
+              100,
+              1
+            ],
+            "adaptive-v3": [
+              31,
+              129,
+              0
+            ],
+            "pressure": [
+              85,
+              74,
+              1
+            ]
+          },
+          "arm_counts": [
+            49,
+            17,
+            12,
+            82
+          ]
+        },
+        {
+          "series": 15,
+          "wins_losses_caps": {
+            "live": [
+              76,
+              84,
+              0
+            ],
+            "uniform": [
+              63,
+              97,
+              0
+            ],
+            "adaptive-v4": [
+              79,
+              81,
+              0
+            ],
+            "adaptive-v1": [
+              65,
+              95,
+              0
+            ],
+            "adaptive-v3": [
+              26,
+              134,
+              0
+            ],
+            "pressure": [
+              88,
+              71,
+              1
+            ]
+          },
+          "arm_counts": [
+            54,
+            25,
+            9,
+            72
+          ]
+        },
+        {
+          "series": 16,
+          "wins_losses_caps": {
+            "live": [
+              82,
+              78,
+              0
+            ],
+            "uniform": [
+              57,
+              103,
+              0
+            ],
+            "adaptive-v4": [
+              74,
+              86,
+              0
+            ],
+            "adaptive-v1": [
+              58,
+              101,
+              1
+            ],
+            "adaptive-v3": [
+              35,
+              125,
+              0
+            ],
+            "pressure": [
+              87,
+              73,
+              0
+            ]
+          },
+          "arm_counts": [
+            18,
+            22,
+            12,
+            108
+          ]
+        },
+        {
+          "series": 17,
+          "wins_losses_caps": {
+            "live": [
+              72,
+              87,
+              1
+            ],
+            "uniform": [
+              70,
+              89,
+              1
+            ],
+            "adaptive-v4": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v1": [
+              65,
+              92,
+              3
+            ],
+            "adaptive-v3": [
+              44,
+              116,
+              0
+            ],
+            "pressure": [
+              94,
+              65,
+              1
+            ]
+          },
+          "arm_counts": [
+            28,
+            54,
+            16,
+            62
+          ]
+        },
+        {
+          "series": 18,
+          "wins_losses_caps": {
+            "live": [
+              74,
+              86,
+              0
+            ],
+            "uniform": [
+              63,
+              96,
+              1
+            ],
+            "adaptive-v4": [
+              85,
+              75,
+              0
+            ],
+            "adaptive-v1": [
+              62,
+              96,
+              2
+            ],
+            "adaptive-v3": [
+              40,
+              120,
+              0
+            ],
+            "pressure": [
+              83,
+              77,
+              0
+            ]
+          },
+          "arm_counts": [
+            54,
+            30,
+            22,
+            54
+          ]
+        },
+        {
+          "series": 19,
+          "wins_losses_caps": {
+            "live": [
+              57,
+              103,
+              0
+            ],
+            "uniform": [
+              62,
+              97,
+              1
+            ],
+            "adaptive-v4": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v1": [
+              65,
+              94,
+              1
+            ],
+            "adaptive-v3": [
+              32,
+              128,
+              0
+            ],
+            "pressure": [
+              91,
+              69,
+              0
+            ]
+          },
+          "arm_counts": [
+            18,
+            68,
+            20,
+            54
+          ]
+        },
+        {
+          "series": 20,
+          "wins_losses_caps": {
+            "live": [
+              87,
+              72,
+              1
+            ],
+            "uniform": [
+              67,
+              92,
+              1
+            ],
+            "adaptive-v4": [
+              86,
+              74,
+              0
+            ],
+            "adaptive-v1": [
+              63,
+              95,
+              2
+            ],
+            "adaptive-v3": [
+              30,
+              130,
+              0
+            ],
+            "pressure": [
+              99,
+              60,
+              1
+            ]
+          },
+          "arm_counts": [
+            37,
+            29,
+            14,
+            80
+          ]
+        },
+        {
+          "series": 21,
+          "wins_losses_caps": {
+            "live": [
+              78,
+              82,
+              0
+            ],
+            "uniform": [
+              63,
+              96,
+              1
+            ],
+            "adaptive-v4": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v1": [
+              82,
+              74,
+              4
+            ],
+            "adaptive-v3": [
+              27,
+              133,
+              0
+            ],
+            "pressure": [
+              84,
+              76,
+              0
+            ]
+          },
+          "arm_counts": [
+            8,
+            36,
+            13,
+            103
+          ]
+        },
+        {
+          "series": 22,
+          "wins_losses_caps": {
+            "live": [
+              68,
+              92,
+              0
+            ],
+            "uniform": [
+              66,
+              94,
+              0
+            ],
+            "adaptive-v4": [
+              75,
+              84,
+              1
+            ],
+            "adaptive-v1": [
+              59,
+              100,
+              1
+            ],
+            "adaptive-v3": [
+              27,
+              133,
+              0
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            72,
+            27,
+            11,
+            50
+          ]
+        },
+        {
+          "series": 23,
+          "wins_losses_caps": {
+            "live": [
+              69,
+              90,
+              1
+            ],
+            "uniform": [
+              62,
+              97,
+              1
+            ],
+            "adaptive-v4": [
+              73,
+              87,
+              0
+            ],
+            "adaptive-v1": [
+              65,
+              91,
+              4
+            ],
+            "adaptive-v3": [
+              32,
+              128,
+              0
+            ],
+            "pressure": [
+              84,
+              76,
+              0
+            ]
+          },
+          "arm_counts": [
+            26,
+            33,
+            19,
+            82
+          ]
+        },
+        {
+          "series": 24,
+          "wins_losses_caps": {
+            "live": [
+              64,
+              96,
+              0
+            ],
+            "uniform": [
+              71,
+              89,
+              0
+            ],
+            "adaptive-v4": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v1": [
+              58,
+              101,
+              1
+            ],
+            "adaptive-v3": [
+              40,
+              120,
+              0
+            ],
+            "pressure": [
+              88,
+              72,
+              0
+            ]
+          },
+          "arm_counts": [
+            34,
+            31,
+            15,
+            80
+          ]
+        },
+        {
+          "series": 25,
+          "wins_losses_caps": {
+            "live": [
+              79,
+              81,
+              0
+            ],
+            "uniform": [
+              79,
+              81,
+              0
+            ],
+            "adaptive-v4": [
+              86,
+              72,
+              2
+            ],
+            "adaptive-v1": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v3": [
+              40,
+              120,
+              0
+            ],
+            "pressure": [
+              86,
+              74,
+              0
+            ]
+          },
+          "arm_counts": [
+            52,
+            62,
+            12,
+            34
+          ]
+        },
+        {
+          "series": 26,
+          "wins_losses_caps": {
+            "live": [
+              70,
+              88,
+              2
+            ],
+            "uniform": [
+              61,
+              98,
+              1
+            ],
+            "adaptive-v4": [
+              72,
+              88,
+              0
+            ],
+            "adaptive-v1": [
+              73,
+              83,
+              4
+            ],
+            "adaptive-v3": [
+              37,
+              123,
+              0
+            ],
+            "pressure": [
+              73,
+              86,
+              1
+            ]
+          },
+          "arm_counts": [
+            81,
+            28,
+            14,
+            37
+          ]
+        },
+        {
+          "series": 27,
+          "wins_losses_caps": {
+            "live": [
+              66,
+              94,
+              0
+            ],
+            "uniform": [
+              73,
+              87,
+              0
+            ],
+            "adaptive-v4": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v1": [
+              66,
+              93,
+              1
+            ],
+            "adaptive-v3": [
+              33,
+              127,
+              0
+            ],
+            "pressure": [
+              79,
+              79,
+              2
+            ]
+          },
+          "arm_counts": [
+            16,
+            54,
+            15,
+            75
+          ]
+        },
+        {
+          "series": 28,
+          "wins_losses_caps": {
+            "live": [
+              77,
+              83,
+              0
+            ],
+            "uniform": [
+              63,
+              97,
+              0
+            ],
+            "adaptive-v4": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v1": [
+              56,
+              103,
+              1
+            ],
+            "adaptive-v3": [
+              31,
+              129,
+              0
+            ],
+            "pressure": [
+              87,
+              72,
+              1
+            ]
+          },
+          "arm_counts": [
+            42,
+            25,
+            12,
+            81
+          ]
+        },
+        {
+          "series": 29,
+          "wins_losses_caps": {
+            "live": [
+              72,
+              87,
+              1
+            ],
+            "uniform": [
+              70,
+              89,
+              1
+            ],
+            "adaptive-v4": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v1": [
+              69,
+              91,
+              0
+            ],
+            "adaptive-v3": [
+              32,
+              128,
+              0
+            ],
+            "pressure": [
+              90,
+              69,
+              1
+            ]
+          },
+          "arm_counts": [
+            75,
+            18,
+            10,
+            57
+          ]
+        },
+        {
+          "series": 30,
+          "wins_losses_caps": {
+            "live": [
+              86,
+              74,
+              0
+            ],
+            "uniform": [
+              66,
+              94,
+              0
+            ],
+            "adaptive-v4": [
+              84,
+              76,
+              0
+            ],
+            "adaptive-v1": [
+              72,
+              88,
+              0
+            ],
+            "adaptive-v3": [
+              28,
+              132,
+              0
+            ],
+            "pressure": [
+              90,
+              70,
+              0
+            ]
+          },
+          "arm_counts": [
+            72,
+            20,
+            6,
+            62
+          ]
+        },
+        {
+          "series": 31,
+          "wins_losses_caps": {
+            "live": [
+              72,
+              88,
+              0
+            ],
+            "uniform": [
+              64,
+              95,
+              1
+            ],
+            "adaptive-v4": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v1": [
+              55,
+              104,
+              1
+            ],
+            "adaptive-v3": [
+              27,
+              133,
+              0
+            ],
+            "pressure": [
+              83,
+              77,
+              0
+            ]
+          },
+          "arm_counts": [
+            76,
+            10,
+            15,
+            59
+          ]
+        }
+      ],
+      "counterfactual_tape_sha256": "e1a92248597effc136089142b4c87f33461c7ecae66d469da2f60c34f89f1350",
+      "counterfactual_tape_zlib_base64": "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",
+      "first_half_opponent": "qualification-rival-v3",
+      "second_half_opponent": "qualification-rival-v3"
+    },
+    "v1_then_v3": {
+      "comparison": {
+        "live": {
+          "wins": 2458,
+          "losses": 2638,
+          "caps": 24,
+          "win_rate": 0.480078125,
+          "score_with_half_for_cap": 0.482421875,
+          "win_rate_95pct_series_interval": [
+            0.4667968749999999,
+            0.49355468750000003
+          ]
+        },
+        "uniform": {
+          "wins": 2401,
+          "losses": 2692,
+          "caps": 27,
+          "win_rate": 0.4689453125,
+          "score_with_half_for_cap": 0.47158203125,
+          "win_rate_95pct_series_interval": [
+            0.45683593749999984,
+            0.4806640624999999
+          ],
+          "live_minus_this_win_rate": 0.0111328125,
+          "paired_difference_95pct_series_interval": [
+            -0.0033203124999999995,
+            0.025195312500000004
+          ]
+        },
+        "adaptive-v4": {
+          "wins": 2663,
+          "losses": 2432,
+          "caps": 25,
+          "win_rate": 0.5201171875,
+          "score_with_half_for_cap": 0.52255859375,
+          "win_rate_95pct_series_interval": [
+            0.5050781249999999,
+            0.5341796874999999
+          ],
+          "live_minus_this_win_rate": -0.0400390625,
+          "paired_difference_95pct_series_interval": [
+            -0.05117187499999999,
+            -0.028710937499999988
+          ]
+        },
+        "adaptive-v1": {
+          "wins": 2254,
+          "losses": 2815,
+          "caps": 51,
+          "win_rate": 0.440234375,
+          "score_with_half_for_cap": 0.44521484375,
+          "win_rate_95pct_series_interval": [
+            0.4267578125,
+            0.45390625
+          ],
+          "live_minus_this_win_rate": 0.03984375,
+          "paired_difference_95pct_series_interval": [
+            0.025585937500000003,
+            0.053515625000000004
+          ]
+        },
+        "adaptive-v3": {
+          "wins": 2134,
+          "losses": 2970,
+          "caps": 16,
+          "win_rate": 0.416796875,
+          "score_with_half_for_cap": 0.418359375,
+          "win_rate_95pct_series_interval": [
+            0.4025390625000001,
+            0.4308593750000002
+          ],
+          "live_minus_this_win_rate": 0.06328125,
+          "paired_difference_95pct_series_interval": [
+            0.0470703125,
+            0.07832031249999999
+          ]
+        },
+        "pressure": {
+          "wins": 2598,
+          "losses": 2508,
+          "caps": 14,
+          "win_rate": 0.507421875,
+          "score_with_half_for_cap": 0.5087890625,
+          "win_rate_95pct_series_interval": [
+            0.4935546875000001,
+            0.5203125000000002
+          ],
+          "live_minus_this_win_rate": -0.02734375,
+          "paired_difference_95pct_series_interval": [
+            -0.0412109375,
+            -0.012695312500000002
+          ]
+        }
+      },
+      "time_windows": {
+        "opening": {
+          "game_indices_zero_based_half_open": [
+            0,
+            20
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 182,
+            "adaptive-v1": 146,
+            "adaptive-v3": 176,
+            "pressure": 136
+          },
+          "win_rates": {
+            "live": 0.5375,
+            "uniform": 0.54375,
+            "adaptive-v4": 0.56875,
+            "adaptive-v1": 0.4640625,
+            "adaptive-v3": 0.6171875,
+            "pressure": 0.496875
+          }
+        },
+        "end_first_half": {
+          "game_indices_zero_based_half_open": [
+            60,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 169,
+            "adaptive-v1": 98,
+            "adaptive-v3": 255,
+            "pressure": 118
+          },
+          "win_rates": {
+            "live": 0.5921875,
+            "uniform": 0.5734375,
+            "adaptive-v4": 0.5765625,
+            "adaptive-v1": 0.4921875,
+            "adaptive-v3": 0.6640625,
+            "pressure": 0.50625
+          }
+        },
+        "start_second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            100
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 168,
+            "adaptive-v1": 117,
+            "adaptive-v3": 220,
+            "pressure": 135
+          },
+          "win_rates": {
+            "live": 0.359375,
+            "uniform": 0.3828125,
+            "adaptive-v4": 0.484375,
+            "adaptive-v1": 0.3953125,
+            "adaptive-v3": 0.2,
+            "pressure": 0.5015625
+          }
+        },
+        "end": {
+          "game_indices_zero_based_half_open": [
+            140,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 222,
+            "adaptive-v1": 133,
+            "adaptive-v3": 66,
+            "pressure": 219
+          },
+          "win_rates": {
+            "live": 0.4671875,
+            "uniform": 0.4265625,
+            "adaptive-v4": 0.49375,
+            "adaptive-v1": 0.4515625,
+            "adaptive-v3": 0.215625,
+            "pressure": 0.5375
+          }
+        },
+        "first_half": {
+          "game_indices_zero_based_half_open": [
+            0,
+            80
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 651,
+            "adaptive-v1": 489,
+            "adaptive-v3": 881,
+            "pressure": 539
+          },
+          "win_rates": {
+            "live": 0.5453125,
+            "uniform": 0.53046875,
+            "adaptive-v4": 0.5546875,
+            "adaptive-v1": 0.46484375,
+            "adaptive-v3": 0.621875,
+            "pressure": 0.49765625
+          }
+        },
+        "second_half": {
+          "game_indices_zero_based_half_open": [
+            80,
+            160
+          ],
+          "live_arm_counts": {
+            "adaptive-v4": 747,
+            "adaptive-v1": 535,
+            "adaptive-v3": 525,
+            "pressure": 753
+          },
+          "win_rates": {
+            "live": 0.41484375,
+            "uniform": 0.407421875,
+            "adaptive-v4": 0.485546875,
+            "adaptive-v1": 0.415625,
+            "adaptive-v3": 0.21171875,
+            "pressure": 0.5171875
+          }
+        }
+      },
+      "per_series": [
+        {
+          "series": 0,
+          "wins_losses_caps": {
+            "live": [
+              86,
+              72,
+              2
+            ],
+            "uniform": [
+              82,
+              77,
+              1
+            ],
+            "adaptive-v4": [
+              91,
+              68,
+              1
+            ],
+            "adaptive-v1": [
+              72,
+              85,
+              3
+            ],
+            "adaptive-v3": [
+              68,
+              91,
+              1
+            ],
+            "pressure": [
+              89,
+              70,
+              1
+            ]
+          },
+          "arm_counts": [
+            78,
+            31,
+            11,
+            40
+          ]
+        },
+        {
+          "series": 1,
+          "wins_losses_caps": {
+            "live": [
+              81,
+              78,
+              1
+            ],
+            "uniform": [
+              65,
+              94,
+              1
+            ],
+            "adaptive-v4": [
+              87,
+              72,
+              1
+            ],
+            "adaptive-v1": [
+              73,
+              87,
+              0
+            ],
+            "adaptive-v3": [
+              61,
+              98,
+              1
+            ],
+            "pressure": [
+              86,
+              74,
+              0
+            ]
+          },
+          "arm_counts": [
+            16,
+            31,
+            48,
+            65
+          ]
+        },
+        {
+          "series": 2,
+          "wins_losses_caps": {
+            "live": [
+              72,
+              87,
+              1
+            ],
+            "uniform": [
+              72,
+              88,
+              0
+            ],
+            "adaptive-v4": [
+              78,
+              81,
+              1
+            ],
+            "adaptive-v1": [
+              57,
+              101,
+              2
+            ],
+            "adaptive-v3": [
+              64,
+              95,
+              1
+            ],
+            "pressure": [
+              87,
+              73,
+              0
+            ]
+          },
+          "arm_counts": [
+            52,
+            14,
+            40,
+            54
+          ]
+        },
+        {
+          "series": 3,
+          "wins_losses_caps": {
+            "live": [
+              83,
+              77,
+              0
+            ],
+            "uniform": [
+              75,
+              85,
+              0
+            ],
+            "adaptive-v4": [
+              93,
+              67,
+              0
+            ],
+            "adaptive-v1": [
+              68,
+              92,
+              0
+            ],
+            "adaptive-v3": [
+              69,
+              91,
+              0
+            ],
+            "pressure": [
+              88,
+              71,
+              1
+            ]
+          },
+          "arm_counts": [
+            38,
+            24,
+            52,
+            46
+          ]
+        },
+        {
+          "series": 4,
+          "wins_losses_caps": {
+            "live": [
+              81,
+              79,
+              0
+            ],
+            "uniform": [
+              67,
+              91,
+              2
+            ],
+            "adaptive-v4": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v1": [
+              66,
+              92,
+              2
+            ],
+            "adaptive-v3": [
+              66,
+              93,
+              1
+            ],
+            "pressure": [
+              72,
+              88,
+              0
+            ]
+          },
+          "arm_counts": [
+            48,
+            31,
+            59,
+            22
+          ]
+        },
+        {
+          "series": 5,
+          "wins_losses_caps": {
+            "live": [
+              76,
+              82,
+              2
+            ],
+            "uniform": [
+              71,
+              89,
+              0
+            ],
+            "adaptive-v4": [
+              71,
+              87,
+              2
+            ],
+            "adaptive-v1": [
+              76,
+              84,
+              0
+            ],
+            "adaptive-v3": [
+              63,
+              95,
+              2
+            ],
+            "pressure": [
+              83,
+              75,
+              2
+            ]
+          },
+          "arm_counts": [
+            32,
+            16,
+            46,
+            66
+          ]
+        },
+        {
+          "series": 6,
+          "wins_losses_caps": {
+            "live": [
+              78,
+              82,
+              0
+            ],
+            "uniform": [
+              76,
+              83,
+              1
+            ],
+            "adaptive-v4": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v1": [
+              78,
+              81,
+              1
+            ],
+            "adaptive-v3": [
+              64,
+              96,
+              0
+            ],
+            "pressure": [
+              73,
+              87,
+              0
+            ]
+          },
+          "arm_counts": [
+            18,
+            42,
+            49,
+            51
+          ]
+        },
+        {
+          "series": 7,
+          "wins_losses_caps": {
+            "live": [
+              85,
+              75,
+              0
+            ],
+            "uniform": [
+              82,
+              77,
+              1
+            ],
+            "adaptive-v4": [
+              90,
+              69,
+              1
+            ],
+            "adaptive-v1": [
+              85,
+              75,
+              0
+            ],
+            "adaptive-v3": [
+              74,
+              86,
+              0
+            ],
+            "pressure": [
+              88,
+              72,
+              0
+            ]
+          },
+          "arm_counts": [
+            52,
+            54,
+            31,
+            23
+          ]
+        },
+        {
+          "series": 8,
+          "wins_losses_caps": {
+            "live": [
+              71,
+              87,
+              2
+            ],
+            "uniform": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v4": [
+              74,
+              84,
+              2
+            ],
+            "adaptive-v1": [
+              69,
+              87,
+              4
+            ],
+            "adaptive-v3": [
+              70,
+              88,
+              2
+            ],
+            "pressure": [
+              74,
+              85,
+              1
+            ]
+          },
+          "arm_counts": [
+            50,
+            37,
+            36,
+            37
+          ]
+        },
+        {
+          "series": 9,
+          "wins_losses_caps": {
+            "live": [
+              82,
+              78,
+              0
+            ],
+            "uniform": [
+              67,
+              93,
+              0
+            ],
+            "adaptive-v4": [
+              79,
+              81,
+              0
+            ],
+            "adaptive-v1": [
+              62,
+              98,
+              0
+            ],
+            "adaptive-v3": [
+              66,
+              94,
+              0
+            ],
+            "pressure": [
+              83,
+              77,
+              0
+            ]
+          },
+          "arm_counts": [
+            33,
+            27,
+            24,
+            76
+          ]
+        },
+        {
+          "series": 10,
+          "wins_losses_caps": {
+            "live": [
+              76,
+              84,
+              0
+            ],
+            "uniform": [
+              73,
+              86,
+              1
+            ],
+            "adaptive-v4": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v1": [
+              76,
+              83,
+              1
+            ],
+            "adaptive-v3": [
+              64,
+              96,
+              0
+            ],
+            "pressure": [
+              89,
+              71,
+              0
+            ]
+          },
+          "arm_counts": [
+            28,
+            59,
+            48,
+            25
+          ]
+        },
+        {
+          "series": 11,
+          "wins_losses_caps": {
+            "live": [
+              65,
+              95,
+              0
+            ],
+            "uniform": [
+              66,
+              94,
+              0
+            ],
+            "adaptive-v4": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v1": [
+              56,
+              102,
+              2
+            ],
+            "adaptive-v3": [
+              68,
+              92,
+              0
+            ],
+            "pressure": [
+              79,
+              81,
+              0
+            ]
+          },
+          "arm_counts": [
+            37,
+            26,
+            78,
+            19
+          ]
+        },
+        {
+          "series": 12,
+          "wins_losses_caps": {
+            "live": [
+              71,
+              89,
+              0
+            ],
+            "uniform": [
+              72,
+              87,
+              1
+            ],
+            "adaptive-v4": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v1": [
+              63,
+              96,
+              1
+            ],
+            "adaptive-v3": [
+              65,
+              95,
+              0
+            ],
+            "pressure": [
+              75,
+              85,
+              0
+            ]
+          },
+          "arm_counts": [
+            39,
+            21,
+            57,
+            43
+          ]
+        },
+        {
+          "series": 13,
+          "wins_losses_caps": {
+            "live": [
+              78,
+              81,
+              1
+            ],
+            "uniform": [
+              70,
+              90,
+              0
+            ],
+            "adaptive-v4": [
+              83,
+              75,
+              2
+            ],
+            "adaptive-v1": [
+              72,
+              87,
+              1
+            ],
+            "adaptive-v3": [
+              64,
+              95,
+              1
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            65,
+            39,
+            35,
+            21
+          ]
+        },
+        {
+          "series": 14,
+          "wins_losses_caps": {
+            "live": [
+              70,
+              89,
+              1
+            ],
+            "uniform": [
+              77,
+              82,
+              1
+            ],
+            "adaptive-v4": [
+              85,
+              74,
+              1
+            ],
+            "adaptive-v1": [
+              67,
+              92,
+              1
+            ],
+            "adaptive-v3": [
+              65,
+              95,
+              0
+            ],
+            "pressure": [
+              87,
+              73,
+              0
+            ]
+          },
+          "arm_counts": [
+            54,
+            43,
+            41,
+            22
+          ]
+        },
+        {
+          "series": 15,
+          "wins_losses_caps": {
+            "live": [
+              78,
+              80,
+              2
+            ],
+            "uniform": [
+              77,
+              79,
+              4
+            ],
+            "adaptive-v4": [
+              85,
+              75,
+              0
+            ],
+            "adaptive-v1": [
+              67,
+              89,
+              4
+            ],
+            "adaptive-v3": [
+              70,
+              90,
+              0
+            ],
+            "pressure": [
+              74,
+              82,
+              4
+            ]
+          },
+          "arm_counts": [
+            14,
+            19,
+            87,
+            40
+          ]
+        },
+        {
+          "series": 16,
+          "wins_losses_caps": {
+            "live": [
+              80,
+              78,
+              2
+            ],
+            "uniform": [
+              75,
+              84,
+              1
+            ],
+            "adaptive-v4": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v1": [
+              78,
+              79,
+              3
+            ],
+            "adaptive-v3": [
+              79,
+              80,
+              1
+            ],
+            "pressure": [
+              73,
+              87,
+              0
+            ]
+          },
+          "arm_counts": [
+            49,
+            31,
+            63,
+            17
+          ]
+        },
+        {
+          "series": 17,
+          "wins_losses_caps": {
+            "live": [
+              94,
+              66,
+              0
+            ],
+            "uniform": [
+              84,
+              76,
+              0
+            ],
+            "adaptive-v4": [
+              101,
+              58,
+              1
+            ],
+            "adaptive-v1": [
+              75,
+              83,
+              2
+            ],
+            "adaptive-v3": [
+              70,
+              90,
+              0
+            ],
+            "pressure": [
+              84,
+              75,
+              1
+            ]
+          },
+          "arm_counts": [
+            73,
+            27,
+            36,
+            24
+          ]
+        },
+        {
+          "series": 18,
+          "wins_losses_caps": {
+            "live": [
+              70,
+              90,
+              0
+            ],
+            "uniform": [
+              78,
+              82,
+              0
+            ],
+            "adaptive-v4": [
+              82,
+              78,
+              0
+            ],
+            "adaptive-v1": [
+              69,
+              91,
+              0
+            ],
+            "adaptive-v3": [
+              61,
+              99,
+              0
+            ],
+            "pressure": [
+              76,
+              84,
+              0
+            ]
+          },
+          "arm_counts": [
+            45,
+            40,
+            48,
+            27
+          ]
+        },
+        {
+          "series": 19,
+          "wins_losses_caps": {
+            "live": [
+              77,
+              82,
+              1
+            ],
+            "uniform": [
+              81,
+              77,
+              2
+            ],
+            "adaptive-v4": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v1": [
+              70,
+              89,
+              1
+            ],
+            "adaptive-v3": [
+              74,
+              86,
+              0
+            ],
+            "pressure": [
+              84,
+              76,
+              0
+            ]
+          },
+          "arm_counts": [
+            41,
+            38,
+            30,
+            51
+          ]
+        },
+        {
+          "series": 20,
+          "wins_losses_caps": {
+            "live": [
+              74,
+              84,
+              2
+            ],
+            "uniform": [
+              75,
+              84,
+              1
+            ],
+            "adaptive-v4": [
+              81,
+              77,
+              2
+            ],
+            "adaptive-v1": [
+              66,
+              94,
+              0
+            ],
+            "adaptive-v3": [
+              63,
+              96,
+              1
+            ],
+            "pressure": [
+              80,
+              79,
+              1
+            ]
+          },
+          "arm_counts": [
+            35,
+            41,
+            44,
+            40
+          ]
+        },
+        {
+          "series": 21,
+          "wins_losses_caps": {
+            "live": [
+              73,
+              85,
+              2
+            ],
+            "uniform": [
+              73,
+              86,
+              1
+            ],
+            "adaptive-v4": [
+              83,
+              76,
+              1
+            ],
+            "adaptive-v1": [
+              72,
+              84,
+              4
+            ],
+            "adaptive-v3": [
+              59,
+              100,
+              1
+            ],
+            "pressure": [
+              80,
+              80,
+              0
+            ]
+          },
+          "arm_counts": [
+            57,
+            29,
+            43,
+            31
+          ]
+        },
+        {
+          "series": 22,
+          "wins_losses_caps": {
+            "live": [
+              76,
+              83,
+              1
+            ],
+            "uniform": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v4": [
+              89,
+              70,
+              1
+            ],
+            "adaptive-v1": [
+              63,
+              96,
+              1
+            ],
+            "adaptive-v3": [
+              63,
+              96,
+              1
+            ],
+            "pressure": [
+              89,
+              71,
+              0
+            ]
+          },
+          "arm_counts": [
+            24,
+            32,
+            51,
+            53
+          ]
+        },
+        {
+          "series": 23,
+          "wins_losses_caps": {
+            "live": [
+              76,
+              84,
+              0
+            ],
+            "uniform": [
+              70,
+              88,
+              2
+            ],
+            "adaptive-v4": [
+              92,
+              67,
+              1
+            ],
+            "adaptive-v1": [
+              64,
+              95,
+              1
+            ],
+            "adaptive-v3": [
+              54,
+              106,
+              0
+            ],
+            "pressure": [
+              80,
+              79,
+              1
+            ]
+          },
+          "arm_counts": [
+            47,
+            15,
+            28,
+            70
+          ]
+        },
+        {
+          "series": 24,
+          "wins_losses_caps": {
+            "live": [
+              64,
+              96,
+              0
+            ],
+            "uniform": [
+              62,
+              97,
+              1
+            ],
+            "adaptive-v4": [
+              70,
+              90,
+              0
+            ],
+            "adaptive-v1": [
+              69,
+              89,
+              2
+            ],
+            "adaptive-v3": [
+              63,
+              97,
+              0
+            ],
+            "pressure": [
+              67,
+              93,
+              0
+            ]
+          },
+          "arm_counts": [
+            36,
+            33,
+            55,
+            36
+          ]
+        },
+        {
+          "series": 25,
+          "wins_losses_caps": {
+            "live": [
+              70,
+              90,
+              0
+            ],
+            "uniform": [
+              76,
+              82,
+              2
+            ],
+            "adaptive-v4": [
+              73,
+              86,
+              1
+            ],
+            "adaptive-v1": [
+              68,
+              87,
+              5
+            ],
+            "adaptive-v3": [
+              71,
+              89,
+              0
+            ],
+            "pressure": [
+              81,
+              79,
+              0
+            ]
+          },
+          "arm_counts": [
+            28,
+            34,
+            26,
+            72
+          ]
+        },
+        {
+          "series": 26,
+          "wins_losses_caps": {
+            "live": [
+              78,
+              80,
+              2
+            ],
+            "uniform": [
+              90,
+              69,
+              1
+            ],
+            "adaptive-v4": [
+              92,
+              66,
+              2
+            ],
+            "adaptive-v1": [
+              71,
+              88,
+              1
+            ],
+            "adaptive-v3": [
+              62,
+              97,
+              1
+            ],
+            "pressure": [
+              83,
+              76,
+              1
+            ]
+          },
+          "arm_counts": [
+            84,
+            17,
+            17,
+            42
+          ]
+        },
+        {
+          "series": 27,
+          "wins_losses_caps": {
+            "live": [
+              82,
+              78,
+              0
+            ],
+            "uniform": [
+              76,
+              84,
+              0
+            ],
+            "adaptive-v4": [
+              88,
+              71,
+              1
+            ],
+            "adaptive-v1": [
+              78,
+              80,
+              2
+            ],
+            "adaptive-v3": [
+              78,
+              82,
+              0
+            ],
+            "pressure": [
+              74,
+              86,
+              0
+            ]
+          },
+          "arm_counts": [
+            22,
+            40,
+            71,
+            27
+          ]
+        },
+        {
+          "series": 28,
+          "wins_losses_caps": {
+            "live": [
+              79,
+              80,
+              1
+            ],
+            "uniform": [
+              79,
+              81,
+              0
+            ],
+            "adaptive-v4": [
+              81,
+              79,
+              0
+            ],
+            "adaptive-v1": [
+              79,
+              79,
+              2
+            ],
+            "adaptive-v3": [
+              73,
+              86,
+              1
+            ],
+            "pressure": [
+              90,
+              70,
+              0
+            ]
+          },
+          "arm_counts": [
+            53,
+            59,
+            23,
+            25
+          ]
+        },
+        {
+          "series": 29,
+          "wins_losses_caps": {
+            "live": [
+              73,
+              86,
+              1
+            ],
+            "uniform": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v4": [
+              80,
+              80,
+              0
+            ],
+            "adaptive-v1": [
+              76,
+              83,
+              1
+            ],
+            "adaptive-v3": [
+              71,
+              89,
+              0
+            ],
+            "pressure": [
+              77,
+              82,
+              1
+            ]
+          },
+          "arm_counts": [
+            39,
+            26,
+            58,
+            37
+          ]
+        },
+        {
+          "series": 30,
+          "wins_losses_caps": {
+            "live": [
+              76,
+              84,
+              0
+            ],
+            "uniform": [
+              78,
+              80,
+              2
+            ],
+            "adaptive-v4": [
+              90,
+              70,
+              0
+            ],
+            "adaptive-v1": [
+              75,
+              82,
+              3
+            ],
+            "adaptive-v3": [
+              53,
+              106,
+              1
+            ],
+            "pressure": [
+              86,
+              74,
+              0
+            ]
+          },
+          "arm_counts": [
+            78,
+            19,
+            28,
+            35
+          ]
+        },
+        {
+          "series": 31,
+          "wins_losses_caps": {
+            "live": [
+              83,
+              77,
+              0
+            ],
+            "uniform": [
+              77,
+              83,
+              0
+            ],
+            "adaptive-v4": [
+              87,
+              73,
+              0
+            ],
+            "adaptive-v1": [
+              74,
+              85,
+              1
+            ],
+            "adaptive-v3": [
+              79,
+              81,
+              0
+            ],
+            "pressure": [
+              86,
+              74,
+              0
+            ]
+          },
+          "arm_counts": [
+            33,
+            29,
+            43,
+            55
+          ]
+        }
+      ],
+      "counterfactual_tape_sha256": "e69bae2d53b0eade2e1be89273c2c0d25b3868ea1936031331489f10f1a5c56c",
+      "counterfactual_tape_zlib_base64": "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",
+      "first_half_opponent": "qualification-rival",
+      "second_half_opponent": "qualification-rival-v3"
+    }
+  }
+}

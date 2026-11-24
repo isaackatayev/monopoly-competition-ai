@@ -1,0 +1,64 @@
+{
+  "qualification": "league-v4.json",
+  "manifest_sha256": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+  "reference_board_stream": 17795291567363018288,
+  "individual_turn_cap": 1000,
+  "method": "Each treatment gives the Collector the frozen V4 decision policy for the indicated decision kinds only. V4 always plays its full policy. All other Collector decisions use its ordinary policy. Each arm replays the same 1,000 boards in both seats. Intervals are normal approximations over 1,000 independent within-board paired differences in win fraction. Each treatment includes follow-on changes in positions and play, so effects are not additive.",
+  "results": {
+    "collector": {
+      "v4_wins": 1923,
+      "v4_losses": 77,
+      "caps": 0,
+      "v4_win_rate": 0.9615,
+      "paired_change": 0.0,
+      "paired_95pct": [
+        0.0,
+        0.0
+      ]
+    },
+    "v4_accept_only": {
+      "v4_wins": 1694,
+      "v4_losses": 296,
+      "caps": 10,
+      "v4_win_rate": 0.847,
+      "paired_change": -0.1145,
+      "paired_95pct": [
+        -0.13103977108752196,
+        -0.09796022891247803
+      ]
+    },
+    "v4_all_trade_decisions": {
+      "v4_wins": 1624,
+      "v4_losses": 322,
+      "caps": 54,
+      "v4_win_rate": 0.812,
+      "paired_change": -0.1495,
+      "paired_95pct": [
+        -0.16691851555914808,
+        -0.1320814844408519
+      ]
+    },
+    "v4_property_purchase_and_auction": {
+      "v4_wins": 1757,
+      "v4_losses": 243,
+      "caps": 0,
+      "v4_win_rate": 0.8785,
+      "paired_change": -0.083,
+      "paired_95pct": [
+        -0.09953642860689911,
+        -0.0664635713931009
+      ]
+    },
+    "v4_management_liquidation_and_building_auctions": {
+      "v4_wins": 1902,
+      "v4_losses": 98,
+      "caps": 0,
+      "v4_win_rate": 0.951,
+      "paired_change": -0.0105,
+      "paired_95pct": [
+        -0.022124456614895666,
+        0.001124456614895665
+      ]
+    }
+  }
+}

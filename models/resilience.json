@@ -1,0 +1,25 @@
+{
+  "format": "monopoly.resilience.v1",
+  "parameter_order": [
+    "cold_population_weight",
+    "alternative_population_weight",
+    "neural_bid_mix",
+    "premium",
+    "denial_multiplier",
+    "purchase_margin",
+    "neural_equity_mix",
+    "downside_discount"
+  ],
+  "weights": [
+    0.07260055454092401,
+    0.6192605208596723,
+    0.8857862751327832,
+    1.244133923109478,
+    0.9800408235944968,
+    9.60129414575276,
+    0.2733890010848316,
+    0.28911169545775894
+  ],
+  "selection_games": 73200,
+  "confirmation_games": 81600
+}

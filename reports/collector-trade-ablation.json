@@ -1,0 +1,103 @@
+{
+  "model": "adaptive-v4",
+  "checkpoint_sha256": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+  "rival": "collector",
+  "reference": "league-v4.json",
+  "start_stream": 17795291567363018288,
+  "board_seeds": 1000,
+  "games_per_condition": 2000,
+  "individual_turn_cap": 1000,
+  "method": "Same 1,000 initial dice/deck seeds in both seat assignments under all four trade-window rules. An allowed proposer uses the full normal transaction path, including the original recipient decision. A suppressed proposer creates no offer or public offer event. The estimate includes subsequent adaptation to the changed game and trade history. Outcome is an outright win; a capped game is a non-win. Interval estimates use the variance across independent initial seeds after averaging both seats.",
+  "control_verification": "Wins, losses, caps, total turns, offers sent and received and both acceptance counts matched the locked qualification.",
+  "reproduce": "make all && python3 tests/collector_trade_ablation.py",
+  "results": {
+    "no_trades": {
+      "wins": 1615,
+      "losses": 276,
+      "caps": 109,
+      "total_turns": 301843,
+      "offers_sent": 0,
+      "outgoing_accepted": 0,
+      "offers_received": 0,
+      "incoming_accepted": 0,
+      "win_rate": 0.8075
+    },
+    "only_v4_proposes": {
+      "wins": 1913,
+      "losses": 86,
+      "caps": 1,
+      "total_turns": 127521,
+      "offers_sent": 11018,
+      "outgoing_accepted": 7130,
+      "offers_received": 0,
+      "incoming_accepted": 0,
+      "win_rate": 0.9565
+    },
+    "only_collector_proposes": {
+      "wins": 1695,
+      "losses": 297,
+      "caps": 8,
+      "total_turns": 180713,
+      "offers_sent": 0,
+      "outgoing_accepted": 0,
+      "offers_received": 6571,
+      "incoming_accepted": 1364,
+      "win_rate": 0.8475
+    },
+    "both_propose": {
+      "wins": 1923,
+      "losses": 77,
+      "caps": 0,
+      "total_turns": 117796,
+      "offers_sent": 11851,
+      "outgoing_accepted": 7659,
+      "offers_received": 2153,
+      "incoming_accepted": 500,
+      "win_rate": 0.9615
+    }
+  },
+  "paired_differences": {
+    "only_v4_proposes_minus_no_trades": {
+      "win_rate_change": 0.149,
+      "approximate_paired_95_interval": [
+        0.1315926091657694,
+        0.1664073908342306
+      ]
+    },
+    "only_collector_proposes_minus_no_trades": {
+      "win_rate_change": 0.04,
+      "approximate_paired_95_interval": [
+        0.022253395198461708,
+        0.057746604801538294
+      ]
+    },
+    "only_collector_proposes_minus_only_v4_proposes": {
+      "win_rate_change": -0.109,
+      "approximate_paired_95_interval": [
+        -0.1255373587563019,
+        -0.09246264124369812
+      ]
+    },
+    "both_propose_minus_no_trades": {
+      "win_rate_change": 0.154,
+      "approximate_paired_95_interval": [
+        0.13659426606046232,
+        0.17140573393953767
+      ]
+    },
+    "both_propose_minus_only_v4_proposes": {
+      "win_rate_change": 0.005,
+      "approximate_paired_95_interval": [
+        -0.002588514053854387,
+        0.012588514053854388
+      ]
+    },
+    "both_propose_minus_only_collector_proposes": {
+      "win_rate_change": 0.114,
+      "approximate_paired_95_interval": [
+        0.0975927892997328,
+        0.13040721070026723
+      ]
+    }
+  }
+}

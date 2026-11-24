@@ -1,0 +1,18 @@
+{
+  "format": "monopoly.adaptive.v4",
+  "base": "neural.json",
+  "opponent": "opponent.bin",
+  "specialist": "specialist.json",
+  "resilience": "resilience.json",
+  "robust": "robust.json",
+  "deal_value": "deal.bin",
+  "pressure": "pressure.json",
+  "acquisition_mode": "pressure",
+  "base_sha256": "a64d76a2c4c5903cba96ca576715e4c3d57301c6f31109148d1170d663fed002",
+  "opponent_sha256": "f2988796e405ec8aa657cd1dfe71e7e30100252dc4a7f34849fb983560aa56f7",
+  "specialist_sha256": "546806471196ed56e97260ca36e71b9bf546f3e3a6f0568b00594f78a9732a66",
+  "resilience_sha256": "3f88a6b9a79e3f7e314d7c76bf0d9faba30d89617d35967659fd28973e04cf88",
+  "robust_sha256": "2dd812401cb351ca7f713bfb46b26bf57c0fc3e1b093491e2a2ee406edda6adf",
+  "deal_value_sha256": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+  "pressure_sha256": "68d510cc25197bace7f1a14d32fad178de26609a1d19827d1392a84ae38d31b9"
+}

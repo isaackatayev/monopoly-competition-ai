@@ -1,0 +1,31 @@
+{
+  "format": "monopoly.pressure.v1",
+  "parameter_order": [
+    "bid_multiplier",
+    "denial_multiplier",
+    "cash_reserve",
+    "asset_manager",
+    "offer_mode",
+    "preservation_gate",
+    "blocker_mix",
+    "railroad_multiplier",
+    "completion_multiplier",
+    "pressure_threshold",
+    "rival_cash_weight",
+    "prior_pressure"
+  ],
+  "weights": [
+    1.55,
+    1.15,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1.25,
+    0.6,
+    0.45
+  ]
+}

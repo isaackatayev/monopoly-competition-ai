@@ -1,0 +1,32 @@
+{
+  "format": "monopoly.robust.v1",
+  "weights": [
+    0.32548913550555936,
+    0.8625075211958783,
+    0.7965667528823248,
+    0.21454654166508244,
+    0.6443398313738931,
+    0.5966372175289514,
+    0.4541898643567853,
+    0.7858460810633027,
+    0.4315755342104499,
+    0.6528262906322603,
+    0.6419428960525326,
+    0.36101433772789326
+  ],
+  "parameter_order": [
+    "previous_rival_mass",
+    "recent_rival_mass",
+    "additive_mass",
+    "open_population_mass",
+    "deed_income",
+    "rival_spending",
+    "cash_stress",
+    "first_purchase_right",
+    "working_cash",
+    "housing_priority",
+    "value_network_mix",
+    "worst_outcome_weight"
+  ],
+  "evidence_mode": 4
+}

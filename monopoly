@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+case "${1-}" in
+    table|three-player|four-player|train-multiplayer) make -s -C "$root" build/libmonopoly.so ;;
+esac
+entry="$root/arena.py"
+if [ "${1-}" = table ]; then
+    entry="$root/table_server.py"
+    shift
+fi
+if [ "$(uname -s)" = Darwin ]; then
+    exec /usr/bin/python3 "$entry" "$@"
+fi
+exec python3 "$entry" "$@"

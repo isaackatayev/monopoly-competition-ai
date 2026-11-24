@@ -1,0 +1,32 @@
+{
+  "format": "monopoly.deal-training.v1",
+  "seed": 559108106,
+  "optimizer_seed": 48193574,
+  "splits": {
+    "train": {
+      "boards": 180000,
+      "offers": 159287
+    },
+    "validation": {
+      "boards": 20000,
+      "offers": 17771
+    },
+    "test": {
+      "boards": 20000,
+      "offers": 17761
+    }
+  },
+  "paired_futures_per_offer": 6,
+  "horizon_individual_turns": 170,
+  "target": "Mean recipient game-score difference between accepting and declining from the same public board. Each pair uses the same sampled decks, dice seed and two continuation policies. Future offers are suppressed. At the horizon an unfinished game uses its board-network value.",
+  "features": "36 pre-deal offer features, 24 public economic features, their 24 changes, and two board-network values (initial score and its change).",
+  "value_sha256": "50aae33eb6c88a07ac0ae84fe70acbfbe275a7abf932be45bbc59ab1cc7f48a4",
+  "sha256": "899f935f2efbddba1542671378b042000bfbf6aa971fa992ada4d37d20ba7580",
+  "metrics": {
+    "test_mse": 0.028752850368618965,
+    "board_only_test_mse": 0.03215857967734337,
+    "material_offer_accuracy": 0.7265082266910421,
+    "board_only_accuracy": 0.7084704448507008,
+    "material_test_cases": 8205
+  }
+}

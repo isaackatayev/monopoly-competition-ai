@@ -1,0 +1,321 @@
+{
+  "format": "monopoly.trade-diagnosis.v1",
+  "seed": 40928041,
+  "games_per_condition": 1600,
+  "turn_cap": 1000,
+  "source_sha256": "f5cbe696a01a3eafe9abbd0d83eb79f3401909b1b475457cb6d9dc2bdde732a8",
+  "binary_sha256": "f8ee4f9c0377f81d6e6f87081fbaea4884d5c303dce57d93b1b90610559a8f0b",
+  "manifest_sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756",
+  "method": "Each board seed is played in each seat. All three conditions use identical boards, rules, and incumbent v1 policy. Only its final outgoing offer may be suppressed. Ties reaching 1,000 turns are nonwins. Intervals compare outright wins within each independently sampled seat pair. Individual intervals do not adjust for multiple fixtures.",
+  "filter": "Suppress a proposed one-deed or cash exchange when its outgoing deed would grant the rival a new full color group. Applies even if both gain a set. Incoming offers and all other decisions use the incumbent.",
+  "results": {
+    "prior_challenger_v1": {
+      "unchanged": {
+        "wins": 759,
+        "losses": 817,
+        "caps": 24,
+        "offers": 24007,
+        "accepted": 563,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 816,
+        "losses": 764,
+        "caps": 20,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": 0.035625,
+          "interval_95": [
+            0.009827860624502811,
+            0.06142213937549718
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 828,
+        "losses": 752,
+        "caps": 20,
+        "offers": 7136,
+        "accepted": 316,
+        "change": {
+          "estimate": 0.043125,
+          "interval_95": [
+            0.021928180192751497,
+            0.06432181980724849
+          ]
+        }
+      }
+    },
+    "prior_challenger_v2": {
+      "unchanged": {
+        "wins": 739,
+        "losses": 852,
+        "caps": 9,
+        "offers": 23338,
+        "accepted": 723,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 787,
+        "losses": 796,
+        "caps": 17,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": 0.03,
+          "interval_95": [
+            0.004197583085245149,
+            0.05580241691475485
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 802,
+        "losses": 785,
+        "caps": 13,
+        "offers": 7855,
+        "accepted": 391,
+        "change": {
+          "estimate": 0.039375,
+          "interval_95": [
+            0.017792204247577163,
+            0.06095779575242284
+          ]
+        }
+      }
+    },
+    "collector": {
+      "unchanged": {
+        "wins": 1516,
+        "losses": 84,
+        "caps": 0,
+        "offers": 9360,
+        "accepted": 5891,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 1334,
+        "losses": 262,
+        "caps": 4,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": -0.11375,
+          "interval_95": [
+            -0.13330800925670078,
+            -0.09419199074329923
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 1421,
+        "losses": 178,
+        "caps": 1,
+        "offers": 4880,
+        "accepted": 2721,
+        "change": {
+          "estimate": -0.059375,
+          "interval_95": [
+            -0.07396695120570021,
+            -0.044783048794299785
+          ]
+        }
+      }
+    },
+    "builder": {
+      "unchanged": {
+        "wins": 1480,
+        "losses": 120,
+        "caps": 0,
+        "offers": 10598,
+        "accepted": 5314,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 1269,
+        "losses": 326,
+        "caps": 5,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": -0.131875,
+          "interval_95": [
+            -0.15221454656409822,
+            -0.11153545343590177
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 1348,
+        "losses": 249,
+        "caps": 3,
+        "offers": 5163,
+        "accepted": 1737,
+        "change": {
+          "estimate": -0.0825,
+          "interval_95": [
+            -0.09993057706183835,
+            -0.06506942293816166
+          ]
+        }
+      }
+    },
+    "cautious": {
+      "unchanged": {
+        "wins": 1437,
+        "losses": 162,
+        "caps": 1,
+        "offers": 15102,
+        "accepted": 5177,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 1114,
+        "losses": 471,
+        "caps": 15,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": -0.201875,
+          "interval_95": [
+            -0.22572473536204193,
+            -0.17802526463795806
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 1363,
+        "losses": 233,
+        "caps": 4,
+        "offers": 8872,
+        "accepted": 3239,
+        "change": {
+          "estimate": -0.04625,
+          "interval_95": [
+            -0.061017796945590605,
+            -0.031482203054409394
+          ]
+        }
+      }
+    },
+    "legacy": {
+      "unchanged": {
+        "wins": 940,
+        "losses": 657,
+        "caps": 3,
+        "offers": 12477,
+        "accepted": 928,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 1010,
+        "losses": 583,
+        "caps": 7,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": 0.04375,
+          "interval_95": [
+            0.020176329913467985,
+            0.067323670086532
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 986,
+        "losses": 611,
+        "caps": 3,
+        "offers": 5985,
+        "accepted": 332,
+        "change": {
+          "estimate": 0.02875,
+          "interval_95": [
+            0.012152369540984923,
+            0.045347630459015076
+          ]
+        }
+      }
+    },
+    "frozen_neural": {
+      "unchanged": {
+        "wins": 897,
+        "losses": 693,
+        "caps": 10,
+        "offers": 19358,
+        "accepted": 1112,
+        "change": {
+          "estimate": 0.0,
+          "interval_95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "no_outgoing": {
+        "wins": 891,
+        "losses": 663,
+        "caps": 46,
+        "offers": 0,
+        "accepted": 0,
+        "change": {
+          "estimate": -0.00375,
+          "interval_95": [
+            -0.03228522661550104,
+            0.024785226615501043
+          ]
+        }
+      },
+      "no_rival_color_completion": {
+        "wins": 896,
+        "losses": 666,
+        "caps": 38,
+        "offers": 8397,
+        "accepted": 397,
+        "change": {
+          "estimate": -0.000625,
+          "interval_95": [
+            -0.022857936938179692,
+            0.02160793693817969
+          ]
+        }
+      }
+    }
+  }
+}

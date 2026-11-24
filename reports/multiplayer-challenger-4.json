@@ -1,0 +1,114 @@
+{
+  "format": "monopoly.multiplayer-challenger.v1",
+  "seats": 4,
+  "seed": 935170219,
+  "turn_cap": 1000,
+  "rounds": 4,
+  "population": 10,
+  "locked_target_sha256": "ec0fcfec5554ea536d8277f4ee1811ae45d5309a1afa2bd47ad08081fdfbad64",
+  "rival": {
+    "format": "monopoly.multiplayer.v1",
+    "architecture": "full-table-residual-v1",
+    "seats": 4,
+    "base": "adaptive-v4",
+    "base_sha256": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8",
+    "weights": [
+      0.4,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "engine_sha256": "ce0043460f7594de82adddba61b817c815de58fa489cd2ae76eb3ed60b8bf8c3",
+  "background_lineups": [
+    [
+      "collector",
+      "collector"
+    ],
+    [
+      "builder",
+      "cautious"
+    ],
+    [
+      "collector",
+      "blocker"
+    ],
+    [
+      "blocker",
+      "adaptive-v1"
+    ],
+    [
+      "adaptive-v2",
+      "adaptive-v3"
+    ],
+    [
+      "adaptive-v1",
+      "collector"
+    ]
+  ],
+  "training": {
+    "search_games": 6720,
+    "selection_games": 864,
+    "round_best_rival_wins": [
+      55,
+      45,
+      57,
+      43
+    ],
+    "search_games_per_rival_per_round": 168,
+    "selection_games_per_rival": 216,
+    "selection_frozen_v4_rival_wins": 53,
+    "selection_trained_rival_wins": [
+      56,
+      60,
+      72
+    ],
+    "selected_rival_wins": 72
+  },
+  "holdout": {
+    "games_per_target": 1200,
+    "independent_starts": 300,
+    "outcomes": {
+      "locked_candidate": {
+        "target_wins": 482,
+        "rival_wins": 357,
+        "other_wins": 335,
+        "caps": 26,
+        "win_rate": 0.40166666666666667
+      },
+      "original_v4": {
+        "target_wins": 223,
+        "rival_wins": 444,
+        "other_wins": 490,
+        "caps": 43,
+        "win_rate": 0.18583333333333332
+      }
+    },
+    "paired_delta": 0.21583333333333332,
+    "paired_delta_95_interval": [
+      0.18124250282067353,
+      0.2504241638459931
+    ]
+  },
+  "design": "The rival learns from its own outright wins at tables containing the locked candidate. Each starting board is played from every seat. Search and selection use distinct seed domains. Three trained rivals advance to selection where possible. The winning trained challenger freezes before new boards are played with each target. The interval uses paired win-rate differences across independent starts within each background lineup. Games reaching the turn cap count as non-wins for every seat."
+}

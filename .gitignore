@@ -1,0 +1,9 @@
+/build/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.env
+*-seat.json
+*-decisions.jsonl
+*-bids.jsonl

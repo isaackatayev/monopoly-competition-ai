@@ -1,0 +1,237 @@
+{
+  "format": "monopoly.bundle-benchmark.v1",
+  "qualification": false,
+  "purpose": "Compare the locked v4 competition player and two archived entrants when both can negotiate real packages.",
+  "entrants": {
+    "adaptive-v4": {
+      "manifest": "models/adaptive-v4.json",
+      "sha256": "d67bc1585de313c0e9eef64ed259778910e230dd7d15ffa88e8a848f9ddb57c8"
+    },
+    "adaptive-v3": {
+      "manifest": "models/adaptive-v3.json",
+      "sha256": "ef13e19c383e61d50971d769ca966f01847d9fc2c547274b80476c0fafe82d29"
+    },
+    "adaptive-v1": {
+      "manifest": "models/adaptive-v1.json",
+      "sha256": "eddeb331fdbfc5a440db5bdd31a57d294978ccde436c24e56f7cf9d2aeeb7756"
+    }
+  },
+  "runtime": {
+    "native_library_sha256": "9d8707d8b5491b874c5885024fe7209333f653fac2d0e761c4339218b552aed4",
+    "source_sha256": {
+      "src/bundle_match.cpp": "b4512118f3c36e965d22e45d46222301005e20a1454fdb533897b8d81ceb6837",
+      "src/bundle_trade.cpp": "aa729f0c5931eef8b6c56509fdddc631503125501ee3b05d4e221b56bf0f0268",
+      "src/bundles/verified.cpp": "faab4d62fd84533e5313cc921f3eb9da1dff5b430c0679dc97047f524d9e437d",
+      "src/bundles/verified.hpp": "b1417348b02be04a843d38b92188e18f9b5edba4fc963335307c46d7cfad5b49",
+      "src/pressure_policy.cpp": "7cfd06853e2bc54a4a24641301b41fe05171634b16c762daa92731cab4b5e35b",
+      "src/opponent.cpp": "d0e334bf0131de1d07069d62e88b1e9340a970aa992923e0674d25e0b424e6ba"
+    }
+  },
+  "games": 3600,
+  "turn_cap": 1000,
+  "design": "Each of 200 independently shuffled boards per fixture was played in both seats for each of v4, v3 and v1. Entrants see the same starts.",
+  "strict_win_rate": "Wins divided by every game, including capped games.",
+  "uncertainty": "Each interval accounts for the two seat-swapped games on a common starting seed. Method is given per matchup. No multiple-testing adjustment.",
+  "trade_counts": "Offers and acceptances are counted across both seats. A package moves multiple deeds on at least one side or includes a release card. A closed deal may count in both the multi-deed and card categories.",
+  "opponents": {
+    "collector": "Scalar collector gameplay; a package is accepted when the package asset heuristic reaches 0.55.",
+    "blocker": "Scalar blocker gameplay; all packages vetoed.",
+    "adaptive-v1": "Manifest-verified neural model, real board-value and continuation evaluation for incoming packages."
+  },
+  "matches": {
+    "collector": {
+      "fixture_seed": 380927135,
+      "games_per_entrant": 400,
+      "board_seed_pairs": 200,
+      "entrants": {
+        "adaptive-v4": {
+          "wins": 384,
+          "losses": 16,
+          "caps": 0,
+          "turns": 22662,
+          "offers": 3645,
+          "accepted": 1768,
+          "package_offers": 1598,
+          "package_accepted": 517,
+          "multi_deed_accepted": 512,
+          "card_accepted": 55,
+          "strict_win_fraction": 0.96,
+          "package_acceptance_fraction": 0.3235294117647059
+        },
+        "adaptive-v3": {
+          "wins": 385,
+          "losses": 15,
+          "caps": 0,
+          "turns": 22897,
+          "offers": 4637,
+          "accepted": 1849,
+          "package_offers": 3124,
+          "package_accepted": 912,
+          "multi_deed_accepted": 900,
+          "card_accepted": 112,
+          "strict_win_fraction": 0.9625,
+          "package_acceptance_fraction": 0.2919334186939821
+        },
+        "adaptive-v1": {
+          "wins": 382,
+          "losses": 18,
+          "caps": 0,
+          "turns": 23345,
+          "offers": 4639,
+          "accepted": 1814,
+          "package_offers": 3121,
+          "package_accepted": 866,
+          "multi_deed_accepted": 849,
+          "card_accepted": 108,
+          "strict_win_fraction": 0.955,
+          "package_acceptance_fraction": 0.2774751682153156
+        }
+      },
+      "paired_strict_win_fraction_v4_minus_v3": -0.0025,
+      "paired_difference_95pct_interval_v4_minus_v3": [
+        -0.021638109873639445,
+        0.016638109873639447
+      ],
+      "interval_method_v4_minus_v3": "Two-sided paired t approximation, 199 degrees of freedom.",
+      "paired_strict_win_fraction_v4_minus_v1": 0.005,
+      "paired_difference_95pct_interval_v4_minus_v1": [
+        -0.019201952147571286,
+        0.02920195214757129
+      ],
+      "interval_method_v4_minus_v1": "Two-sided paired t approximation, 199 degrees of freedom."
+    },
+    "blocker": {
+      "fixture_seed": 711829035,
+      "games_per_entrant": 400,
+      "board_seed_pairs": 200,
+      "entrants": {
+        "adaptive-v4": {
+          "wins": 305,
+          "losses": 81,
+          "caps": 14,
+          "turns": 51096,
+          "offers": 2308,
+          "accepted": 0,
+          "package_offers": 1490,
+          "package_accepted": 0,
+          "multi_deed_accepted": 0,
+          "card_accepted": 0,
+          "strict_win_fraction": 0.7625,
+          "package_acceptance_fraction": 0.0
+        },
+        "adaptive-v3": {
+          "wins": 305,
+          "losses": 81,
+          "caps": 14,
+          "turns": 50952,
+          "offers": 3266,
+          "accepted": 0,
+          "package_offers": 2947,
+          "package_accepted": 0,
+          "multi_deed_accepted": 0,
+          "card_accepted": 0,
+          "strict_win_fraction": 0.7625,
+          "package_acceptance_fraction": 0.0
+        },
+        "adaptive-v1": {
+          "wins": 305,
+          "losses": 81,
+          "caps": 14,
+          "turns": 50996,
+          "offers": 3222,
+          "accepted": 0,
+          "package_offers": 2947,
+          "package_accepted": 0,
+          "multi_deed_accepted": 0,
+          "card_accepted": 0,
+          "strict_win_fraction": 0.7625,
+          "package_acceptance_fraction": 0.0
+        }
+      },
+      "paired_strict_win_fraction_v4_minus_v3": 0.0,
+      "paired_difference_95pct_interval_v4_minus_v3": [
+        -0.014867039231272083,
+        0.014867039231272083
+      ],
+      "interval_method_v4_minus_v3": "All paired differences were zero; exact 95% upper bound on the probability of any unseen nonzero difference, times the maximum magnitude one.",
+      "paired_strict_win_fraction_v4_minus_v1": 0.0,
+      "paired_difference_95pct_interval_v4_minus_v1": [
+        -0.014867039231272083,
+        0.014867039231272083
+      ],
+      "interval_method_v4_minus_v1": "All paired differences were zero; exact 95% upper bound on the probability of any unseen nonzero difference, times the maximum magnitude one."
+    },
+    "adaptive-v1": {
+      "fixture_seed": 480581291,
+      "games_per_entrant": 400,
+      "board_seed_pairs": 200,
+      "entrants": {
+        "adaptive-v4": {
+          "wins": 229,
+          "losses": 170,
+          "caps": 1,
+          "turns": 44308,
+          "offers": 19133,
+          "accepted": 753,
+          "package_offers": 11486,
+          "package_accepted": 240,
+          "multi_deed_accepted": 232,
+          "card_accepted": 26,
+          "strict_win_fraction": 0.5725,
+          "package_acceptance_fraction": 0.020895002611875328
+        },
+        "adaptive-v3": {
+          "wins": 203,
+          "losses": 195,
+          "caps": 2,
+          "turns": 41954,
+          "offers": 24519,
+          "accepted": 911,
+          "package_offers": 19870,
+          "package_accepted": 693,
+          "multi_deed_accepted": 642,
+          "card_accepted": 141,
+          "strict_win_fraction": 0.5075,
+          "package_acceptance_fraction": 0.03487669854051334
+        },
+        "adaptive-v1": {
+          "wins": 199,
+          "losses": 199,
+          "caps": 2,
+          "turns": 38498,
+          "offers": 23534,
+          "accepted": 830,
+          "package_offers": 18808,
+          "package_accepted": 696,
+          "multi_deed_accepted": 650,
+          "card_accepted": 126,
+          "strict_win_fraction": 0.4975,
+          "package_acceptance_fraction": 0.03700552956188856
+        }
+      },
+      "paired_strict_win_fraction_v4_minus_v3": 0.065,
+      "paired_difference_95pct_interval_v4_minus_v3": [
+        0.0023637686809726277,
+        0.12763623131902738
+      ],
+      "interval_method_v4_minus_v3": "Two-sided paired t approximation, 199 degrees of freedom.",
+      "paired_strict_win_fraction_v4_minus_v1": 0.075,
+      "paired_difference_95pct_interval_v4_minus_v1": [
+        0.028244002559450428,
+        0.12175599744054957
+      ],
+      "interval_method_v4_minus_v1": "Two-sided paired t approximation, 199 degrees of freedom."
+    }
+  },
+  "reproduction": [
+    "./monopoly bundle-match --model adaptive-v4 --opponent collector --seed 380927135 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v3 --opponent collector --seed 380927135 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v1 --opponent collector --seed 380927135 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v4 --opponent blocker --seed 711829035 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v3 --opponent blocker --seed 711829035 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v1 --opponent blocker --seed 711829035 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v4 --opponent adaptive-v1 --seed 480581291 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v3 --opponent adaptive-v1 --seed 480581291 --cap 1000 --games 400",
+    "./monopoly bundle-match --model adaptive-v1 --opponent adaptive-v1 --seed 480581291 --cap 1000 --games 400"
+  ]
+}
